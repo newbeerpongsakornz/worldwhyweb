@@ -13,7 +13,7 @@
 }
 .icon-delivery:before{content:"\e906"}
 
-a{
+.headMenu{
     color: white !important;
 }
 .orderFoodBt{
@@ -64,10 +64,11 @@ a{
     display: block;
   }
 
+
 /* body */
 .card-bd{
-    border-top-left-radius: 15px!important;
-    border-top-right-radius: 15px!important;
+    border-top-left-radius: 10px!important;
+    border-top-right-radius: 10px!important;
 }
 .card, .card-header{
     border: none!important;
@@ -78,8 +79,8 @@ a{
 }
 .list-group-item{
     background-color: #FEF4F9!important;
-    border-bottom-left-radius: 15px!important;
-    border-bottom-right-radius: 15px!important;
+    border-bottom-left-radius: 10px!important;
+    border-bottom-right-radius: 10px!important;
 
     
 }
