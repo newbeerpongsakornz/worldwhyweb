@@ -2,6 +2,12 @@
     background-color: #EB7AAE;
     color: white;
 }
+.toppic{
+    background-color: #FFFFFF;
+    width: 260px;
+    transform: translate(-30px,-26px);
+    position: absolute;
+}
 
 li::after {
     list-style-type: none!important;
