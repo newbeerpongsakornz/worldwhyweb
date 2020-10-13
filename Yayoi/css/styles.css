@@ -32,6 +32,25 @@ a{
     color: white;
 }
 
+/* body */
+.card-bd{
+    border-top-left-radius: 15px!important;
+    border-top-right-radius: 15px!important;
+}
+.card, .card-header{
+    border: none!important;
+}
+.card-header{
+    background-color: #EB7AAE!important;
+    color: #FFFFFF;
+}
+.list-group-item{
+    background-color: #FEF4F9!important;
+    border-bottom-left-radius: 15px!important;
+    border-bottom-right-radius: 15px!important;
+
+    
+}
 
 /* Footer */
 

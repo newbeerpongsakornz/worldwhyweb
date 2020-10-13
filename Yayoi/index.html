@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/indexC.css">
     <link rel="stylesheet" href="css/notoFont.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="js/indexJS.js"></script>
     <title>Yayoi</title>
 </head>
 <body class="notoFont">
+
+    <!-- Head -->
     <header>
         <div class="topheader shadow">
             <div class="container notoFont">
@@ -25,31 +29,55 @@
                     <div class="col-md-2"></div>
                     <div class="col-md-6">
                         <div class="row">
-                    <div class="col-md-3">
-                        <li><a href="">เข้าสู่ระบบ</a></li>
+                            <div class="col-md-3">
+                                <li><a href="">เข้าสู่ระบบ</a></li>
+                            </div>
+                            <div class="col-md-3">
+                                <li><a href="">สมัครสมาชิก</a></li>
+                            </div>
+                            <div class="col-md-2">
+                                <select name="" id="" class="scustom-select ">
+                                <option selected>TH</option>
+                                <option value="1">EN</option>   
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn font-weight-bold">สั่งอาหารทันที</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <li><a href="">สมัครสมาชิก</a></li>
-                    </div>
-                    <div class="col-md-2">
-                        <select name="" id="" class="scustom-select ">
-                        <option selected>TH</option>
-                        <option value="1">EN</option>
-                            
-                    </select></div>
-                    <div class="col-md-3">
-                        <button class="btn font-weight-bold">สั่งอาหารทันที</button>
-                    </div>
-                </div></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Body -->
+    <div class="container text-center">
+        <h2><b>เมนูยอดนิยม</b></h2>
+        <div class="row">
+            <div class="col-9">
+                <div id="menuPromo" class="row">
 
                 </div>
             </div>
-            
+            <div class="cart col-3 ">
+                <div class="card" style="width: 100%;">
+                    <div class="card-header card-bd font-weight-bold">
+                      รายการอาหารทั้งหมด
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">ไม่พบสินค้าในตะกร้า</li>
+                      
+                    </ul>
+                  </div>
 
+
+            </div>
         </div>
+        
+    </div>
 
-    </header>
-
+    <!-- Footer -->
     <footer class="text-center">
         <div class="container">
             <a href="">
@@ -78,9 +106,7 @@
             <div style="transform: translateY(10px);">
                 <img width="100%" src="https://yayoirestaurants.com/frontend/assets/images/bg_footer_bottom.png?c3d6b62">
             </div>
-            <div id="creditD">
-                © 2557-2563 บริษัท เอ็มเค อินเตอร์ฟู้ด
-            </div>
+            <div id="creditD">© 2557-2563 บริษัท เอ็มเค อินเตอร์ฟู้ด</div>
         </div>
     </footer>
     
