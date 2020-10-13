@@ -1,0 +1,41 @@
+/* ชื่อฟอนต์ "Noto Sans Thai" */
+
+@font-face {
+    font-family: "Noto Sans Thai";
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://static.pkn.sh/fonts/NotoSansThai/NotoSansThai-Regular.woff2")
+        format("woff2"),
+      url("https://static.pkn.sh/fonts/NotoSansThai/NotoSansThai-Regular.woff")
+        format("woff");
+}
+  
+@font-face {
+    font-family: "Noto Sans Thai";
+    font-style: normal;
+    font-weight: 700;
+    src: url("https://static.pkn.sh/fonts/NotoSansThai/NotoSansThai-Bold.woff2")
+        format("woff2"),
+      url("https://static.pkn.sh/fonts/NotoSansThai/NotoSansThai-Bold.woff")
+        format("woff");
+}
+  
+@font-face {
+    font-family: "Noto Serif Thai";
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://static.pkn.sh/fonts/NotoSerifThai/NotoSerifThai-Regular.woff2")
+        format("woff2"),
+      url("https://static.pkn.sh/fonts/NotoSerifThai/NotoSerifThai-Regular.woff")
+        format("woff");
+}
+  
+@font-face {
+    font-family: "Noto Serif Thai";
+    font-style: normal;
+    font-weight: 700;
+    src: url("https://static.pkn.sh/fonts/NotoSerifThai/NotoSerifThai-Bold.woff2")
+        format("woff2"),
+      url("https://static.pkn.sh/fonts/NotoSerifThai/NotoSerifThai-Bold.woff")
+        format("woff");
+}
