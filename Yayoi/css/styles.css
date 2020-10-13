@@ -8,29 +8,61 @@
     transform: translate(-30px,-26px);
     position: absolute;
 }
+.bd-right{
+    border-right-style:  solid;
+}
+.icon-delivery:before{content:"\e906"}
 
-li::after {
-    list-style-type: none!important;
-    content: "";
-    position:absolute;
-    top: 1px;
-    bottom: 1px;
-    right: 5px;
-    width: 2px;
-    background-color:white;
-  }
 a{
-    text-decoration: none!important;
     color: white !important;
 }
-.btn{
-    color:red;
+.orderFoodBt{
+    color:red!important;
 
 }
-.btn:hover{
-    background-color: red;
-    color: white;
+.orderFoodBt:hover{
+    background-color: red!important;
+    color: white!important;
 }
+.carousel-indicators li{
+    width: 10px!important;
+    height: 10px!important;
+    border-radius: 50%;
+}
+.logoYayoi{
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.dropbtn {
+    background-color: #EB7AAE;
+    color: white;
+    border: none;
+    width: 50px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black!important;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
 /* body */
 .card-bd{
