@@ -1,5 +1,3 @@
-/* ชื่อฟอนต์ "Noto Sans Thai" */
-
 @font-face {
     font-family: "Noto Sans Thai";
     font-style: normal;
@@ -38,4 +36,8 @@
         format("woff2"),
       url("https://static.pkn.sh/fonts/NotoSerifThai/NotoSerifThai-Bold.woff")
         format("woff");
+}
+
+.notoFont{
+  font-family: "Noto Sans Thai",sans-serif;
 }
