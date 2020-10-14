@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/indexC.css">
     <link rel="stylesheet" href="css/notoFont.css">
+    <link rel="stylesheet" href="css/icon.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="js/indexJS.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -24,35 +25,38 @@
             <div class="container notoFont">
                 <div class="row p-3">
                     <div class="col-md-4">
-                        <div class="row">
+                        <div class="row justify-content-start">
                             <div class="col-md-8">
                                 <div class="toppic p-3 shadow-lg logoYayoi" style="z-index: 1;">
                                     <img src="https://yayoirestaurants.com/frontend/assets/images/logo.svg" alt="Yayoi Restaurant - เสิร์ฟร้อน อร่อยเร็ว" width="100%">
-                            </div></div>
+                                </div>
+                            </div>
                             <div class="col-md-4 font-weight-bold"><a class="headMenu" href="" class="float-right">เมนูยาโยอิ</a></div>
                         </div>
                     </div>
-                    <div class="col-md-2"></div>
-                    <div class="col-md-6">
-                        <div class="row">
-                    <div class="col-md-3 text-center">
-                        <div class="bd-right">
-                        <a class="headMenu" href="" class="">เข้าสู่ระบบ</a></div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="bd-right">
-                        <a class="headMenu" href="">สมัครสมาชิก</a></div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="dropdown">
-                            <button class="dropbtn">TH</button>
-                            <div class="dropdown-content">
-                              <a href="#">EN</a>
+                    <div class="col-md-8">
+                        <div class="row justify-content-end">
+                            <div class="headMenuBox text-center">
+                                <a class="headMenu" href="" class="">เข้าระบบ</a>
+                            </div> |
+                            <div class="headMenuBox">
+                                <a class="headMenu" href="">สมัครสมาชิก</a>
+                            </div>|
+                            <div class="headMenuBox">
+                                <div class="dropdown">
+                                    <button class="dropbtn">TH</button>
+                                    <div class="dropdown-content">
+                                    <a href="#">EN</a>
+                                    </div>
+                                </div>
                             </div>
-                          </div>
-                    </div>
-                    <div class="col-md-3">
-                        <button class="btn font-weight-bold orderFoodBt"><i class="icon-delivery"></i>สั่งอาหารทันที</button>
+                            <div class="headMenuBox">
+                                <button class="btn font-weight-bold orderFoodBt"><img src="icon/delivery.PNG" height="20px"> สั่งอาหารทันที</button>
+                            </div>
+                            <div class="headMenuBox">
+                                <a class="headMenu" href=""><img src="icon/busket.PNG" width="30px"></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -60,46 +64,46 @@
     </header>
 
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleControls" data-slide-to="1"></li>
-          <li data-target="#carouselExampleControls" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="https://yayoirestaurants.com/mainbanners/3464_2007-03-Tempura Overload_Desktop_1920x803.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="https://yayoirestaurants.com/mainbanners/5764_Yayoi_Juicy-Super-C-Booster_Web-Banner_1920-x-803-px.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="https://yayoirestaurants.com/mainbanners/1937__AW Yayoi-Tokyo-Trio_Web-Banner-1920-x-803-px.jpg" class="d-block w-100" alt="...">
-          </div>
-        </div>
+
       </div><br><br>
 
     <!-- Body -->
     <div class="container text-center">
         <h2><b>เมนูยอดนิยม</b></h2><br>
         <div class="row">
-            <div class="col-9">
+            <div class="col-12">
                 <div id="menuPromo" class="row">
 
                 </div>
             </div>
-            <div class="cart col-3 ">
+            <!-- <div class="cart col-3 ">
                 <div class="card" style="width: 100%;">
                     <div class="card-header card-bd font-weight-bold">
                       รายการอาหารทั้งหมด
                     </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">ไม่พบสินค้าในตะกร้า</li>
-                      
-                    </ul>
-                  </div>
-
-
-            </div>
+                    <div class="card-bd">
+                        <div id="menuChoose">
+                            
+                        </div>
+                        <div id="totalMenu">
+                            ราคาอาหารทั้งหมด <br>
+                            (ยังไม่รวมค่าจัดส่ง)
+                        </div>
+                        <div>
+                            <button class='plusAdd'>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill="#eb7aae" fill-rule="evenodd" d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"></path></svg>
+                            </button>
+                        </div>
+                        <div>
+                            <button class='minusAdd'>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill="#eb7aae" fill-rule="evenodd" d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"></path></svg>
+                            </button>
+                        </div>
+                        
+                        <div id="noChoose">ไม่พบสินค้าในตะกร้า</div>
+                    </div>
+                </div>
+            </div> -->
         </div>
         
     </div>
