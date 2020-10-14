@@ -5,62 +5,63 @@
         "nameTH":"น้ำชาเขียวเย็น",
         "nameJP":"アイスグリーンティー",
         "price": "29",
-        
-    }
+        "type": [""]
+    },
     {
         "id":"BE002",
         "img":"https://yayoirestaurants.com/productimages/2872_BE002_Mineral-Water.jpg",
         "nameTH":"น้ำเเร่",
         "nameJP":"ミネラルウォーター",
         "price": "23",
-        
-    }
+        "type": [""]
+    },
     {
         "id":"PP334",
         "img":"https://yayoirestaurants.com/productimages/3815_Yayoi-Tokyo-Trio_Web-Menu_880-x-800-px_Matcha-Latte-Red-Bean-3.jpg",
         "nameTH":"มัทฉะ ลาเต้ ถั่วแดง",
         "nameJP":"あずき抹茶ラテ",
         "price": "59",
-        
-    }
+        "type": [""]
+    },
     {
         "id":"PP333",
         "img":"https://yayoirestaurants.com/productimages/3571_Yayoi-Tokyo-Trio_Web-Menu_880-x-800-px_Royal-Boba-Milk-Tea-3.jpg",
         "nameTH":"รอยัล โบบา มิลค์ ที",
         "nameJP":"タピオカミルクティー",
         "price": "59",
-        
-    }
+        "type": [""]
+    },
     {
         "id":"BE004",
         "img":"https://yayoirestaurants.com/productimages/6797_Photo-Menu-Matcha%20880%20x%20800%20px.jpg",
         "nameTH":"มัทฉะ ลาเต้",
         "nameJP":"抹茶ラテ",
         "price": "59",
-        
-    }
+        "type": [""]
+    },
     {
         "id":"BE003",
         "img":"https://yayoirestaurants.com/productimages/3589_Photo-Menu-Sakura%20880%20x%20800%20px.jpg",
         "nameTH":"ซากุระ อุเมะ โซดา",
         "nameJP":"さくら梅ソーダ",
         "price": "55",
-        
-    }
+        "type": [""]
+    },
     {
         "id":"PP312",
         "img":"https://yayoirestaurants.com/productimages/3508_Yayoi_Juicy-Super-C-Booster_Web-Banner_880-x-800-px_Berry.jpg",
         "nameTH":"มิกซ์ เบอร์รี ซูเปอร์ ซี",
         "nameJP":"スーパービタミン ミックスベリー",
         "price": "49",
-        
-    }
+        "type": [""]
+    },
     {
         "id":"PP311",
         "img":"https://yayoirestaurants.com/productimages/9337_Yayoi_Juicy-Super-C-Booster_Web-Banner_880-x-800-px_Orange.jpg",
         "nameTH":"ออเรนจ์ ทรีโอ ซูเปอร์ ซี",
         "nameJP":"スーパービタミン オレンジトリオ",
         "price": "59",
-        
+        "type": [""]
     }
+
 ]
