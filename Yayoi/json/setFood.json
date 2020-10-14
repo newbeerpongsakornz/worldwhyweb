@@ -1,6 +1,6 @@
 [
     {
-        "no":"1",
+        "id":"[SETmackerel|30]",
         "nameTH":"เซ็ตปลาซาบะย่างเกลือกระทะร้อน",
         "nameJP":"サバ",
         "type":["fish"],
@@ -64,7 +64,7 @@
 
 
     {
-        "no":"2",
+        "id":"[SETpangasius-dory|40]",
         "nameTH":"เซ็ตปลาแพนกาเซียส ดอร์รี่ ย่างซีอิ๊วกระทะร้อน",
         "nameJP":"パンがツアス",
         "type":["fish"],
@@ -132,7 +132,7 @@
 
 
     {
-        "no":"3",
+        "id":"[SETfried-pork-cutlet|62]",
         "nameTH":"เซ็ตหมูชุบแป้งทอด",
         "nameJP":"とんかつ",
         "type":["pork"],
@@ -170,7 +170,7 @@
     },
 
     {
-        "no":"4",
+        "id":"[SETdeep-fried-marinated-chicken|45]",
         "nameTH":"ไก่ทอดราดซอสนัมบัง",
         "nameJP":"チキン南蛮",
         "type":["chicken"],
@@ -210,7 +210,7 @@
 
 
     {
-        "no":"5",
+        "id":"[SETfried-pork-cut|51]",
         "nameTH":"เซ็ตชีสเบอร์เกอร์หมูชุบแป้งทอด",
         "nameJP":"チーズ入りポークメンチ",
         "type":["pork"],
@@ -251,7 +251,7 @@
 
 
     {
-        "no":"6",
+        "id":"[SETteriyaki-chicken|48]",
         "nameTH":"เซ็ตไก่เทอริยากิ",
         "nameJP":"照焼きチキン",
         "type":["chicken"],
@@ -291,7 +291,7 @@
 
 
     {
-        "no":"7",
+        "id":"[SETpork-sauteed-with-kimchi|68]",
         "nameTH":"เซ็ตหมูผัดกิมจิสูตรเกาหลี",
         "nameJP":"豚キムチ",
         "type":["pork"],
@@ -332,7 +332,7 @@
 
 
     {
-        "no":"8",
+        "id":"[SETroasted-pork-on-hot-plate|71]",
         "nameTH":"เซ็ตหมูย่างกระทะร้อน",
         "nameJP":"豚焼肉",
         "type":["pork"],
@@ -372,8 +372,8 @@
 
     
     {
-        "no":"9",
-        "nameTH":"เซ็ตปลาแซลม่อนย่างซีอิ๊วกระทะร้อน",
+        "id":"[SETsalmon|35]",
+        "nameTH":"เซ็ตปลาแซลม่อน",
         "nameJP":"サーモン",
         "type":["fish"],
         "setType":
@@ -450,7 +450,7 @@
 
     
     {
-        "no":"10",
+        "id":"[SETfried-chicken|173]",
         "nameTH":"เซ็ตไก่ทอดคาราอาเกะ",
         "nameJP":"から揚げ",
         "type":["chicken"],
@@ -490,7 +490,7 @@
 
     
     {
-        "no":"11",
+        "id":"[SETfried-prawns-and-fried-chicken|176]",
         "nameTH":"เซ็ตกุ้งชุบแป้งทอดกับไก่ทอดคาราอาเกะ",
         "nameJP":"エビフライとから揚げ",
         "type":["shrimp, chicken"],
@@ -529,7 +529,7 @@
     },
 
     {
-        "no":"12",
+        "id":"[SETfried-chicken-with-sweetened-vinegar-sauce|179]",
         "nameTH":"เซ็ตไก่ซอสสามรส",
         "nameJP":"鶏の甘酢あん",
         "type":["pork"],
@@ -567,47 +567,8 @@
         ]
     },
 
-    {
-    "no":"13",
-    "nameTH":"เซ็ตหมูย่างกระทะร้อน",
-    "nameJP":"豚焼肉",
-    "type":["pork"],
-    "setType":
-    [
-        [
-            {
-                "img":"https://yayoirestaurants.com/productimages/141_SE024_Roasted-Pork-on-Hot-Set.jpg",
-                "nameTH":"เซ็ตหมูย่างกระทะร้อน",
-                "nameJP":"豚焼肉",
-                "price":"145"
-            }
-        ],
-        [
-            {
-                "img":"https://yayoirestaurants.com/productimages/7347_AL019_Roasted-Pork-on-Hot.jpg",
-                "nameTH":"หมูย่างกระทะร้อน (อาหารจานเดียว)",
-                "nameJP":"豚焼肉",
-                "price":"125"
-            }
-        ]
-    ],
-    "rices":
-    [
-        {
-            "img":"https://yayoirestaurants.com/frontend/assets/images/product/topping/rice.png",
-            "name":"ข้าวญี่ปุ่น",
-            "price":"0"
-        },
-        {
-            "img":"https://yayoirestaurants.com/frontend/assets/images/product/topping/garlic_rice.png",
-            "name":"ข้าวผัดกระเทียม",
-            "price":"20"
-        }
-    ]
-},
-
 {
-    "no":"14",
+    "id":"[SETkatsutoji|182]",
     "nameTH":"เซ็ตคัตสึโทจิ",
     "nameJP":"かつとじ",
     "type":["pork"],
@@ -646,7 +607,7 @@
 },
 
 {
-    "no":"15",
+    "id":"[SETmixed-toji|185]",
     "nameTH":"เซ็ตมิกซ์โทจิ",
     "nameJP":"ミックスとじ",
     "type":["pork, shrimp"],
@@ -684,7 +645,7 @@
     ]
 },
 {
-    "no":"16",
+    "id":"[SETfried-beef-cutlet-with-cheese-filling|188]",
     "nameTH":"เซ็ตชีสเบอร์เกอร์เนื้อชุบแป้งทอด",
     "nameJP":"チーズ入りビーフメンチカツ",
     "type":["beef"],
@@ -722,7 +683,7 @@
     ]
 },
 {
-    "no":"17",
+    "id":"[SETdiced-pork-steak-on-hot-plate|191]",
     "nameTH":"เซ็ตสเต็กหมูกระทะร้อน",
     "nameJP":"豚サイコロステーキ",
     "type":["pork"],
@@ -761,7 +722,7 @@
 },
 
 {
-    "no":"18",
+    "id":"[SETdiced-beef-steak-on-hot-plate|194]",
     "nameTH":"เซ็ตสเต็กเนื้อกระทะร้อน",
     "nameJP":"豚サイコロステーキ",
     "type":["beef"],
@@ -800,7 +761,7 @@
 },
 
 {
-    "no":"19",
+    "id":"[SETpork-sukiyaki|197]",
     "nameTH":"เซ็ตสุกี้ยากี้ญี่ปุ่นหมู",
     "nameJP":"豚すきやき",
     "type":["pork"],
@@ -839,7 +800,7 @@
 },
 
 {
-    "no":"20",
+    "id":"[SETbeef-sukiyaki|200]",
     "nameTH":"เซ็ตสุกี้ยากี้ญี่ปุ่นเนื้อ",
     "nameJP":"牛すきやき",
     "type":["beef"],
@@ -878,7 +839,7 @@
 },
 
 {
-    "no":"21",
+    "id":"[SETroasted-beef-on-hot-plate|203]",
     "nameTH":"เซ็ตเนื้อย่างกระทะร้อน",
     "nameJP":"牛焼肉",
     "type":["beef"],
@@ -917,7 +878,7 @@
 },
 
 {
-    "no":"22",
+    "id":"[SETdeep-fried-snapper|206]",
     "nameTH":"เซ็ตปลากะพงชุบแป้งทอด",
     "nameJP":"白身フライ定食",
     "type":["fish"],
@@ -955,7 +916,7 @@
     ]
 },
 {
-    "no":"23",
+    "id":"SETpork-hamburger-on-hot-plate|209]",
     "nameTH":"เซ็ตแฮมเบอร์เกอร์หมูกระทะร้อน",
     "nameJP":"ポークハンバーグ(デミグラスソース)",
     "type":["pork"],
@@ -993,7 +954,7 @@
     ]
 },
 {
-    "no":"24",
+    "id":"[SETbeef-hamburger-on-hot-plate|212]",
     "nameTH":"แฮมเบอร์เกอร์เนื้อกระทะร้อน",
     "nameJP":"ビーフハンバーグ（デミグラスソース)",
     "type":["beef"],
@@ -1032,7 +993,7 @@
 },
 
 {
-    "no":"25",
+    "id":"[SETprawn-fish-and-vegetable-tempura|215]",
     "nameTH":"เซ็ตเทมปุระรวม",
     "nameJP":"天ぷら盛合せ",
     "type":["shrimp, fish"],
@@ -1071,7 +1032,7 @@
 },
 
 {
-    "no":"26",
+    "id":"[SETdeep-fried-prawn-with-sweetened-vinegar-sauce|218]",
     "nameTH":"เซ็ตกุ้งซอสสามรส",
     "nameJP":"エビの甘酢あん",
     "type":["shrimp, fish"],
@@ -1109,7 +1070,7 @@
     ]
 },
 {
-    "no":"27",
+    "id":"[SETprawn-tempura|221]",
     "nameTH":"เซ็ตเทมปุระกุ้ง",
     "nameJP":"えび天ぷら",
     "type":["shrimp"],
@@ -1148,7 +1109,7 @@
 },
 
 {
-    "no":"28",
+    "id":"28",
     "nameTH":"เซ็ตหมูชุบแป้งทอดราดซอสมิโสะ",
     "nameJP":"味噌かつ煮味噌かつ煮",
     "type":["pork"],
