@@ -93,7 +93,12 @@
     border-top-right-radius: 10px!important;
     color: #FFFFFF;
 }
-.nameMenu:hover{
+
+.nameMenu p{
+    margin-bottom: 0px!important;
+}
+
+.nameMenu p:hover{
     color: #EB7AAE;
     cursor: default;
 }
@@ -110,7 +115,7 @@
 
 /* Menu */
 .menuBar{
-    margin: 25px 0px;
+    margin: 40px 0px;
     white-space: nowrap;
 }
 
@@ -202,12 +207,24 @@ footer{
 }
 
 .plusAdd, .minusAdd{
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: white;
     border: 2px solid #eb7aae;
 }
+.plusAdd:hover, .minusAdd:hover{
+    background-color: #eb7aae;
+    
+}
+.plusAdd span, .minusAdd span{
+    font-size: 5px;
+    color: #eb7aae;
+}
+.plusAdd span:hover, .minusAdd span:hover{
+    color: white;
+}
+
 
 #totalMenu{
     display: none;
@@ -215,4 +232,9 @@ footer{
 
 #totalMenuActive{
     display: relative;
+}
+
+.headBody{
+    color: #eb7aae;
+    font-size: 38px;
 }
