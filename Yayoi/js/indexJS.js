@@ -1,3 +1,18 @@
+// var data;
+
+// let requestURL = 'json/promoFood.json'; 
+// let request = new XMLHttpRequest(); 
+// request.onreadystatechange = function () { 
+//     if (request.readyState == 4 && request.status == 200) {             
+//         dataReportStatus(JSON.parse(request.responseText));            
+//     } 
+// }; 
+// request.open("GET", requestURL, true); 
+// request.send();
+// function dataReportStatus(dataURL) { 
+//     data = dataURL;
+// }
+
 // var totalPrice = 0;
 // var numMenu = 0;
 
@@ -26,11 +41,29 @@
 //     document.getElementById("menuChoose").innerHTML += htmlText;
 // }
 
-function changeColor(item){
-    item.innerHTML.src = "icon/"+item.alt+"h.PNG";
-    console.log(item.innerHTML.src);
+function changeMenuColor(itemId, cmd){
+    var item = document.getElementById("imgMenuBox"+itemId);
+    if (cmd == "in")
+    {
+        item.src = "icon/"+itemId+"h.PNG";
+    }
+    else
+    {
+        item.src = "icon/"+itemId+".PNG";
+    }
 }
-function defaultColor(item){
-    item.innerHTML.src = "icon/"+item.alt+".PNG";
-    console.log("Back");
+
+function changeMenuName(itemId, cmd){
+    var item1 = document.getElementById("nameMenu"+itemId);
+    var item2 = document.getElementById("nameMenuJP"+itemId);
+    if (cmd == "in")
+    {
+        item1.style.color = "#eb7aae";
+        item2.style.color = "#eb7aae";
+    }
+    else
+    {
+        item1.style.color = "black";
+        item2.style.color = "#777";
+    }
 }

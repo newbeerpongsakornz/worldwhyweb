@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/notoFont.css">
-    <link rel="stylesheet" href="css/icon.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="js/indexJS.js"></script>
     <script src="https://kit.fontawesome.com/a0ce56af97.js" crossorigin="anonymous"></script>
@@ -57,7 +56,7 @@
                                 </div>
                             </div>
                             <div class="headMenuBox">
-                                <button class="btn font-weight-bold orderFoodBt"><div id="delivery"></div> สั่งอาหารทันที</button>
+                                <button class="btn font-weight-bold orderFoodBt"><img src="icon/delivery.PNG" height="21px"> สั่งอาหารทันที</button>
                             </div>
                             <div class="headMenuBox">
                                 <a class="headMenu" href=""><img src="icon/busket.PNG" width="30px"></a>
@@ -122,15 +121,15 @@
                 {
                     if ($i == 0)
                     {
-                        echo "<div class='menuBox select'><a href='menu/".$nameEN[$i].".php' alt='".($i+1)."' class='menuText select' onmouseover='changeColor(this)' onmouseout='defaultColor(this)'>";
+                        echo "<div class='menuBox menuSelect'>";
                         echo "<img src='icon/".($i+1)."1.PNG' width='40px' height='40px'><br><br>";
-                        echo $nameTH[$i]."</a></div>";
+                        echo $nameTH[$i]."</div>";
                     }
                     else
                     {
-                        echo "<div class='menuBox'><a href='menu/".$nameEN[$i].".php' alt='".($i+1)."' class='menuText' onmouseover='changeColor(this)' onmouseout='defaultColor(this)'>";
-                        echo "<img src='icon/".($i+1).".PNG' width='40px' height='40px'><br><br>";
-                        echo $nameTH[$i]."</a></div>";
+                        echo "<a href='menu/".$nameEN[$i].".php' class='menuText'><div class='menuBox' onmouseover='changeMenuColor(".($i+1).", \"in\")' onmouseout='changeMenuColor(".($i+1).", \"out\")'>";
+                        echo "<img id='imgMenuBox".($i+1)."' src='icon/".($i+1).".PNG' width='40px' height='40px'><br><br>";
+                        echo $nameTH[$i]."</div></a>";
                     }
                 }
             ?>
@@ -150,8 +149,8 @@
                             echo "<div class='menu col-4'>";
                             echo "<a href=''><img src='".$menu->img."' width='85%' title='".$menu->id." ".$menu->nameTH."'></a><br><br>";
                             echo "<div class='logoType'></div>";
-                            echo "<div class='nameMenu'>".$menu->nameTH."<br>";
-                            echo $menu->nameJP."<br><br></div>";
+                            echo "<a href='' class='linkMenu'><div class='nameMenu' id='nameMenu$i' onmouseover='changeMenuName($i, \"in\")' onmouseout='changeMenuName($i, \"out\")'>".$menu->nameTH."<br>";
+                            echo "<div class='nameMenuJP' id='nameMenuJP$i'>".$menu->nameJP."<br><br></div></div></a>";
                             echo "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ ".$menu->price."</b>&nbsp;&nbsp;";
                             echo "<button class='cartBt' onclick='add(".$menu->id.")'><img src='icon/addcart.PNG' width='70%'></button></div></div>";
                             echo "</div>";
