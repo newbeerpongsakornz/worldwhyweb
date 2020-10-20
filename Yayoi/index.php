@@ -122,13 +122,13 @@
                 {
                     if ($i == 0)
                     {
-                        echo "<div class='menuBox select'><a href='menu/".$nameEN[$i].".html' alt='".($i+1)."' class='menuText select' onmouseover='changeColor(this)' onmouseout='defaultColor(this)'>";
+                        echo "<div class='menuBox select'><a href='menu/".$nameEN[$i].".php' alt='".($i+1)."' class='menuText select' onmouseover='changeColor(this)' onmouseout='defaultColor(this)'>";
                         echo "<img src='icon/".($i+1)."1.PNG' width='40px' height='40px'><br><br>";
                         echo $nameTH[$i]."</a></div>";
                     }
                     else
                     {
-                        echo "<div class='menuBox'><a href='menu/".$nameEN[$i].".html' alt='".($i+1)."' class='menuText' onmouseover='changeColor(this)' onmouseout='defaultColor(this)'>";
+                        echo "<div class='menuBox'><a href='menu/".$nameEN[$i].".php' alt='".($i+1)."' class='menuText' onmouseover='changeColor(this)' onmouseout='defaultColor(this)'>";
                         echo "<img src='icon/".($i+1).".PNG' width='40px' height='40px'><br><br>";
                         echo $nameTH[$i]."</a></div>";
                     }
