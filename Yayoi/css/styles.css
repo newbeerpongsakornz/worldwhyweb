@@ -272,6 +272,11 @@ footer{
 .cartBt:hover{
     background-color: #ee66a5;
 }
+.seemore{
+    width: 130px;
+    font-size: large;
+    color: white;
+}
 
 .plusAdd, .minusAdd{
     width: 30px;

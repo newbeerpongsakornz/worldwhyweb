@@ -156,8 +156,32 @@
                             echo "<button class='cartBt' onclick='add(".$menu->id.")'><img src='icon/addcart.PNG' width='70%'></button></div></div>";
                             echo "</div>";
                         }
-                    ?>
+                    ?>                 
                 </div>
+                <div class=" p-4 pb-4 m-3">
+                    <button class="cartBt seemore"><a href="menu/promoFood.php"></a><b>ดูทั้งหมด</b></button> <br><br>
+                </div>
+                    <hr class="my-4"><br>
+                <div><img src="icon/promo.PNG" width="50px" class="pb-3 mr-1">
+                <b class="headBody">โปรโมชั่น</b>
+            </div><br>
+            <div id="menuPromoIndex" class="row">
+                    <?php
+                        $url = "json/promoFoodIndex.json";
+                        $res = file_get_contents($url);
+                        $data = json_decode($res);
+
+                        for ($i = 0; $i < 4; $i++)
+                        {
+                            $menu = $data[$i];
+                            echo "<div class='menu col-6'>";
+                            echo "<a href=''><img src='".$menu->img."' width='85%' title='".$menu->id."'></a><br><br>";
+                            echo "</div>";
+                        }
+                    ?>                 
+                </div>
+                <div class="pb-4 m-3">
+                    <button class="cartBt seemore"><a href="menu/morepromo.php"></a><b>ดูทั้งหมด</b></button> <br><br></div>
             </div>
             <!-- <div class="cart col-3 ">
                 <div class="card" style="width: 100%;">
