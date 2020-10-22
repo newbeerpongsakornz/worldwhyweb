@@ -143,10 +143,10 @@
 
     <footer class="text-center">
         <div class="container">
-            <a href="">
+            <a href="../index.php">
                 <img width="200px" src="https://yayoirestaurants.com/frontend/assets/images/logo.svg" alt="Yayoi Restaurant - เสิร์ฟร้อน อร่อยเร็ว">
             </a><br><br>
-            <img width="79px" src="https://yayoirestaurants.com/frontend/assets/images/icon/delivery_icon.svg">
+            <img id="aniDelivery" width="79px" src="https://yayoirestaurants.com/frontend/assets/images/icon/delivery_icon.svg">
             <div id="footerMenu">
                 <div class="FMenu"><a href="../help/promo.php">โปรโมชั่น</a></div>
                 <div class="FMenu"><a href="../help/branch.php">สาขายาโยอิ</a></div>
@@ -167,7 +167,7 @@
         </div><br>
         <div id="credit">
             <div style="transform: translateY(10px);">
-                <img width="100%" src="https://yayoirestaurants.com/frontend/assets/images/bg_footer_bottom.png?c3d6b62">
+                <img  width="100%" src="https://yayoirestaurants.com/frontend/assets/images/bg_footer_bottom.png?c3d6b62">
             </div>
             <div id="creditD">© 2557-2563 บริษัท เอ็มเค อินเตอร์ฟู้ด</div>
         </div>

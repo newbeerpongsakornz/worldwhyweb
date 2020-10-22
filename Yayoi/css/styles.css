@@ -204,6 +204,22 @@ footer{
     color: white;
     text-align: center;
 }
+#aniDelivery{
+    animation: aniDeli 3s infinite;
+    animation: aniDeliMove 0.3s infinite;
+}
+
+@keyframes aniDeli{
+    0%{transform: translateX(0);}
+    20%{transform: translateX(20px);}
+    70%{transform: translateX(20px);}
+    100%{transform: translateX(0);}
+
+}
+@keyframes aniDeliMove{
+    0% {transform: translateY(0);}
+    100% {transform: translateY(1px);}
+}
 
 /* Other */
 
