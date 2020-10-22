@@ -167,6 +167,35 @@
     text-decoration: none!important;
 }
 
+#foodType{
+    background-color: #f6f6f6;
+    padding: 8px;
+    margin-bottom: 3rem;
+    border-radius: 8px;
+}
+
+.typeBox{
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    color: #777;
+    padding: 12px 5px;
+    margin: 0 8px;
+    display: inline-block;
+    text-decoration: none;
+    border: 0px!important;
+    cursor: pointer;
+}
+
+.typeBox img{
+    margin-bottom: 10px;
+}
+
+.logoTypeBox{
+    margin: 0px .5rem;
+    display: inline-block;
+}
+
 /* Footer */
 
 footer{
@@ -205,10 +234,12 @@ footer{
     text-align: center;
 }
 #aniDelivery{
-    animation: aniDeli 3s infinite;
     animation: aniDeliMove 0.3s infinite;
+    margin-bottom: 25px;
 }
-
+#aniDelivery > img{
+    animation: aniDeli 3s infinite;
+}
 @keyframes aniDeli{
     0%{transform: translateX(0);}
     20%{transform: translateX(20px);}

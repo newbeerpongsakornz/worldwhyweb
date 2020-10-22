@@ -59,7 +59,7 @@
                                 </div>
                             </div>
                             <div class="headMenuBox" onmouseover="changeIconDer('over')" onmouseout="changeIconDer('out')">
-                                <button class="btn font-weight-bold orderFoodBt"><img id='deliveryIcon' src="../icon/delivery.PNG" height="21px"> สั่งอาหารทันที</button>
+                                <button onclick="window.location.href='promoFood.php'" class="btn font-weight-bold orderFoodBt"><img id='deliveryIcon' src="../icon/delivery.PNG" height="21px"> สั่งอาหารทันที</button>
                             </div>
                             <div class="headMenuBox" onmouseover="changeIconBasket('over')" onmouseout="changeIconBasket('out')">
                                 <a class="headMenu" href=""><img id='BasketIcon' src="../icon/busket.PNG" width="30px"></a>
@@ -71,13 +71,14 @@
         </div>
     </header>
     <!-- End Header -->
-
+    <!-- Banner -->
+    <img src="https://yayoirestaurants.com/mainbanners/3880_Cart.jpg" width="100%">
     <!-- Menu Bar -->
     <br><br>
     <div class="container text-center">
-        <br><br><div>
+        <div>
             <img src="../icon/like.PNG" width="40px">
-            <b class="headBody">เมนูยอดนิยม</b>
+            <b class="headBody">เมนูยาโยอิ</b>
         </div>
         <div class="menuBar" id="menuBar">
             <?php
@@ -110,7 +111,9 @@
             <a href="../index.php">
                 <img width="200px" src="https://yayoirestaurants.com/frontend/assets/images/logo.svg" alt="Yayoi Restaurant - เสิร์ฟร้อน อร่อยเร็ว">
             </a><br><br>
-            <img id="aniDelivery" width="79px" src="https://yayoirestaurants.com/frontend/assets/images/icon/delivery_icon.svg">
+            <div id="aniDelivery">
+                <img width="79px" src="https://yayoirestaurants.com/frontend/assets/images/icon/delivery_icon.svg">
+            </div>
             <div id="footerMenu">
                 <div class="FMenu"><a href="../help/promo.php">โปรโมชั่น</a></div>
                 <div class="FMenu"><a href="../help/branch.php">สาขายาโยอิ</a></div>

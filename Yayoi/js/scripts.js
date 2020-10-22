@@ -1,18 +1,3 @@
-// var data;
-
-// let requestURL = 'json/promoFood.json'; 
-// let request = new XMLHttpRequest(); 
-// request.onreadystatechange = function () { 
-//     if (request.readyState == 4 && request.status == 200) {             
-//         dataReportStatus(JSON.parse(request.responseText));            
-//     } 
-// }; 
-// request.open("GET", requestURL, true); 
-// request.send();
-// function dataReportStatus(dataURL) { 
-//     data = dataURL;
-// }
-
 // var totalPrice = 0;
 // var numMenu = 0;
 
@@ -92,4 +77,55 @@ function changeIconBasket(cmd){
     {
         item.src = "../icon/busket.PNG";
     }
+}
+
+function changeTypeIcon(itemName, cmd){
+    var item1 = document.getElementById(itemName+"Type");
+    var item2 = document.getElementById(itemName+"Img");
+    if (cmd == "over")
+    {
+        item1.style.color = "#eb7aae";
+        item2.src = "../icon/"+itemName+"1.PNG";
+    }
+    else
+    {
+        item1.style.color = "#777";
+        item2.src = "../icon/"+itemName+".PNG";
+    }
+}
+
+function findData(page){
+    let requestURL = "../json/"+page+".json"; 
+    let request = new XMLHttpRequest(); 
+    request.onreadystatechange = function () { 
+        if (request.readyState == 4 && request.status == 200) {             
+            dataReportStatus(JSON.parse(request.responseText));            
+        } 
+    }; 
+    request.open("GET", requestURL, true); 
+    request.send();
+    function dataReportStatus(dataURL) { 
+        return dataURL;
+    }
+}
+
+function changeMenuType(page, type){
+    var data = findData(page);
+    var htmlText = "";
+    for (i = 0; i < data.length; i++)
+    {
+        var menu = data[i];
+        if (type == "all" || menu.index(type) != -1)
+        {
+            htmlText += "<div class='menu col-4 p-0'>";
+            htmlText += "<a href=''><img src='"+menu.img+"' width='85%' title='"+menu.id+" "+menu.nameTH+"'></a><br><br>";
+            htmlText += "<div class='logoType'></div>";
+            htmlText += "<a href='' class='linkMenu'><div class='nameMenu' id='nameMenu$i' onmouseover='changeMenuName($i, \"over\")' onmouseout='changeMenuName($i, \"out\")'>"+menu.nameTH+"<br>";
+            htmlText += "<div class='nameMenuJP' id='nameMenuJP$i'>"+menu.nameJP+"<br><br></div></div></a>";
+            htmlText += "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ "+menu.price+"</b>&nbsp;&nbsp;";
+            htmlText += "<button class='cartBt' onclick='add("+menu.id+")'><img src='../icon/addcart.PNG' width='70%'></button></div></div>";
+            htmlText += "</div>";
+        }
+    }
+    document.getElementById("menuPromo") = htmlText;
 }

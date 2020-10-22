@@ -33,7 +33,7 @@
         "nameJP":"たこ焼き",
         "price": "129",
         "recom":"false",
-        "type": [""]
+        "type": []
     },
     {
         "id":"AP001",
@@ -42,7 +42,7 @@
         "nameJP":"餃子",
         "price": "79",
         "recom":"false",
-        "type": [""]
+        "type": []
     },
     {
         "id":"AP002",
@@ -69,7 +69,7 @@
         "nameJP":"イカのガーリックから揚げ",
         "price": "149",
         "recom":"false",
-        "type": [""]
+        "type": []
     },
     {
         "id":"AP009",
@@ -78,7 +78,7 @@
         "nameJP":"お好み焼き",
         "price": "160",
         "recom":"false",
-        "type": [""]
+        "type": []
     },
     {
         "id":"AP020",
@@ -123,7 +123,7 @@
         "nameJP":"天ぷら盛合せ",
         "price": "225",
         "recom":"false",
-        "type": ["fish, shrimp"]
+        "type": ["fish", "shrimp"]
     },
     {
         "id":"AP015",
@@ -141,7 +141,7 @@
         "nameJP":"エリンギバター",
         "price": "79",
         "recom":"false",
-        "type": [""]
+        "type": []
     },
     {
         "id":"AP013",
@@ -150,7 +150,7 @@
         "nameJP":"えのきバター",
         "price": "80",
         "recom":"false",
-        "type": [""]
+        "type": []
     },
     {
         "id":"AP001",
@@ -168,6 +168,6 @@
         "nameJP":"ポテトコロッケ",
         "price": "90",
         "recom":"false",
-        "type": [""]
+        "type": []
     }
 ]

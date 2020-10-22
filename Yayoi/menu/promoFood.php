@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Head ทุกอันต้องมี -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
@@ -55,7 +54,7 @@
                                 </div>
                             </div>
                             <div class="headMenuBox" onmouseover="changeIconDer('over')" onmouseout="changeIconDer('out')">
-                                <button class="btn font-weight-bold orderFoodBt"><img id='deliveryIcon' src="../icon/delivery.PNG" height="21px"> สั่งอาหารทันที</button>
+                                <button onclick="window.location.href='promoFood.php'" class="btn font-weight-bold orderFoodBt"><img id='deliveryIcon' src="../icon/delivery.PNG" height="21px"> สั่งอาหารทันที</button>
                             </div>
                             <div class="headMenuBox" onmouseover="changeIconBasket('over')" onmouseout="changeIconBasket('out')">
                                 <a class="headMenu" href=""><img id='BasketIcon' src="../icon/busket.PNG" width="30px"></a>
@@ -66,12 +65,12 @@
             </div>
         </div>
     </header>
-
+    <img src="https://yayoirestaurants.com/mainbanners/3880_Cart.jpg" width="100%">
     <br><br>
     <div class="container text-center">
         <div>
             <img src="../icon/like.PNG" width="40px">
-            <b class="headBody">เมนูยอดนิยม</b>
+            <b class="headBody">เมนูยาโยอิ</b>
         </div>
         <div class="menuBar" id="menuBar">
             <?php
@@ -109,7 +108,7 @@
                             echo "<div class='menu col-4 p-0'>";
                             echo "<a href=''><img src='".$menu->img."' width='85%' title='".$menu->id." ".$menu->nameTH."'></a><br><br>";
                             echo "<div class='logoType'></div>";
-                            echo "<a href='' class='linkMenu'><div class='nameMenu' id='nameMenu$i' onmouseover='changeMenuName($i, \"in\")' onmouseout='changeMenuName($i, \"out\")'>".$menu->nameTH."<br>";
+                            echo "<a href='' class='linkMenu'><div class='nameMenu' id='nameMenu$i' onmouseover='changeMenuName($i, \"over\")' onmouseout='changeMenuName($i, \"out\")'>".$menu->nameTH."<br>";
                             echo "<div class='nameMenuJP' id='nameMenuJP$i'>".$menu->nameJP."<br><br></div></div></a>";
                             echo "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ ".$menu->price."</b>&nbsp;&nbsp;";
                             echo "<button class='cartBt' onclick='add(".$menu->id.")'><img src='../icon/addcart.PNG' width='70%'></button></div></div>";
@@ -146,7 +145,9 @@
             <a href="../index.php">
                 <img width="200px" src="https://yayoirestaurants.com/frontend/assets/images/logo.svg" alt="Yayoi Restaurant - เสิร์ฟร้อน อร่อยเร็ว">
             </a><br><br>
-            <img id="aniDelivery" width="79px" src="https://yayoirestaurants.com/frontend/assets/images/icon/delivery_icon.svg">
+            <div id="aniDelivery">
+                <img width="79px" src="https://yayoirestaurants.com/frontend/assets/images/icon/delivery_icon.svg">
+            </div>
             <div id="footerMenu">
                 <div class="FMenu"><a href="../help/promo.php">โปรโมชั่น</a></div>
                 <div class="FMenu"><a href="../help/branch.php">สาขายาโยอิ</a></div>

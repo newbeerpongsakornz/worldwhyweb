@@ -203,7 +203,9 @@
             <a href="index.php">
                 <img width="200px" src="https://yayoirestaurants.com/frontend/assets/images/logo.svg" alt="Yayoi Restaurant - เสิร์ฟร้อน อร่อยเร็ว">
             </a><br><br>
-            <img id="aniDelivery" width="79px" src="https://yayoirestaurants.com/frontend/assets/images/icon/delivery_icon.svg">
+            <div id="aniDelivery">
+                <img width="79px" src="https://yayoirestaurants.com/frontend/assets/images/icon/delivery_icon.svg">
+            </div>
             <div id="footerMenu">
                 <div class="FMenu"><a href="help/promo.php">โปรโมชั่น</a></div>
                 <div class="FMenu"><a href="help/branch.php">สาขายาโยอิ</a></div>
