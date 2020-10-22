@@ -72,38 +72,6 @@
     </header>
     <!-- End Header -->
 
-    <!-- Menu Bar -->
-    <br><br>
-    <div class="container text-center">
-        <br><br><div>
-            <img src="../icon/like.PNG" width="40px">
-            <b class="headBody">เมนูยอดนิยม</b>
-        </div>
-        <div class="menuBar" id="menuBar">
-            <?php
-                $nameEN = ["promoFood", "freeFood", "setFood", "donburi", "bento", "ramen", "sideDish", "drink"];
-                $nameTH = ["โปรโมชั่น", "ของทานเล่น", "เซ็ต", "ดงบุริ", "เบนโตะ", "ราเม็ง", "เครื่องเคียง", "เครื่องดื่ม"];
-                for ($i = 0; $i < sizeOf($nameTH); $i++)
-                {
-                    if ($i == 0)
-                    {
-                        echo "<a href='".$nameEN[$i].".php'><div class='menuBox menuSelect'>";
-                        echo "<img src='../icon/".($i+1)."1.PNG' width='40px' height='40px'><br><br>";
-                        echo $nameTH[$i]."</div></a>";
-                    }
-                    else
-                    {
-                        echo "<a href='".$nameEN[$i].".php' class='menuText'><div class='menuBox' onmouseover='changeMenuColor(".($i+1).", \"over\")' onmouseout='changeMenuColor(".($i+1).", \"out\")'>";
-                        echo "<img id='imgMenuBox".($i+1)."' src='../icon/".($i+1).".PNG' width='40px' height='40px'><br><br>";
-                        echo $nameTH[$i]."</div></a>";
-                    }
-                }
-            ?>
-        </div>
-    </div>
-    <!-- End Menu Bar -->
-
-
     <!-- Footer -->
     <footer class="text-center">
         <div class="container">
@@ -112,13 +80,13 @@
             </a><br><br>
             <img width="79px" src="https://yayoirestaurants.com/frontend/assets/images/icon/delivery_icon.svg">
             <div id="footerMenu">
-                <div class="FMenu"><a href="../help/promo.php">โปรโมชั่น</a></div>
-                <div class="FMenu"><a href="../help/branch.php">สาขายาโยอิ</a></div>
-                <div class="FMenu"><a href="../help/about.php">เกี่ยวกับยาโยอิ</a></div>
-                <div class="FMenu"><a href="../help/contact.php">ติดต่อเรา</a></div>
-                <div class="FMenu"><a href="../help/sugguest.php">แนะนำติชมการให้บริการ</a></div>
-                <div class="FMenu"><a href="../help/condition.php">เงื่อนไขการให้บริการ</a></div>
-                <div class="FMenu"><a href="../help/policy.php">นโยบายความเป็นส่วนตัว</a></div>
+                <div class="FMenu"><a href="promo.php">โปรโมชั่น</a></div>
+                <div class="FMenu"><a href="branch.php">สาขายาโยอิ</a></div>
+                <div class="FMenu"><a href="about.php">เกี่ยวกับยาโยอิ</a></div>
+                <div class="FMenu"><a href="contact.php">ติดต่อเรา</a></div>
+                <div class="FMenu"><a href="sugguest.php">แนะนำติชมการให้บริการ</a></div>
+                <div class="FMenu"><a href="condition.php">เงื่อนไขการให้บริการ</a></div>
+                <div class="FMenu"><a href="policy.php">นโยบายความเป็นส่วนตัว</a></div>
             </div><br>
             <div id="contact">
                 <b>ติดตามเราที่นี่</b><br><br>

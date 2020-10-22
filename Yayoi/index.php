@@ -27,17 +27,17 @@
                     <div class="col-md-4">
                         <div class="row justify-content-start">
                             <div class="col-md-8">
-                                <div class="toppic p-3 shadow-lg logoYayoi" style="z-index: 1;">
+                                <a href="index.php"><div class="toppic p-3 shadow-lg logoYayoi" style="z-index: 1;">
                                     <img src="https://yayoirestaurants.com/frontend/assets/images/logo.svg" alt="Yayoi Restaurant - เสิร์ฟร้อน อร่อยเร็ว" width="100%">
-                                </div>
+                                </div></a>
                             </div>
-                            <div class="col-md-4 font-weight-bold"><a class="headMenu" href="" class="float-right">เมนูยาโยอิ</a></div>
+                            <div class="col-md-4 font-weight-bold"><a class="headMenu" href="menu/promoFood.php" class="float-right">เมนูยาโยอิ</a></div>
                         </div>
                     </div>
                     <div class="col-md-8">
                         <div class="row justify-content-end">
                             <div class="headMenuBox text-center">
-                                <a class="headMenu" href="" class="">เข้าระบบ</a>
+                                <a class="headMenu" href="">เข้าระบบ</a>
                             </div> |
                             <div class="headMenuBox">
                                 <a class="headMenu" href="">สมัครสมาชิก</a>
@@ -55,11 +55,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="headMenuBox">
-                                <button class="btn font-weight-bold orderFoodBt"><img src="icon/delivery.PNG" height="21px"> สั่งอาหารทันที</button>
+                            <div class="headMenuBox" onmouseover="changeIconDer('over')" onmouseout="changeIconDer('out')">
+                                <button class="btn font-weight-bold orderFoodBt"><img id='deliveryIcon' src="icon/delivery.PNG" height="21px"> สั่งอาหารทันที</button>
                             </div>
-                            <div class="headMenuBox">
-                                <a class="headMenu" href=""><img src="icon/busket.PNG" width="30px"></a>
+                            <div class="headMenuBox" onmouseover="changeIconBasket('over')" onmouseout="changeIconBasket('out')">
+                                <a class="headMenu" href=""><img id='BasketIcon' src="icon/busket.PNG" width="30px"></a>
                             </div>
                         </div>
                     </div>
@@ -105,9 +105,10 @@
             $htmlText .= "</div>";
             echo $htmlText;
         ?>
-      </div><br><br>
+      </div>
 
     <!-- Body -->
+    <br><br>
     <div class="container text-center">
         <div>
             <img src="icon/like.PNG" width="40px">
@@ -121,13 +122,13 @@
                 {
                     if ($i == 0)
                     {
-                        echo "<div class='menuBox menuSelect'>";
+                        echo "<a href='menu/".$nameEN[$i].".php'><div class='menuBox menuSelect'>";
                         echo "<img src='icon/".($i+1)."1.PNG' width='40px' height='40px'><br><br>";
-                        echo $nameTH[$i]."</div>";
+                        echo $nameTH[$i]."</div></a>";
                     }
                     else
                     {
-                        echo "<a href='menu/".$nameEN[$i].".php' class='menuText'><div class='menuBox' onmouseover='changeMenuColor(".($i+1).", \"in\")' onmouseout='changeMenuColor(".($i+1).", \"out\")'>";
+                        echo "<a href='menu/".$nameEN[$i].".php' class='menuText'><div class='menuBox' onmouseover='changeMenuColor(".($i+1).", \"over\")' onmouseout='changeMenuColor(".($i+1).", \"out\")'>";
                         echo "<img id='imgMenuBox".($i+1)."' src='icon/".($i+1).".PNG' width='40px' height='40px'><br><br>";
                         echo $nameTH[$i]."</div></a>";
                     }
@@ -149,7 +150,7 @@
                             echo "<div class='menu col-4'>";
                             echo "<a href=''><img src='".$menu->img."' width='85%' title='".$menu->id." ".$menu->nameTH."'></a><br><br>";
                             echo "<div class='logoType'></div>";
-                            echo "<a href='' class='linkMenu'><div class='nameMenu' id='nameMenu$i' onmouseover='changeMenuName($i, \"in\")' onmouseout='changeMenuName($i, \"out\")'>".$menu->nameTH."<br>";
+                            echo "<a href='' class='linkMenu'><div class='nameMenu' id='nameMenu$i' onmouseover='changeMenuName($i, \"over\")' onmouseout='changeMenuName($i, \"out\")'>".$menu->nameTH."<br>";
                             echo "<div class='nameMenuJP' id='nameMenuJP$i'>".$menu->nameJP."<br><br></div></div></a>";
                             echo "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ ".$menu->price."</b>&nbsp;&nbsp;";
                             echo "<button class='cartBt' onclick='add(".$menu->id.")'><img src='icon/addcart.PNG' width='70%'></button></div></div>";
@@ -204,13 +205,13 @@
             </a><br><br>
             <img width="79px" src="https://yayoirestaurants.com/frontend/assets/images/icon/delivery_icon.svg">
             <div id="footerMenu">
-                <div class="FMenu"><a href="">โปรโมชั่น</a></div>
-                <div class="FMenu"><a href="">สาขายาโยอิ</a></div>
-                <div class="FMenu"><a href="">เกี่ยวกับยาโยอิ</a></div>
-                <div class="FMenu"><a href="">ติดต่อเรา</a></div>
-                <div class="FMenu"><a href="">แนะนำติชมการให้บริการ</a></div>
-                <div class="FMenu"><a href="">เงื่อนไขการให้บริการ</a></div>
-                <div class="FMenu"><a href="">นโยบายความเป็นส่วนตัว</a></div>
+                <div class="FMenu"><a href="help/promo.php">โปรโมชั่น</a></div>
+                <div class="FMenu"><a href="help/branch.php">สาขายาโยอิ</a></div>
+                <div class="FMenu"><a href="help/about.php">เกี่ยวกับยาโยอิ</a></div>
+                <div class="FMenu"><a href="help/contact.php">ติดต่อเรา</a></div>
+                <div class="FMenu"><a href="help/sugguest.php">แนะนำติชมการให้บริการ</a></div>
+                <div class="FMenu"><a href="help/condition.php">เงื่อนไขการให้บริการ</a></div>
+                <div class="FMenu"><a href="help/policy.php">นโยบายความเป็นส่วนตัว</a></div>
             </div><br>
             <div id="contact">
                 <b>ติดตามเราที่นี่</b><br><br>

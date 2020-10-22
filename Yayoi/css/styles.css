@@ -114,7 +114,8 @@
     transform: translateX(-10%);
 }
 
-/* Menu */
+/* Menu */  
+
 .menuBar{
     margin: 40px 0px;
     white-space: nowrap;
