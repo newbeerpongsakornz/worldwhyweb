@@ -109,23 +109,37 @@ function findData(page){
     }
 }
 
-function changeMenuType(page, type){
-    var data = findData(page);
-    var htmlText = "";
-    for (i = 0; i < data.length; i++)
-    {
-        var menu = data[i];
-        if (type == "all" || menu.index(type) != -1)
+function changeMenuType(page, typeFood){
+    let requestURL = "../json/"+page+".json"; 
+    let request = new XMLHttpRequest(); 
+    request.onreadystatechange = function () { 
+        if (request.readyState == 4 && request.status == 200) {             
+            dataReportStatus(JSON.parse(request.responseText));            
+        } 
+    }; 
+    request.open("GET", requestURL, true); 
+    request.send();
+    function dataReportStatus(data) { 
+        var htmlText = "";
+        for (i = 0; i < data.length; i++)
         {
-            htmlText += "<div class='menu col-4 p-0'>";
-            htmlText += "<a href=''><img src='"+menu.img+"' width='85%' title='"+menu.id+" "+menu.nameTH+"'></a><br><br>";
-            htmlText += "<div class='logoType'></div>";
-            htmlText += "<a href='' class='linkMenu'><div class='nameMenu' id='nameMenu$i' onmouseover='changeMenuName($i, \"over\")' onmouseout='changeMenuName($i, \"out\")'>"+menu.nameTH+"<br>";
-            htmlText += "<div class='nameMenuJP' id='nameMenuJP$i'>"+menu.nameJP+"<br><br></div></div></a>";
-            htmlText += "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ "+menu.price+"</b>&nbsp;&nbsp;";
-            htmlText += "<button class='cartBt' onclick='add("+menu.id+")'><img src='../icon/addcart.PNG' width='70%'></button></div></div>";
-            htmlText += "</div>";
+            var menu = data[i];
+            if (typeFood == "all" || menu.type.indexOf(typeFood) != -1)
+            {
+                htmlText += "<div class='menu col-4 p-0'>";
+                htmlText += "<a href=''><img src='"+menu.img+"' width='85%' title='"+menu.id+" "+menu.nameTH+"'></a><br><br>";
+                htmlText += "<div class='logoType'>";
+                for (j = 0; j < menu.type.length; j++)
+                {
+                    htmlText += "<div class='logoTypeBox'><img src='../icon/"+menu.type[j]+".PNG' height='26px'></div>";
+                }
+                htmlText += "</div><a href='' class='linkMenu'><div class='nameMenu' id='nameMenu"+i+"' onmouseover='changeMenuName("+i+", \"over\")' onmouseout='changeMenuName("+i+", \"out\")'>"+menu.nameTH+"<br>";
+                htmlText += "<div class='nameMenuJP' id='nameMenuJP"+i+"'>"+menu.nameJP+"<br><br></div></div></a>";
+                htmlText += "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ "+menu.price+"</b>&nbsp;&nbsp;";
+                htmlText += "<button class='cartBt' onclick='add("+menu.id+")'><img src='../icon/addcart.PNG' width='70%'></button>";
+                htmlText += "</div></div></div>";
+            }
         }
+        document.getElementById("menuPromo").innerHTML = htmlText;
     }
-    document.getElementById("menuPromo") = htmlText;
 }
