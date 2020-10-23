@@ -16,7 +16,6 @@
     
     <title>Yayoi Restaurant : Modern Japanese Restaurant in Thailand - ยาโยอิ เซ็ตอร่อยของทุกคน</title>
 </head>
-<!-- onload="load()" -->
 <body class="notoFont" >
 
     <!-- Head -->
@@ -116,8 +115,8 @@
         </div>
         <div class="menuBar" id="menuBar">
             <?php
-                $nameEN = ["promoFood", "freeFood", "setFood", "donburi", "bento", "ramen", "sideDish", "drink"];
-                $nameTH = ["โปรโมชั่น", "ของทานเล่น", "เซ็ต", "ดงบุริ", "เบนโตะ", "ราเม็ง", "เครื่องเคียง", "เครื่องดื่ม"];
+                $nameEN = ["promoFood", "freeFood", "setFood", "donburi", "bento", "ramen", "sideDish", "drink", "dessert"];
+                $nameTH = ["โปรโมชั่น", "ของทานเล่น", "เซ็ต", "ดงบุริ", "เบนโตะ", "ราเม็ง", "เครื่องเคียง", "เครื่องดื่ม", "ของหวาน"];
                 for ($i = 0; $i < sizeOf($nameTH); $i++)
                 {
                     if ($i == 0)
@@ -183,25 +182,6 @@
                 <div class="pb-4 m-3">
                     <button class="seemoreBt seemore"><a href="menu/morepromo.php"></a><b>ดูทั้งหมด</b></button> <br><br></div>
             </div>
-            <!-- <div class="cart col-3 ">
-                <div class="card" style="width: 100%;">
-                    <div class="card-header card-bd font-weight-bold">
-                      รายการอาหารทั้งหมด
-                    </div>
-                    <div class="card-bd">
-                        <div id="menuChoose">
-                            
-                        </div>
-                        <div id="totalMenu">
-                            ราคาอาหารทั้งหมด <br>
-                            (ยังไม่รวมค่าจัดส่ง)
-                        </div>
-                        
-                        
-                        <div id="noChoose">ไม่พบสินค้าในตะกร้า</div>
-                    </div>
-                </div>
-            </div> -->
         </div>
         <!-- <div>
             <button class='plusAdd' onmouseover="changeBt()">
