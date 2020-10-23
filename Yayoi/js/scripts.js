@@ -1,30 +1,41 @@
-// var totalPrice = 0;
-// var numMenu = 0;
+var totalPrice = 0;
+var numMenu = 0;
 
-// function add(menuNo){
-//     if (document.getElementById("noChoose").innerText != "")
-//     {
-//         document.getElementById("noChoose").innerText = "";
-//         document.getElementById("totalMenu").id = "totalMenuActive";
-//     }
-    
-//     var htmlText = "";
-//     htmlText += "<div>";
-//     for (i = 0; i < data.length; i++)
-//     {
-//         var menu = data[i];
-//         if (menu.id == menuNo)
-//         {
-//             numMenu++;
+function add(menuNo, page){
+    let requestURL = "../json/"+page+".json"; 
+    let request = new XMLHttpRequest(); 
+    request.onreadystatechange = function () { 
+        if (request.readyState == 4 && request.status == 200) {             
+            dataReportStatus(JSON.parse(request.responseText));            
+        } 
+    }; 
+    request.open("GET", requestURL, true); 
+    request.send();
+    function dataReportStatus(data) {
+        if (document.getElementById("noChoose").innerText != "")
+        {
+            document.getElementById("noChoose").innerText = "";
+            document.getElementById("totalMenu").id = "totalMenuActive";
+        }
+        
+        var htmlText = "";
+        htmlText += "<div>";
+        for (i = 0; i < data.length; i++)
+        {
+            var menu = data[i];
+            if (menu.id == menuNo)
+            {
+                numMenu++;
 
-//             totalPrice += parseInt(menu.price);
-//             htmlText += "<div style='width:100%; text-align: left'>"+menu.nameTH+"</div>";
-//             htmlText += "<div style='width:100%; text-align: right'>฿ "+menu.price+"</div>";
-//         }
-//     }
-//     htmlText += "</div>";
-//     document.getElementById("menuChoose").innerHTML += htmlText;
-// }
+                totalPrice += parseInt(menu.price);
+                htmlText += "<div style='width:100%; text-align: left'>"+menu.nameTH+"</div>";
+                htmlText += "<div style='width:100%; text-align: right'>฿ "+menu.price+"</div>";
+            }
+        }
+        htmlText += "</div>";
+        document.getElementById("menuChoose").innerHTML += htmlText;
+    }
+}
 
 
 
