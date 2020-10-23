@@ -89,13 +89,13 @@
                     if ($i == 0)
                     {
                         echo "<a href='".$nameEN[$i].".php'><div class='menuBox menuSelect'>";
-                        echo "<img src='../icon/".($i+1)."1.PNG' width='40px' height='40px'><br><br>";
+                        echo "<img src='../icon/".($i+1)."1.PNG' height='40px'><br><br>";
                         echo $nameTH[$i]."</div></a>";
                     }
                     else
                     {
                         echo "<a href='".$nameEN[$i].".php' class='menuText'><div class='menuBox' onmouseover='changeMenuColor(".($i+1).", \"over\")' onmouseout='changeMenuColor(".($i+1).", \"out\")'>";
-                        echo "<img id='imgMenuBox".($i+1)."' src='../icon/".($i+1).".PNG' width='40px' height='40px'><br><br>";
+                        echo "<img id='imgMenuBox".($i+1)."' src='../icon/".($i+1).".PNG'height='40px'><br><br>";
                         echo $nameTH[$i]."</div></a>";
                     }
                 }
