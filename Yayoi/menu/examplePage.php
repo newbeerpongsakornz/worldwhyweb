@@ -82,8 +82,8 @@
         </div>
         <div class="menuBar" id="menuBar">
             <?php
-                $nameEN = ["promoFood", "freeFood", "setFood", "donburi", "bento", "ramen", "sideDish", "drink"];
-                $nameTH = ["โปรโมชั่น", "ของทานเล่น", "เซ็ต", "ดงบุริ", "เบนโตะ", "ราเม็ง", "เครื่องเคียง", "เครื่องดื่ม"];
+                $nameEN = ["promoFood", "freeFood", "setFood", "donburi", "bento", "ramen", "sideDish", "drink", "dessert"];
+                $nameTH = ["โปรโมชั่น", "ของทานเล่น", "เซ็ต", "ดงบุริ", "เบนโตะ", "ราเม็ง", "เครื่องเคียง", "เครื่องดื่ม", "ของหวาน"];
                 for ($i = 0; $i < sizeOf($nameTH); $i++)
                 {
                     if ($i == 0)
