@@ -35,10 +35,10 @@
                     <div class="col-md-8">
                         <div class="row justify-content-end">
                             <div class="headMenuBox text-center">
-                                <a class="headMenu" href="">เข้าระบบ</a>
+                                <a class="headMenu" href="../login.php">เข้าระบบ</a>
                             </div> |
                             <div class="headMenuBox">
-                                <a class="headMenu" href="">สมัครสมาชิก</a>
+                                <a class="headMenu" href="../register.php">สมัครสมาชิก</a>
                             </div>|
                             <div class="headMenuBox">
                                 <div class="dropdown">
@@ -57,7 +57,7 @@
                                 <button onclick="window.location.href='promoFood.php'" class="btn font-weight-bold orderFoodBt"><img id='deliveryIcon' src="../icon/delivery.PNG" height="21px"> สั่งอาหารทันที</button>
                             </div>
                             <div class="headMenuBox" onmouseover="changeIconBasket('over')" onmouseout="changeIconBasket('out')">
-                                <a class="headMenu" href=""><img id='BasketIcon' src="../icon/busket.PNG" width="30px"></a>
+                                <a class="headMenu" href="../cart.php"><img id='BasketIcon' src="../icon/busket.PNG" width="30px"></a>
                             </div>
                         </div>
                     </div>

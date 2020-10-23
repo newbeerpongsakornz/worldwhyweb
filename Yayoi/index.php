@@ -36,10 +36,10 @@
                     <div class="col-md-8">
                         <div class="row justify-content-end">
                             <div class="headMenuBox text-center">
-                                <a class="headMenu" href="">เข้าระบบ</a>
+                                <a class="headMenu" href="login.php">เข้าระบบ</a>
                             </div> |
                             <div class="headMenuBox">
-                                <a class="headMenu" href="">สมัครสมาชิก</a>
+                                <a class="headMenu" href="register.php">สมัครสมาชิก</a>
                             </div>|
                             <div class="headMenuBox">
                                 <div class="dropdown">
