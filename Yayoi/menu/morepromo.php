@@ -66,8 +66,8 @@
         </div>
     </header>
     <br><br>
-    <div class="container">
-        <div class="text-center">
+    <div class="container-fluid">
+        <div class="text-center m-4">
             <img src="../icon/promo.PNG" width="50px" class="pb-3 mr-1">
             <b class="headBody">โปรโมชั่น</b>
         </div>
@@ -82,7 +82,7 @@
                         {
                             $menu = $data[$i];
                             echo "<div class='menu col-6'>";
-                            echo "<a href=''><img src='".$menu->img."' width='85%' title='".$menu->id."'></a><br><br>";   
+                            echo "<a href=''><img src='".$menu->img."' width='85%' title='".$menu->id."' class='text-center'></a><br><br>";   
                             echo "<div class='nameMenuJP' id='nameMenuJP$i'>".$menu->time."<br>";
                             echo "<a href='' class='linkMenu'><div class='nameMenu' id='nameMenu$i' onmouseover='changeMenuName($i, \"over\")' onmouseout='changeMenuName($i, \"out\")'>".$menu->Detail."<br><br></div></div></a>";
                             echo "</div>";

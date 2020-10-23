@@ -158,7 +158,7 @@
                     ?>                 
                 </div>
                 <div class=" p-4 pb-4 m-3">
-                    <button class="seemoreBt seemore"><a href="menu/promoFood.php"></a><b>ดูทั้งหมด</b></button> <br><br>
+                    <button onclick="window.location.href='menu/promoFood.php'" class="seemoreBt seemore"><a href="menu/promoFood.php"></a><b>ดูทั้งหมด</b></button> <br><br>
                 </div>
                     <hr class="my-4"><br>
                 <div><img src="icon/promo.PNG" width="50px" class="pb-3 mr-1">
@@ -180,7 +180,7 @@
                     ?>                 
                 </div>
                 <div class="pb-4 m-3">
-                    <button class="seemoreBt seemore"><a href="menu/morepromo.php"></a><b>ดูทั้งหมด</b></button> <br><br></div>
+                    <button onclick="window.location.href='menu/morepromo.php'" class="seemoreBt seemore"><b>ดูทั้งหมด</b></button> <br><br></div>
             </div>
         </div>
         <!-- <div>
