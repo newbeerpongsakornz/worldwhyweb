@@ -493,7 +493,7 @@
         "id":"[SETfried-prawns-and-fried-chicken|176]",
         "nameTH":"เซ็ตกุ้งชุบแป้งทอดกับไก่ทอดคาราอาเกะ",
         "nameJP":"エビフライとから揚げ",
-        "type":["shrimp, chicken"],
+        "type":["shrimp", "chicken"],
         "setType":
         [
             [
@@ -610,7 +610,7 @@
     "id":"[SETmixed-toji|185]",
     "nameTH":"เซ็ตมิกซ์โทจิ",
     "nameJP":"ミックスとじ",
-    "type":["pork, shrimp"],
+    "type":["pork", "shrimp"],
     "setType":
     [
         [
@@ -996,7 +996,7 @@
     "id":"[SETprawn-fish-and-vegetable-tempura|215]",
     "nameTH":"เซ็ตเทมปุระรวม",
     "nameJP":"天ぷら盛合せ",
-    "type":["shrimp, fish"],
+    "type":["shrimp", "fish"],
     "setType":
     [
         [
@@ -1035,7 +1035,7 @@
     "id":"[SETdeep-fried-prawn-with-sweetened-vinegar-sauce|218]",
     "nameTH":"เซ็ตกุ้งซอสสามรส",
     "nameJP":"エビの甘酢あん",
-    "type":["shrimp, fish"],
+    "type":["shrimp", "fish"],
     "setType":
     [
         [
