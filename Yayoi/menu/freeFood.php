@@ -67,7 +67,7 @@
     </header>
     <img src="https://yayoirestaurants.com/mainbanners/3880_Cart.jpg" width="100%">
     <br><br>
-    <div class="container text-center">
+    <div class="container-fluid text-center">
         <div>
             <img src="../icon/like.PNG" width="40px">
             <b class="headBody">เมนูยาโยอิ</b>
@@ -81,13 +81,13 @@
                     if ($i == 1)
                     {
                         echo "<a href='".$nameEN[$i].".php'><div class='menuBox menuSelect'>";
-                        echo "<img src='../icon/".($i+1)."1.PNG' width='40px' height='40px'><br><br>";
+                        echo "<img src='../icon/".($i+1)."1.PNG' height='40px'><br><br>";
                         echo $nameTH[$i]."</div></a>";
                     }
                     else
                     {
                         echo "<a href='".$nameEN[$i].".php' class='menuText'><div class='menuBox' onmouseover='changeMenuColor(".($i+1).", \"over\")' onmouseout='changeMenuColor(".($i+1).", \"out\")'>";
-                        echo "<img id='imgMenuBox".($i+1)."' src='../icon/".($i+1).".PNG' width='40px' height='40px'><br><br>";
+                        echo "<img id='imgMenuBox".($i+1)."' src='../icon/".($i+1).".PNG' height='40px'><br><br>";
                         echo $nameTH[$i]."</div></a>";
                     }
                 }
@@ -117,19 +117,41 @@
 
                         for ($i = 0; $i < sizeOf($data); $i++)
                         {
-                            $menu = $data[$i];
-                            echo "<div class='menu col-4 p-0'>";
-                            echo "<a href=''><img src='".$menu->img."' width='85%' title='".$menu->id." ".$menu->nameTH."'></a><br><br>";
-                            echo "<div class='logoType'>";
-                            for ($j = 0; $j < sizeof($menu->type); $j++)
+                            if ($i == 2)
                             {
-                                echo "<div class='logoTypeBox'><img src='../icon/".$menu->type[$j].".PNG' height='26px'></div>";
+                                $menu = $data[$i];
+                                echo "<div class='menu col-4 p-0'>";
+                                echo "<div class='recommend'><img src='../icon/mask.svg' style='width:130%;'><div class='rectext text-center'>แนะนำ</div></div>";
+                                echo "<a href=''><img src='".$menu->img."' width='85%' title='".$menu->id." ".$menu->nameTH."'></a><br><br>";
+                                echo "<div class='logoType'>";
+                                for ($j = 0; $j < sizeof($menu->type); $j++)
+                                {
+                                    echo "<div class='logoTypeBox'><img src='../icon/".$menu->type[$j].".PNG' height='26px'></div>";
+                                }
+                                echo "</div><a href='' class='linkMenu'><div class='nameMenu' id='nameMenu$i' onmouseover='changeMenuName($i, \"over\")' onmouseout='changeMenuName($i, \"out\")'>".$menu->nameTH."<br>";
+                                echo "<div class='nameMenuJP' id='nameMenuJP$i'>".$menu->nameJP."<br><br></div></div></a>";
+                                echo "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ ".$menu->price."</b>&nbsp;&nbsp;";
+                                echo "<button class='cartBt' onclick='add(\"".$menu->id."\", \"freeFood\")'><img src='../icon/addcart.PNG' width='70%'></button></div></div>";
+                                echo "</div>";
                             }
-                            echo "</div><a href='' class='linkMenu'><div class='nameMenu' id='nameMenu$i' onmouseover='changeMenuName($i, \"over\")' onmouseout='changeMenuName($i, \"out\")'>".$menu->nameTH."<br>";
-                            echo "<div class='nameMenuJP' id='nameMenuJP$i'>".$menu->nameJP."<br><br></div></div></a>";
-                            echo "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ ".$menu->price."</b>&nbsp;&nbsp;";
-                            echo "<button class='cartBt' onclick='add(\"".$menu->id."\", \"freeFood\")'><img src='../icon/addcart.PNG' width='70%'></button></div></div>";
-                            echo "</div>";
+                            else 
+                            {
+                                $menu = $data[$i];
+                                echo "<div class='menu col-4 p-0'>";
+                                echo "<a href=''><img src='".$menu->img."' width='85%' title='".$menu->id." ".$menu->nameTH."'></a><br><br>";
+                                echo "<div class='logoType'>";
+                                for ($j = 0; $j < sizeof($menu->type); $j++)
+                                {
+                                    echo "<div class='logoTypeBox'><img src='../icon/".$menu->type[$j].".PNG' height='26px'></div>";
+                                }
+                                echo "</div><a href='' class='linkMenu'><div class='nameMenu' id='nameMenu$i' onmouseover='changeMenuName($i, \"over\")' onmouseout='changeMenuName($i, \"out\")'>".$menu->nameTH."<br>";
+                                echo "<div class='nameMenuJP' id='nameMenuJP$i'>".$menu->nameJP."<br><br></div></div></a>";
+                                echo "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ ".$menu->price."</b>&nbsp;&nbsp;";
+                                echo "<button class='cartBt' onclick='add(\"".$menu->id."\", \"freeFood\")'><img src='../icon/addcart.PNG' width='70%'></button></div></div>";
+                                echo "</div>";
+
+                            }
+                            
                         }
                     ?>
                 </div>

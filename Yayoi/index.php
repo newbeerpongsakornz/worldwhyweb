@@ -106,7 +106,7 @@
         ?>
       </div>
 
-    <!-- Body -->
+    <!-- Body -->                           
     <br><br>
     <div class="container-fluid text-center">
         <div>
@@ -198,6 +198,7 @@
             </button>
         </div> -->
     </div>
+    
 
     
 
@@ -235,6 +236,7 @@
             <div id="creditD">© 2557-2563 บริษัท เอ็มเค อินเตอร์ฟู้ด</div>
         </div>
     </footer>
+    
     
 </body>
 </html>
