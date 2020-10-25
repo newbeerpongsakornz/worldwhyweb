@@ -78,7 +78,7 @@
                 $nameTH = ["โปรโมชั่น", "ของทานเล่น", "เซ็ต", "ดงบุริ", "เบนโตะ", "ราเม็ง", "เครื่องเคียง", "เครื่องดื่ม", "ของหวาน"];
                 for ($i = 0; $i < sizeOf($nameTH); $i++)
                 {
-                    if ($i == 1)
+                    if ($i == 2)
                     {
                         echo "<a href='".$nameEN[$i].".php'><div class='menuBox menuSelect'>";
                         echo "<img src='../icon/".($i+1)."1.PNG' height='40px'><br><br>";
@@ -98,8 +98,8 @@
                 <div id="foodType" class="text-center">
                     <?php
 
-                        $typeTH = array("ทั้งหมด", "เนื้อไก่", "เนื้อปลา", "เนื้อหมู", "เนื้อกุ้ง");
-                        $typeEN = array("all", "chicken", "fish", "pork", "shrimp");
+                        $typeTH = array("ทั้งหมด", "เนื้อวัว", "เนื้อไก่", "เนื้อปลา", "เนื้อหมู", "กุ้ง");
+                        $typeEN = array("all", "beef", "chicken", "fish", "pork", "shrimp");
                         
                         for ($i = 0; $i < sizeof($typeTH); $i++)
                         {
@@ -111,18 +111,21 @@
                 </div>
                 <div id="menuPromo" class="row">
                     <?php
-                        $url = "../json/freeFood.json";
+                        $url = "../json/setFood.json";
                         $res = file_get_contents($url);
                         $data = json_decode($res);
 
                         for ($i = 0; $i < sizeOf($data); $i++)
                         {
-                            if ($i == 2)
+                            if ($i < 15)
                             {
                                 $menu = $data[$i];
                                 echo "<div class='menu col-4 p-0'>";
-                                echo "<div class='recommend'><img src='../icon/mask.svg' style='width:130%;'><div class='rectext text-center'>แนะนำ</div></div>";
-                                echo "<a href=''><img src='".$menu->img."' width='85%' title='".$menu->id." ".$menu->nameTH."'></a><br><br>";
+                                if ($menu->recom == "true")
+                                {
+                                    echo "<div class='recommend'><img src='../icon/mask.svg' style='width:130%;'><div class='rectext text-center'>แนะนำ</div></div>";
+                                }
+                                echo "<a href=''><img src='".$menu->setType[0][0]->img."' width='85%' title='".$menu->id." ".$menu->nameTH."'></a><br><br>";
                                 echo "<div class='logoType'>";
                                 for ($j = 0; $j < sizeof($menu->type); $j++)
                                 {
@@ -130,28 +133,27 @@
                                 }
                                 echo "</div><a href='' class='linkMenu'><div class='nameMenu' id='nameMenu$i' onmouseover='changeMenuName($i, \"over\")' onmouseout='changeMenuName($i, \"out\")'>".$menu->nameTH."<br>";
                                 echo "<div class='nameMenuJP' id='nameMenuJP$i'>".$menu->nameJP."<br><br></div></div></a>";
-                                echo "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ ".$menu->price."</b>&nbsp;&nbsp;";
+                                echo "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ ".$menu->setType[0][0]->price."</b>&nbsp;&nbsp;";
                                 echo "<button class='cartBt' onclick='add(\"".$menu->id."\", \"freeFood\")'><img src='../icon/addcart.PNG' width='70%'></button></div></div>";
                                 echo "</div>";
                             }
-                            else 
+                            else if ($i == 15)
                             {
-                                $menu = $data[$i];
-                                echo "<div class='menu col-4 p-0'>";
-                                echo "<a href=''><img src='".$menu->img."' width='85%' title='".$menu->id." ".$menu->nameTH."'></a><br><br>";
-                                echo "<div class='logoType'>";
-                                for ($j = 0; $j < sizeof($menu->type); $j++)
+                                echo "<div class='pageBar'>";
+                                echo "<>";
+                                for ($j == 0; $j < (sizeof($data)/15)+1; $j++)
                                 {
-                                    echo "<div class='logoTypeBox'><img src='../icon/".$menu->type[$j].".PNG' height='26px'></div>";
+                                    if ($j == 1)
+                                    {
+                                        echo "<button class='pageNum pageSelect' id='page".($j)."'>".($j)."</button>";
+                                    }
+                                    else
+                                    {
+                                        echo "<button class='pageNum' id='page".($j)."'>".($j)."</button>";
+                                    }
                                 }
-                                echo "</div><a href='' class='linkMenu'><div class='nameMenu' id='nameMenu$i' onmouseover='changeMenuName($i, \"over\")' onmouseout='changeMenuName($i, \"out\")'>".$menu->nameTH."<br>";
-                                echo "<div class='nameMenuJP' id='nameMenuJP$i'>".$menu->nameJP."<br><br></div></div></a>";
-                                echo "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ ".$menu->price."</b>&nbsp;&nbsp;";
-                                echo "<button class='cartBt' onclick='add(\"".$menu->id."\", \"freeFood\")'><img src='../icon/addcart.PNG' width='70%'></button></div></div>";
-                                echo "</div>";
-
+                                echo "</div><br><br><br>";
                             }
-                            
                         }
                     ?>
                 </div>

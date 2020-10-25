@@ -70,7 +70,6 @@
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <?php
             $bannerImg = array(
-                "https://yayoirestaurants.com/mainbanners/3797_Desktop%201920x803px-01.jpg",
                 "https://yayoirestaurants.com/mainbanners/3464_2007-03-Tempura Overload_Desktop_1920x803.jpg",
                 "https://yayoirestaurants.com/mainbanners/5764_Yayoi_Juicy-Super-C-Booster_Web-Banner_1920-x-803-px.jpg",
                 "https://yayoirestaurants.com/mainbanners/1937__AW Yayoi-Tokyo-Trio_Web-Banner-1920-x-803-px.jpg"
@@ -180,7 +179,7 @@
                     ?>                 
                 </div>
                 <div class="pb-4 m-3">
-                    <button onclick="window.location.href='menu/morepromo.php'" class="seemoreBt seemore"><b>ดูทั้งหมด</b></button> <br><br></div>
+                    <button onclick="window.location.href='help/promo.php'" class="seemoreBt seemore"><b>ดูทั้งหมด</b></button> <br><br></div>
             </div>
         </div>
         <!-- <div>

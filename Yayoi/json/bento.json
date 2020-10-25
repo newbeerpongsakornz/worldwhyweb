@@ -6,6 +6,7 @@
         "nameTH":"ยาโยอิ ซากานะเบนโตะ",
         "nameJP":"さかな弁当",
         "price": "219",
+        "recom":"false",
         "type": ["fish"]
     },
 
@@ -15,6 +16,7 @@
         "nameTH":"ยาโยอิ ชิกกี้เบนโตะ",
         "nameJP":"チキンステーキ弁当",
         "price": "209",
+        "recom":"false",
         "type": ["chicken"]
     },
     {
@@ -23,6 +25,7 @@
         "nameTH":"ยาโยอิ ซาชิมิเดอลุกซ์ เบนโตะ",
         "nameJP":"刺身デラックス弁当",
         "price": "329",
+        "recom":"false",
         "type": ["fish","chicken"]
     }
 ]

@@ -6,6 +6,7 @@
         "nameTH":"ยาโยอิ ซากานะเบนโตะ",
         "nameJP":"さかな弁当",
         "price": "219",
+        "recom":"false",
         "type": ["fish"]
     },
     {
@@ -14,6 +15,7 @@
         "nameTH":"แซลมอนทรงเครื่อง ดงบุริ",
         "nameJP":"鮭の照り焼き丼",
         "price": "195",
+        "recom":"false",
         "type": ["fish","pork"]
     },
     {
@@ -22,6 +24,7 @@
         "nameTH":"อุนางิ ดงบุริ",
         "nameJP":"うな重",
         "price": "369",
+        "recom":"false",
         "type": ["fish"]
     },
     {
@@ -30,6 +33,7 @@
         "nameTH":"ข้าวหน้าหมูผัดเผ็ดซอสญี่ปุ่น",
         "nameJP":"辛焼き豚丼",
         "price": "145",
+        "recom":"false",
         "type": ["pork"]
     },
     {
@@ -38,6 +42,7 @@
         "nameTH":"ข้าวหน้าหมู",
         "nameJP":"豚丼",
         "price": "149",
+        "recom":"false",
         "type": ["pork"]
     },
     {
@@ -46,6 +51,7 @@
         "nameTH":"ข้าวหน้าเนื้อ",
         "nameJP":"牛丼",
         "price": "169",
+        "recom":"false",
         "type": ["beef"]
     },
     {
@@ -54,6 +60,7 @@
         "nameTH":"ข้าวราดหน้าไก่ใส่ไข่",
         "nameJP":"親子丼",
         "price": "145",
+        "recom":"false",
         "type": ["chicken"]
     },
     {
@@ -62,6 +69,7 @@
         "nameTH":"ข้าวแกงกะหรี่เนื้อชีสเบอร์เกอร์",
         "nameJP":"チーズ入りビーフメンチカツカレー",
         "price": "229",
+        "recom":"false",
         "type": ["beef"]
     },
     {
@@ -70,6 +78,7 @@
         "nameTH":"ข้าวแกงกะหรี่หมูชีสเบอร์เกอร์",
         "nameJP":"チーズ入りポークメンチカツカレー",
         "price": "209",
+        "recom":"false",
         "type": ["pork"]
     },
     {
@@ -78,6 +87,7 @@
         "nameTH":"ข้าวแกงกะหรี่ไก่ทอด",
         "nameJP":"から揚げカレー",
         "price": "189",
+        "recom":"false",
         "type": ["chicken"]
     },
     {
@@ -86,6 +96,7 @@
         "nameTH":"ข้าวแกงกะหรี่ทงคัตสึ",
         "nameJP":"とんかつカレー",
         "price": "189",
+        "recom":"false",
         "type": ["pork"]
     },
     {
@@ -94,6 +105,7 @@
         "nameTH":"หมูชาชู ดงบุริ",
         "nameJP":"チャーシュー丼",
         "price": "165",
+        "recom":"false",
         "type": ["pork"]
     },
     {
@@ -102,6 +114,7 @@
         "nameTH":"สไปซี่บูตะ ดงบุริ",
         "nameJP":"ピリ辛焼き豚丼",
         "price": "149",
+        "recom":"false",
         "type": ["pork"]
     },
     {
@@ -110,6 +123,7 @@
         "nameTH":"ปลาแพนกาเซียสดอร์รี่ทรงเครื่อง ดงบุริ",
         "nameJP":"パンガシアスドリー丼",
         "price": "159",
+        "recom":"false",
         "type": ["fish","pork"]
     },
     {
@@ -118,6 +132,7 @@
         "nameTH":"ข้าวหน้าเนื้อผัดเผ็ดซอสญี่ปุ่น",
         "nameJP":"辛焼肉丼",
         "price": "179",
+        "recom":"false",
         "type": ["beef"]
     },
     {
@@ -126,6 +141,7 @@
         "nameTH":"ข้าวราดหน้าไก่ทอดราดซอสนัมบัง",
         "nameJP":"チキン南蛮丼",
         "price": "189",
+        "recom":"false",
         "type": ["chicken"]
     }
 

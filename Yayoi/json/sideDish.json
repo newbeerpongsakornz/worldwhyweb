@@ -4,6 +4,7 @@
         "id":"SD001",
         "img":"https://yayoirestaurants.com/productimages/8712_SD001_Japanese-Rice.jpg",
         "nameTH":"ข้าวเปล่าญี่ปุ่น",
+        "recom":"false",
         "nameJP":"ご飯",
         "price": "19"
         
@@ -12,6 +13,7 @@
         "id":"SD002",
         "img":"https://yayoirestaurants.com/productimages/5914_SD002_Fire-Garlic-Rice.jpg",
         "nameTH":"ข้าวผัดกระเทียม",
+        "recom":"false",
         "nameJP":"ガーリックライス",
         "price": "49"
         
@@ -20,6 +22,7 @@
         "id":"SD010",
         "img":"https://yayoirestaurants.com/productimages/1244_SD010_Onsen-Egg.jpg",
         "nameTH":"ไข่ออนเซ็น",
+        "recom":"false",
         "nameJP":"温泉たまご",
         "price": "16"
         
@@ -28,6 +31,7 @@
         "id":"SD006",
         "img":"https://yayoirestaurants.com/productimages/5033_SD006_Salad.jpg",
         "nameTH":"สลัดผัก",
+        "recom":"false",
         "nameJP":"サラダ",
         "price": "17"
         
@@ -36,6 +40,7 @@
         "id":"SD005",
         "img":"https://yayoirestaurants.com/productimages/2754_SD005_Miso-Soup.jpg",
         "nameTH":"ซุปมิโสะญี่ปุ่น",
+        "recom":"false",
         "nameJP":"味噌汁",
         "price": "17"
        
@@ -44,6 +49,7 @@
         "id":"SD004",
         "img":"https://yayoirestaurants.com/productimages/1783_SD004_Kimchi.jpg",
         "nameTH":"กิมจิ",
+        "recom":"false",
         "nameJP":"キムチ",
         "price": "17"
         
@@ -52,6 +58,7 @@
         "id":"SD007",
         "img":"https://yayoirestaurants.com/productimages/2627_01%20-%20880%20x%20800%20Side%20order%20-%20%20(1).jpg",
         "nameTH":"ยำสาหร่าย",
+        "recom":"false",
         "nameJP":"海藻サラダ",
         "price": "62"
         

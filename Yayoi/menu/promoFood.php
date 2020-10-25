@@ -104,15 +104,23 @@
 
                         for ($i = 0; $i < sizeOf($data); $i++)
                         {
-                            $menu = $data[$i];
-                            echo "<div class='menu col-4 p-0'>";
-                            echo "<a href=''><img src='".$menu->img."' width='88%' title='".$menu->id." ".$menu->nameTH."'></a><br><br>";
-                            echo "<div class='logoType'></div>";
-                            echo "<a href='' class='linkMenu'><div class='nameMenu' id='nameMenu$i' onmouseover='changeMenuName($i, \"over\")' onmouseout='changeMenuName($i, \"out\")'>".$menu->nameTH."<br>";
-                            echo "<div class='nameMenuJP' id='nameMenuJP$i'>".$menu->nameJP."<br><br></div></div></a>";
-                            echo "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ ".$menu->price."</b>&nbsp;&nbsp;";
-                            echo "<button class='cartBt' onclick='add(\"".$menu->id."\", \"promoFood\")'><img src='../icon/addcart.PNG' width='70%'></button></div></div>";
-                            echo "</div>";
+                            if ($i < 15)
+                            {
+                                $menu = $data[$i];
+                                echo "<div class='menu col-4 p-0'>";
+                                if ($menu->recom == "true")
+                                {
+                                    echo "<div class='recommend'><img src='../icon/mask.svg' style='width:130%;'><div class='rectext text-center'>แนะนำ</div></div>";
+                                }
+                                echo "<a href=''><img src='".$menu->img."' width='88%' title='".$menu->id." ".$menu->nameTH."'></a><br><br>";
+                                echo "<div class='logoType'></div>";
+                                echo "<a href='' class='linkMenu'><div class='nameMenu' id='nameMenu$i' onmouseover='changeMenuName($i, \"over\")' onmouseout='changeMenuName($i, \"out\")'>".$menu->nameTH."<br>";
+                                echo "<div class='nameMenuJP' id='nameMenuJP$i'>".$menu->nameJP."<br><br></div></div></a>";
+                                echo "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ ".$menu->price."</b>&nbsp;&nbsp;";
+                                echo "<button class='cartBt' onclick='add(\"".$menu->id."\", \"promoFood\")'><img src='../icon/addcart.PNG' width='70%'></button></div></div>";
+                                echo "</div>";
+                            }
+                            
                         }
                     ?>
                 </div>

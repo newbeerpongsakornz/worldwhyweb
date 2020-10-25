@@ -347,4 +347,84 @@ footer{
     position: absolute;
     font-size:1.35em;
 }
+
+.boxForm{
+    width: 40%;
+    text-align: left;
+    display: inline-block;
+}
   
+.redColor{
+    color: red;
+}
+
+.pC{
+    color: #eb7aae;
+}
+
+#login>input, #login>button, #register>input, #register>button{
+    margin-bottom: 15px;
+}
+
+.btnPW{
+    background-color: #eb7aae;
+    color: white;
+}
+
+.btnFB{
+    background-color: #1778f2;
+    color: white;
+}
+
+.btnWP{
+    background-color: white;
+    border: 1px solid #eb7aae!important;
+    color: #eb7aae;
+}
+
+.btnWP:hover{
+    background-color: #eb7aae;
+    color: white;
+}
+
+.cc25{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #eb7aae;
+    display: inline-block;
+    text-align: center;
+}
+
+.cc25L{
+    display: inline-block;
+}
+
+.backBtn{
+    color: black;
+}
+
+.backBtn:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+
+.pageNum{
+    margin: 0px 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border: 1px solid #cdcdcd;
+
+}
+
+.pageBar{
+    width: 100%;
+}
+
+.pageSelect{
+    background-color: #4595c6;
+    color: white;
+}

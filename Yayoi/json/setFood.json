@@ -3,6 +3,7 @@
         "id":"[SETmackerel|30]",
         "nameTH":"เซ็ตปลาซาบะย่างเกลือกระทะร้อน",
         "nameJP":"サバ",
+        "recom":"false",
         "type":["fish"],
         "setType":
         [
@@ -67,6 +68,7 @@
         "id":"[SETpangasius-dory|40]",
         "nameTH":"เซ็ตปลาแพนกาเซียส ดอร์รี่ ย่างซีอิ๊วกระทะร้อน",
         "nameJP":"パンがツアス",
+        "recom":"false",
         "type":["fish"],
         "setType":
         [
@@ -135,6 +137,7 @@
         "id":"[SETfried-pork-cutlet|62]",
         "nameTH":"เซ็ตหมูชุบแป้งทอด",
         "nameJP":"とんかつ",
+        "recom":"false",
         "type":["pork"],
         "setType":
         [
@@ -173,6 +176,7 @@
         "id":"[SETdeep-fried-marinated-chicken|45]",
         "nameTH":"ไก่ทอดราดซอสนัมบัง",
         "nameJP":"チキン南蛮",
+        "recom":"false",
         "type":["chicken"],
         "setType":
         [
@@ -213,6 +217,7 @@
         "id":"[SETfried-pork-cut|51]",
         "nameTH":"เซ็ตชีสเบอร์เกอร์หมูชุบแป้งทอด",
         "nameJP":"チーズ入りポークメンチ",
+        "recom":"false",
         "type":["pork"],
         "setType":
         [
@@ -254,6 +259,7 @@
         "id":"[SETteriyaki-chicken|48]",
         "nameTH":"เซ็ตไก่เทอริยากิ",
         "nameJP":"照焼きチキン",
+        "recom":"false",
         "type":["chicken"],
         "setType":
         [
@@ -294,6 +300,7 @@
         "id":"[SETpork-sauteed-with-kimchi|68]",
         "nameTH":"เซ็ตหมูผัดกิมจิสูตรเกาหลี",
         "nameJP":"豚キムチ",
+        "recom":"false",
         "type":["pork"],
         "setType":
         [
@@ -335,6 +342,7 @@
         "id":"[SETroasted-pork-on-hot-plate|71]",
         "nameTH":"เซ็ตหมูย่างกระทะร้อน",
         "nameJP":"豚焼肉",
+        "recom":"false",
         "type":["pork"],
         "setType":
         [
@@ -375,6 +383,7 @@
         "id":"[SETsalmon|35]",
         "nameTH":"เซ็ตปลาแซลม่อน",
         "nameJP":"サーモン",
+        "recom":"false",
         "type":["fish"],
         "setType":
         [
@@ -453,6 +462,7 @@
         "id":"[SETfried-chicken|173]",
         "nameTH":"เซ็ตไก่ทอดคาราอาเกะ",
         "nameJP":"から揚げ",
+        "recom":"false",
         "type":["chicken"],
         "setType":
         [
@@ -493,6 +503,7 @@
         "id":"[SETfried-prawns-and-fried-chicken|176]",
         "nameTH":"เซ็ตกุ้งชุบแป้งทอดกับไก่ทอดคาราอาเกะ",
         "nameJP":"エビフライとから揚げ",
+        "recom":"false",
         "type":["shrimp", "chicken"],
         "setType":
         [
@@ -532,6 +543,7 @@
         "id":"[SETfried-chicken-with-sweetened-vinegar-sauce|179]",
         "nameTH":"เซ็ตไก่ซอสสามรส",
         "nameJP":"鶏の甘酢あん",
+        "recom":"false",
         "type":["pork"],
         "setType":
         [
@@ -571,6 +583,7 @@
     "id":"[SETkatsutoji|182]",
     "nameTH":"เซ็ตคัตสึโทจิ",
     "nameJP":"かつとじ",
+        "recom":"false",
     "type":["pork"],
     "setType":
     [
@@ -610,6 +623,7 @@
     "id":"[SETmixed-toji|185]",
     "nameTH":"เซ็ตมิกซ์โทจิ",
     "nameJP":"ミックスとじ",
+        "recom":"false",
     "type":["pork", "shrimp"],
     "setType":
     [
@@ -648,6 +662,7 @@
     "id":"[SETfried-beef-cutlet-with-cheese-filling|188]",
     "nameTH":"เซ็ตชีสเบอร์เกอร์เนื้อชุบแป้งทอด",
     "nameJP":"チーズ入りビーフメンチカツ",
+        "recom":"false",
     "type":["beef"],
     "setType":
     [
@@ -686,6 +701,7 @@
     "id":"[SETdiced-pork-steak-on-hot-plate|191]",
     "nameTH":"เซ็ตสเต็กหมูกระทะร้อน",
     "nameJP":"豚サイコロステーキ",
+        "recom":"false",
     "type":["pork"],
     "setType":
     [
@@ -725,6 +741,7 @@
     "id":"[SETdiced-beef-steak-on-hot-plate|194]",
     "nameTH":"เซ็ตสเต็กเนื้อกระทะร้อน",
     "nameJP":"豚サイコロステーキ",
+        "recom":"false",
     "type":["beef"],
     "setType":
     [
@@ -764,6 +781,7 @@
     "id":"[SETpork-sukiyaki|197]",
     "nameTH":"เซ็ตสุกี้ยากี้ญี่ปุ่นหมู",
     "nameJP":"豚すきやき",
+        "recom":"false",
     "type":["pork"],
     "setType":
     [
@@ -803,6 +821,7 @@
     "id":"[SETbeef-sukiyaki|200]",
     "nameTH":"เซ็ตสุกี้ยากี้ญี่ปุ่นเนื้อ",
     "nameJP":"牛すきやき",
+        "recom":"false",
     "type":["beef"],
     "setType":
     [
@@ -842,6 +861,7 @@
     "id":"[SETroasted-beef-on-hot-plate|203]",
     "nameTH":"เซ็ตเนื้อย่างกระทะร้อน",
     "nameJP":"牛焼肉",
+        "recom":"false",
     "type":["beef"],
     "setType":
     [
@@ -881,6 +901,7 @@
     "id":"[SETdeep-fried-snapper|206]",
     "nameTH":"เซ็ตปลากะพงชุบแป้งทอด",
     "nameJP":"白身フライ定食",
+        "recom":"false",
     "type":["fish"],
     "setType":
     [
@@ -919,6 +940,7 @@
     "id":"SETpork-hamburger-on-hot-plate|209]",
     "nameTH":"เซ็ตแฮมเบอร์เกอร์หมูกระทะร้อน",
     "nameJP":"ポークハンバーグ(デミグラスソース)",
+        "recom":"false",
     "type":["pork"],
     "setType":
     [
@@ -957,6 +979,7 @@
     "id":"[SETbeef-hamburger-on-hot-plate|212]",
     "nameTH":"แฮมเบอร์เกอร์เนื้อกระทะร้อน",
     "nameJP":"ビーフハンバーグ（デミグラスソース)",
+        "recom":"false",
     "type":["beef"],
     "setType":
     [
@@ -996,6 +1019,7 @@
     "id":"[SETprawn-fish-and-vegetable-tempura|215]",
     "nameTH":"เซ็ตเทมปุระรวม",
     "nameJP":"天ぷら盛合せ",
+        "recom":"false",
     "type":["shrimp", "fish"],
     "setType":
     [
@@ -1035,6 +1059,7 @@
     "id":"[SETdeep-fried-prawn-with-sweetened-vinegar-sauce|218]",
     "nameTH":"เซ็ตกุ้งซอสสามรส",
     "nameJP":"エビの甘酢あん",
+        "recom":"false",
     "type":["shrimp", "fish"],
     "setType":
     [
@@ -1073,6 +1098,7 @@
     "id":"[SETprawn-tempura|221]",
     "nameTH":"เซ็ตเทมปุระกุ้ง",
     "nameJP":"えび天ぷら",
+        "recom":"false",
     "type":["shrimp"],
     "setType":
     [
@@ -1112,6 +1138,7 @@
     "id":"28",
     "nameTH":"เซ็ตหมูชุบแป้งทอดราดซอสมิโสะ",
     "nameJP":"味噌かつ煮味噌かつ煮",
+        "recom":"false",
     "type":["pork"],
     "setType":
     [
