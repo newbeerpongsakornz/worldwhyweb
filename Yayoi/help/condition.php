@@ -217,34 +217,7 @@
         </div>
     </footer>
 
-    <div class="cookiebar">
-    <div class="container">
-        <div class="row gutter-20 align-items-center justify-content-center">
-            <section class="col-lg col-12 mb-2 mb-lg-0">
-                
-                                    ยาโยอิ จะทำการเก็บคุ๊กกี้บนเว็บไซต์นี้ เพื่อมอบประสบการณ์ที่ดีให้กับคุณลูกค้า อ่านรายละเอียดเพิ่มเติมได้จาก <a href="/policy" class="ci-primary text-underline">นโยบายความเป็นส่วนตัว</a>
-                           </section>
-            <section class="col-auto col-btn">
-                <nav>
-                    <button type="button" class="btn btn-primary px-4 mx-1" id="accept-cookie" data-url="/accept/policy" data-method="GET">
-                        <span class="ci-white">ยอมรับ</span>
-                    </button>
-                    <button type="button" class="btn btn-outline-mediumgray mx-1" id="close-cookie">
-                        <i class="fas fa-times fa-xs"></i> ปิด
-                    </button>
-                </nav>
-            </section>
-        </div>
-    </div>
-</div>
-
-<div class="bottombasket">
-    <a href="/cart">
-        <i class="icon-basket tx-26"></i>
-        <span class="badge" data-number="0"></span>
-    </a>
-</div>
-
+ 
 <script type="text/javascript" src="https://yayoirestaurants.com/frontend/assets/dist/customize/text.th.js"></script>
 <script type="text/javascript" src="https://yayoirestaurants.com/frontend/assets/dist/app.js"></script>
 <script type="text/javascript" src="https://yayoirestaurants.com/frontend/assets/dist/customize/global.fn.js"></script>
