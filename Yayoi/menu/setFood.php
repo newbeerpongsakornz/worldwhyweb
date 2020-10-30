@@ -103,7 +103,7 @@
                         
                         for ($i = 0; $i < sizeof($typeTH); $i++)
                         {
-                            echo "<div class='typeBox' id='".$typeEN[$i]."Type' onclick='changeMenuType(\"freeFood\", \"".$typeEN[$i]."\")' onmouseover='changeTypeIcon(\"".$typeEN[$i]."\", \"over\")' onmouseout='changeTypeIcon(\"".$typeEN[$i]."\", \"out\")'>";
+                            echo "<div class='typeBox' id='".$typeEN[$i]."Type' onclick='changeMenuType(\"setFood\", \"".$typeEN[$i]."\")' onmouseover='changeTypeIcon(\"".$typeEN[$i]."\", \"over\")' onmouseout='changeTypeIcon(\"".$typeEN[$i]."\", \"out\")'>";
                             echo "<img id='".$typeEN[$i]."Img' src='../icon/".$typeEN[$i].".PNG' height='20px'><br>";
                             echo $typeTH[$i]."</div>";
                         }
@@ -134,7 +134,7 @@
                                 echo "</div><a href='' class='linkMenu'><div class='nameMenu' id='nameMenu$i' onmouseover='changeMenuName($i, \"over\")' onmouseout='changeMenuName($i, \"out\")'>".$menu->nameTH."<br>";
                                 echo "<div class='nameMenuJP' id='nameMenuJP$i'>".$menu->nameJP."<br><br></div></div></a>";
                                 echo "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ ".$menu->setType[0][0]->price."</b>&nbsp;&nbsp;";
-                                echo "<button class='cartBt' onclick='add(\"".$menu->id."\", \"freeFood\")'><img src='../icon/addcart.PNG' width='70%'></button></div></div>";
+                                echo "<button class='cartBt' onclick='add(\"".$menu->id."\", \"setFood\")'><img src='../icon/addcart.PNG' width='70%'></button></div></div>";
                                 echo "</div>";
                             }
                             else if ($i == 15)

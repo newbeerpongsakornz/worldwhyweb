@@ -1,14 +1,4 @@
 [
-    
-    {
-        "id":"DB007",
-        "img":"https://yayoirestaurants.com/productimages/816_BT002_Sakana-Bento.jpg",
-        "nameTH":"ยาโยอิ ซากานะเบนโตะ",
-        "nameJP":"さかな弁当",
-        "price": "219",
-        "recom":"false",
-        "type": ["fish"]
-    },
     {
         "id":"DB012",
         "img":"https://yayoirestaurants.com/productimages/thumbs/6797_Salmon-Donburi-Set%20800x800.jpg",
@@ -24,7 +14,7 @@
         "nameTH":"อุนางิ ดงบุริ",
         "nameJP":"うな重",
         "price": "369",
-        "recom":"false",
+        "recom":"true",
         "type": ["fish"]
     },
     {
