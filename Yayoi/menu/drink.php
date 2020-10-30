@@ -35,10 +35,10 @@
                     <div class="col-md-7">
                         <div class="row justify-content-end">
                             <div class="headMenuBox pt-2">
-                                <a class="headMenu" href="login.php">เข้าระบบ</a>
+                                <a class="headMenu" href="../login.php">เข้าระบบ</a>
                                 <b class="pl-2">|</b></div> 
                             <div class="headMenuBox pt-2 pl-0 pr-1">
-                                <a class="headMenu" href="register.php">สมัครสมาชิก</a>
+                                <a class="headMenu" href="../register.php">สมัครสมาชิก</a>
                                 <b class="pl-2">|</b></div>
                             <div class="headMenuBox pt-1">
                                 <div class="dropdown">
