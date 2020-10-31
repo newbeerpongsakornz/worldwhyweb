@@ -67,11 +67,11 @@
     </header>
     <img src="https://yayoirestaurants.com/mainbanners/3880_Cart.jpg" width="100%">
     <br><br>
-    <div class="container-fluid text-center">
-        <div>
-            <img src="../icon/like.PNG" width="40px">
-            <b class="headBody">เมนูยาโยอิ</b>
-        </div>
+    <div class="text-center">
+        <img src="../icon/like.PNG" width="40px" style="transform: translateY(-7px);">
+        <b class="headBody">เมนูยาโยอิ</b>
+    </div>
+    <div class="container text-center">
         <div class="menuBar" id="menuBar">
             <?php
                 $nameEN = ["promoFood", "freeFood", "setFood", "donburi", "bento", "ramen", "sideDish", "drink", "dessert"];
@@ -93,8 +93,8 @@
                 }
             ?>
         </div>
-        <div class="row">
-            <div class="col-md-9">
+        <div class="row bodyMenu">
+            <div class="col-lg-9 col-12">
             <br><br>
                 <div id="menuPromo" class="row">
                     <?php
@@ -125,7 +125,7 @@
                     ?>
                 </div>
             </div>
-            <div class="cart col-3 ">
+            <div class="cart col-lg-3 col-12">
                 <div class="card" style="width: 100%;">
                     <div class="card-header card-bd font-weight-bold">
                       รายการอาหารทั้งหมด

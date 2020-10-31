@@ -120,7 +120,7 @@ function findData(page){
     }
 }
 
-function changeMenuType(page, typeFood){
+function changeMenuType(page, typeFood, pageMenu){
     let requestURL = "../json/"+page+".json"; 
     let request = new XMLHttpRequest(); 
     request.onreadystatechange = function () { 
@@ -132,25 +132,73 @@ function changeMenuType(page, typeFood){
     request.send();
     function dataReportStatus(data) { 
         var htmlText = "";
-        for (i = 0; i < data.length; i++)
-        {
-            var menu = data[i];
-            if (typeFood == "all" || menu.type.indexOf(typeFood) != -1)
+        for (i = (15*(pageMenu-1)); i < data.length; i++)
+        {  
+            if (i < 15*pageMenu)
             {
-                htmlText += "<div class='menu col-4 p-0'>";
-                htmlText += "<a href=''><img src='"+menu.img+"' width='85%' title='"+menu.id+" "+menu.nameTH+"'></a><br><br>";
-                htmlText += "<div class='logoType'>";
-                for (j = 0; j < menu.type.length; j++)
+                var menu = data[i];
+                if (typeFood == "all" || menu.type.indexOf(typeFood) != -1)
                 {
-                    htmlText += "<div class='logoTypeBox'><img src='../icon/"+menu.type[j]+".PNG' height='26px'></div>";
+                    htmlText += "<div class='menu col-4 p-0'>";
+                    htmlText += "<a href=''><img src='";
+                    if (page == "setFood")
+                    {
+                        htmlText += menu.setType[0][0].img;
+                    }
+                    else
+                    {
+                        htmlText += menu.img;
+                    }
+                    htmlText += "' width='85%' title='"+menu.id+" "+menu.nameTH+"'></a><br><br>";
+                    htmlText += "<div class='logoType'>";
+                    for (j = 0; j < menu.type.length; j++)
+                    {
+                        htmlText += "<div class='logoTypeBox'><img src='../icon/"+menu.type[j]+".PNG' height='26px'></div>";
+                    }
+                    htmlText += "</div><a href='' class='linkMenu'><div class='nameMenu' id='nameMenu"+i+"' onmouseover='changeMenuName("+i+", \"over\")' onmouseout='changeMenuName("+i+", \"out\")'>"+menu.nameTH+"<br>";
+                    htmlText += "<div class='nameMenuJP' id='nameMenuJP"+i+"'>"+menu.nameJP+"<br><br></div></div></a>";
+                    htmlText += "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ ";
+                    if (page == "setFood")
+                    {
+                        htmlText += menu.setType[0][0].price;
+                    }
+                    else
+                    {
+                        htmlText += menu.price;
+                    }
+                    htmlText += "</b>&nbsp;&nbsp;";
+                    htmlText += "<button class='cartBt' onclick='add("+menu.id+")'><img src='../icon/addcart.PNG' width='70%'></button>";
+                    htmlText += "</div></div></div>";
                 }
-                htmlText += "</div><a href='' class='linkMenu'><div class='nameMenu' id='nameMenu"+i+"' onmouseover='changeMenuName("+i+", \"over\")' onmouseout='changeMenuName("+i+", \"out\")'>"+menu.nameTH+"<br>";
-                htmlText += "<div class='nameMenuJP' id='nameMenuJP"+i+"'>"+menu.nameJP+"<br><br></div></div></a>";
-                htmlText += "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ "+menu.price+"</b>&nbsp;&nbsp;";
-                htmlText += "<button class='cartBt' onclick='add("+menu.id+")'><img src='../icon/addcart.PNG' width='70%'></button>";
-                htmlText += "</div></div></div>";
+            }
+            else
+            {
+                break;
             }
         }
+        if ((data.length > 15 && typeFood == "all"))
+        {
+            htmlText += "<div class='pageBar'>";
+            for (j = 1; j < (data.length/15)+1; j++)
+            {
+                if (j == pageMenu)
+                {
+                    htmlText += "<button onclick='changeMenuType(\""+page+"\", \"all\", "+j+")' class='pageNum pageSelect' id='page"+j+"'>"+j+"</button>";
+                }
+                else
+                {
+                    htmlText += "<button onclick='changeMenuType(\""+page+"\", \"all\", "+j+")' class='pageNum' id='page"+j+"'>"+j+"</button>";
+                }
+            }
+            htmlText += "</div><br><br><br>";
+        }
+        gotoTop();
         document.getElementById("menuPromo").innerHTML = htmlText;
     }
+    
 }
+
+function gotoTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
