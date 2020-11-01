@@ -101,11 +101,13 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+    </header>
+    
 
-
-        <section>
+    <!-- main -->
         <div class="container py-5">
-
             <div class="row justify-content-center">
                 <section class="col-12 col-lg-10">
                     <h1 class="ci-primary text-center mb-4">
@@ -173,14 +175,8 @@
                     อีเมล: <a href="mailto:yayoicustomerservice@mkrestaurantgroup.com">yayoicustomerservice@mkrestaurantgroup.com</a></p>
                 </section>
             </div>
-
         </div>
-    </section>
-
-
-    </div>
-</div>
-    </header>
+    <!--main-->
 
 
         <footer class="text-center">
