@@ -100,13 +100,13 @@
                 <img width="79px" src="https://yayoirestaurants.com/frontend/assets/images/icon/delivery_icon.svg">
             </div>
             <div id="footerMenu">
-                <div class="FMenu"><a href="help/promo.php">โปรโมชั่น</a></div>
-                <div class="FMenu"><a href="help/branch.php">สาขายาโยอิ</a></div>
-                <div class="FMenu"><a href="help/about.php">เกี่ยวกับยาโยอิ</a></div>
-                <div class="FMenu"><a href="help/contact.php">ติดต่อเรา</a></div>
-                <div class="FMenu"><a href="help/sugguest.php">แนะนำติชมการให้บริการ</a></div>
-                <div class="FMenu"><a href="help/condition.php">เงื่อนไขการให้บริการ</a></div>
-                <div class="FMenu"><a href="help/policy.php">นโยบายความเป็นส่วนตัว</a></div>
+                <div class="FMenu"><a href="promo.php">โปรโมชั่น</a></div>
+                <div class="FMenu"><a href="branch.php">สาขายาโยอิ</a></div>
+                <div class="FMenu"><a href="about.php">เกี่ยวกับยาโยอิ</a></div>
+                <div class="FMenu"><a href="contact.php">ติดต่อเรา</a></div>
+                <div class="FMenu"><a href="sugguest.php">แนะนำติชมการให้บริการ</a></div>
+                <div class="FMenu"><a href="condition.php">เงื่อนไขการให้บริการ</a></div>
+                <div class="FMenu"><a href="policy.php">นโยบายความเป็นส่วนตัว</a></div>
             </div><br>
             <div id="contact">
                 <b>ติดตามเราที่นี่</b><br><br>

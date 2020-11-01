@@ -105,6 +105,7 @@
                 </div>
             </div>
         </div>
+    </header>
 
 
 <div id="wrapper">
@@ -373,7 +374,6 @@
     </div>
 </div>
 
-    </header>
 
 
     <!--footer -->

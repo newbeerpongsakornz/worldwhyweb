@@ -67,11 +67,11 @@
     </header>
     <img src="https://yayoirestaurants.com/mainbanners/3880_Cart.jpg" width="100%">
     <br><br>
-    <div class="container-fluid text-center">
-        <div>
-            <img src="../icon/like.PNG" width="40px">
-            <b class="headBody">เมนูยาโยอิ</b>
-        </div>
+    <div class="text-center">
+        <img src="../icon/like.PNG" width="40px" style="transform: translateY(-7px);">
+        <b class="headBody">เมนูยาโยอิ</b>
+    </div>
+    <div class="container text-center">
         <div class="menuBar" id="menuBar">
             <?php
                 $nameEN = ["promoFood", "freeFood", "setFood", "donburi", "bento", "ramen", "sideDish", "drink", "dessert"];
@@ -93,8 +93,8 @@
                 }
             ?>
         </div>
-        <div class="row">
-            <div class="col-md-9">
+        <div class="row bodyMenu">
+            <div class="col-lg-9 col-12">
                 <div id="foodType" class="text-center">
                     <?php
 
@@ -103,7 +103,7 @@
                         
                         for ($i = 0; $i < sizeof($typeTH); $i++)
                         {
-                            echo "<div class='typeBox' id='".$typeEN[$i]."Type' onclick='changeMenuType(\"sideDish\", \"".$typeEN[$i]."\")' onmouseover='changeTypeIcon(\"".$typeEN[$i]."\", \"over\")' onmouseout='changeTypeIcon(\"".$typeEN[$i]."\", \"out\")'>";
+                            echo "<div class='typeBox' id='".$typeEN[$i]."Type' onclick='changeMenuType(\"sideDish\", \"".$typeEN[$i]."\", 1)' onmouseover='changeTypeIcon(\"".$typeEN[$i]."\", \"over\")' onmouseout='changeTypeIcon(\"".$typeEN[$i]."\", \"out\")'>";
                             echo "<img id='".$typeEN[$i]."Img' src='../icon/".$typeEN[$i].".PNG' height='20px'><br>";
                             echo $typeTH[$i]."</div>";
                         }
@@ -117,6 +117,8 @@
 
                         for ($i = 0; $i < sizeOf($data); $i++)
                         {
+                            if ($i < 15)
+                            {
                                 $menu = $data[$i];
                                 echo "<div class='menu col-4 p-0'>";
                                 if ($menu->recom == "true")
@@ -131,11 +133,30 @@
                                 echo "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ ".$menu->price."</b>&nbsp;&nbsp;";
                                 echo "<button class='cartBt' onclick='add(\"".$menu->id."\", \"sideDish\")'><img src='../icon/addcart.PNG' width='70%'></button></div></div>";
                                 echo "</div>";
+                            }
+                            else if ($i == 15)
+                            {
+                                echo "<div class='pageBar'>";
+                                for ($j = 1; $j < (sizeof($data)/15)+1; $j++)
+                                {
+                                    if ($j == 1)
+                                    {
+                                        echo "<button onclick='changeMenuType(\"sideDish\", \"all\", $j)' class='pageNum pageSelect' id='page".($j)."'>".($j)."</button>";
+                                    }
+                                    else
+                                    {
+                                        echo "<button onclick='changeMenuType(\"sideDish\", \"all\", $j)' class='pageNum' id='page".($j)."'>".($j)."</button>";
+                                    }
+                                }
+                                echo "</div>";
+                                break;
+                            }
                         }
+                        
                     ?>
                 </div>
             </div>
-            <div class="cart col-3 ">
+            <div class="cart col-lg-3 col-12">
                 <div class="card" style="width: 100%;">
                     <div class="card-header card-bd font-weight-bold">
                       รายการอาหารทั้งหมด
