@@ -17,11 +17,14 @@
 
     <link rel="shortcut icon" href="https://yayoirestaurants.com/frontend/assets/images/favicon.ico" type="image/x-icon" >
     <title>เกี่ยวกับยาโยอิ Yayoi Restaurant : Modern Japanese Restaurant in Thailand - ยาโยอิ เซ็ตอร่อยของทุกคน</title>
+
     <style>
+    
         .item_conditions { font-size: 14px; line-height: 18px; margin-top: 20px;}
         .promo_note { font-size: 14px; color: #eb7aae}
         strong { color: #eb7aae}
     </style>
+
 </head>
 <body>
 <header class="notoFont">
@@ -70,10 +73,12 @@
                 </div>
             </div>
         </div>
+    </header>
 
-    <section>
+        <!-- main -->
+
         <div class="container py-5">
-            <h1 class="ci-primary text-center mb-4 mb-1g-5">
+            <h1 class="text-center">
                 <strong>เกี่ยวกับยาโยอิ</strong>
             </h1>
         
@@ -132,8 +137,7 @@
 
         </div>
     </section>
-
-    </header>
+        <!-- main -->
 
 
     <footer class="text-center">
