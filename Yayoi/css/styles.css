@@ -106,6 +106,7 @@
 .nameMenu p:hover{
     color: #EB7AAE;
     cursor: default;
+    
 }
 
 .menu{
@@ -428,3 +429,32 @@ footer{
     background-color: #4595c6;
     color: white;
 }
+
+.svg{
+    display: inline-block;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    padding: 4px 0;
+    background: #00c201;
+    position: relative;
+    text-align: center;
+    font-size: 1rem;
+    top: 4px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    vertical-align: baseline
+}
+.buymoreBt{
+    border: none;
+    background-color: #eb7aae;
+    cursor: pointer;
+    color: white;
+}
+.buymoreBt:hover{
+    background-color: #ee66a5;
+}
+
+
+
+
