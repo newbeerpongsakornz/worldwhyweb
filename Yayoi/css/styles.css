@@ -461,3 +461,6 @@ footer{
 .bodyMenu{
     margin-bottom: 45px;
 }
+.icon-map-marker{
+    content: "\e92c";
+}

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/notoFont.css">
+    <link href="http://mozilla.github.io/foundation-icons/assets/foundation-icons.css" type="text/css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="../js/scripts.js"></script>
     <script src="https://kit.fontawesome.com/a0ce56af97.js" crossorigin="anonymous"></script>
@@ -348,7 +350,7 @@
                         <section class="col-lg-auto col-sm-4 col-12">
                             <button type="submit" class="btn btn-primary btn-round" id="btn-find-branch">
                                 <strong>
-                                    <i class="icon-pin"></i>
+                                    <i class="icon-map-marker"></i>
                                     สาขาใกล้เคียง
                                 </strong>
                             </button>
