@@ -455,12 +455,35 @@ footer{
     background-color: #ee66a5;
 }
 
-
-
-
 .bodyMenu{
     margin-bottom: 45px;
 }
 .icon-map-marker{
     content: "\e92c";
+}
+
+.menuOne{
+    width: 100%;
+}
+
+.menuOneName{
+    height: 28px;
+}
+
+.menuOneIcon, .menuOneN{
+    height: 86px;
+    display: inline-block;
+}
+
+.clickCursor{
+    cursor: pointer;
+}
+
+.btnNone{
+    border: 0;
+    background-color: transparent;
+}
+
+.btnNone:focus{
+    outline: none;
 }

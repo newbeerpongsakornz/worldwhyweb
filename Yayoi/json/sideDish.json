@@ -6,6 +6,7 @@
         "nameTH":"ข้าวเปล่าญี่ปุ่น",
         "recom":"false",
         "nameJP":"ご飯",
+        "type":[],
         "price": "19"
         
     },
@@ -15,6 +16,7 @@
         "nameTH":"ข้าวผัดกระเทียม",
         "recom":"false",
         "nameJP":"ガーリックライス",
+        "type":[],
         "price": "49"
         
     },
@@ -24,6 +26,7 @@
         "nameTH":"ไข่ออนเซ็น",
         "recom":"false",
         "nameJP":"温泉たまご",
+        "type":[],
         "price": "16"
         
     },
@@ -33,6 +36,7 @@
         "nameTH":"สลัดผัก",
         "recom":"false",
         "nameJP":"サラダ",
+        "type":[],
         "price": "17"
         
     },
@@ -42,6 +46,7 @@
         "nameTH":"ซุปมิโสะญี่ปุ่น",
         "recom":"false",
         "nameJP":"味噌汁",
+        "type":[],
         "price": "17"
        
     },
@@ -51,6 +56,7 @@
         "nameTH":"กิมจิ",
         "recom":"false",
         "nameJP":"キムチ",
+        "type":[],
         "price": "17"
         
     },
@@ -60,6 +66,7 @@
         "nameTH":"ยำสาหร่าย",
         "recom":"false",
         "nameJP":"海藻サラダ",
+        "type":[],
         "price": "62"
         
     }

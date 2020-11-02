@@ -16,9 +16,9 @@
     
     <title>Yayoi Restaurant : Modern Japanese Restaurant in Thailand - ยาโยอิ เซ็ตอร่อยของทุกคน</title>
 </head>
-<body class="notoFont">
 
-<header>
+<body class="notoFont">
+    <header>
         <div class="topheader shadow">
             <div class="container notoFont">
                 <div class="row p-3">
@@ -125,14 +125,14 @@
                                 {
                                     echo "<div class='recommend'><img src='../icon/mask.svg' style='width:130%;'><div class='rectext text-center'>แนะนำ</div></div>";
                                 }
-                                echo "<a href=''><img src='".$menu->img."' width='85%' title='".$menu->id." ".$menu->nameTH."'></a><br><br>";
+                                echo "<button onclick='clickMenu(\"".$menu->id."\", \"freeFood\")' class='btnNone clickCursor'><img src='".$menu->img."' width='85%' title='".$menu->id." ".$menu->nameTH."'></button><br><br>";
                                 echo "<div class='logoType'>";
                                 for ($j = 0; $j < sizeof($menu->type); $j++)
                                 {
                                     echo "<div class='logoTypeBox'><img src='../icon/".$menu->type[$j].".PNG' height='26px'></div>";
                                 }
-                                echo "</div><a href='' class='linkMenu'><div class='nameMenu font-weight-bold' id='nameMenu$i' onmouseover='changeMenuName($i, \"over\")' onmouseout='changeMenuName($i, \"out\")'>".$menu->nameTH."<br>";
-                                echo "<div class='nameMenuJP font-weight-normal' id='nameMenuJP$i'>".$menu->nameJP."<br><br></div></div></a>";
+                                echo "</div><button onclick='clickMenu(\"".$menu->id."\", \"freeFood\")' class='linkMenu btnNone clickCursor'><div class='nameMenu font-weight-bold' id='nameMenu$i' onmouseover='changeMenuName($i, \"over\")' onmouseout='changeMenuName($i, \"out\")'>".$menu->nameTH."<br>";
+                                echo "<div class='nameMenuJP font-weight-normal' id='nameMenuJP$i'>".$menu->nameJP."<br><br></div></div></button>";
                                 echo "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ ".$menu->price."</b>&nbsp;&nbsp;";
                                 echo "<button class='cartBt' onclick='add(\"".$menu->id."\", \"freeFood\")'><img src='../icon/addcart.PNG' width='70%'></button></div></div>";
                                 echo "</div>";
