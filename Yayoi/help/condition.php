@@ -33,11 +33,8 @@
 
     <title>เงื่อนไขการให้บริการ Yayoi Restaurant : Modern Japanese Restaurant in Thailand - ยาโยอิ เซ็ตอร่อยของทุกคน</title>
 
-    <base href="/">
-
     <link rel="shortcut icon" href="https://yayoirestaurants.com/frontend/assets/images/favicon.ico" type="image/x-icon" >
     
-
     <link rel="apple-touch-icon" href="https://yayoirestaurants.com/frontend/assets/images/favicon/apple-touch-icon.png" />
     <link rel="apple-touch-icon" sizes="57x57" href="https://yayoirestaurants.com/frontend/assets/images/favicon/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="https://yayoirestaurants.com/frontend/assets/images/favicon/apple-touch-icon-72x72.png" />
@@ -55,29 +52,30 @@
     </style>
 </head>
 <body>
-<header class="notoFont">
+<body class="notoFont">
+    <header>
         <div class="topheader shadow">
-            <div class="container notoFont">
+            <div class="container">
                 <div class="row p-3">
-                    <div class="col-md-4">
+                    <div class="col-md-5">
                         <div class="row justify-content-start">
-                            <div class="col-md-8">
+                            <div class="col-md-7">
                                 <a href="../index.php"><div class="toppic p-3 shadow-lg logoYayoi" style="z-index: 1;">
                                     <img src="https://yayoirestaurants.com/frontend/assets/images/logo.svg" alt="Yayoi Restaurant - เสิร์ฟร้อน อร่อยเร็ว" width="100%">
                                 </div></a>
                             </div>
-                            <div class="col-md-4 font-weight-bold"><a class="headMenu" href="promoFood.php" class="float-right">เมนูยาโยอิ</a></div>
+                            <div class="col-md-5 font-weight-bold pt-2 "><a class="headMenu" href="../menu/promoFood.php" class="float-right">เมนูยาโยอิ</a></div>
                         </div>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-7">
                         <div class="row justify-content-end">
-                            <div class="headMenuBox text-center">
-                                <a class="headMenu" href="">เข้าระบบ</a>
-                            </div> |
-                            <div class="headMenuBox">
-                                <a class="headMenu" href="">สมัครสมาชิก</a>
-                            </div>|
-                            <div class="headMenuBox">
+                            <div class="headMenuBox pt-2">
+                                <a class="headMenu" href="../login.php">เข้าระบบ</a>
+                                <b class="pl-2">|</b></div> 
+                            <div class="headMenuBox pt-2 pl-0 pr-1">
+                                <a class="headMenu" href="../register.php">สมัครสมาชิก</a>
+                                <b class="pl-2">|</b></div>
+                            <div class="headMenuBox pt-1">
                                 <div class="dropdown">
                                     <button class="dropbtn">
                                         TH
@@ -91,18 +89,16 @@
                                 </div>
                             </div>
                             <div class="headMenuBox" onmouseover="changeIconDer('over')" onmouseout="changeIconDer('out')">
-                                <button class="btn font-weight-bold orderFoodBt"><img id='deliveryIcon' src="../icon/delivery.PNG" height="21px"> สั่งอาหารทันที</button>
+                                <button onclick="window.location.href='../menu/promoFood.php'" class="btn font-weight-bold orderFoodBt"><img id='deliveryIcon' src="../icon/delivery.PNG" height="21px"> สั่งอาหารทันที</button>
                             </div>
-                            <div class="headMenuBox" onmouseover="changeIconBasket('over')" onmouseout="changeIconBasket('out')">
-                                <a class="headMenu" href=""><img id='BasketIcon' src="../icon/busket.PNG" width="30px"></a>
+                            <div class="headMenuBox pt-1" onmouseover="changeIconBasket('over')" onmouseout="changeIconBasket('out')">
+                                <a class="headMenu" href="../cart.php"><img id='BasketIcon' src="../icon/busket.PNG" width="30px"></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
     </header>
     
 

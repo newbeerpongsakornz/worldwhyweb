@@ -19,37 +19,36 @@
     <title>นโยบายความเป็นส่วนตัว Yayoi Restaurant : Modern Japanese Restaurant in Thailand - ยาโยอิ เซ็ตอร่อยของทุกคน</title>
 
     <style>
-    
         .item_conditions { font-size: 14px; line-height: 18px; margin-top: 20px;}
         .promo_note { font-size: 14px; color: #eb7aae}
         strong { color: #eb7aae}
     </style>
 
 </head>
-<body>
-    <header class="notoFont">
+<body class="notoFont">
+    <header>
         <div class="topheader shadow">
-            <div class="container notoFont">
+            <div class="container">
                 <div class="row p-3">
-                    <div class="col-md-4">
+                    <div class="col-md-5">
                         <div class="row justify-content-start">
-                            <div class="col-md-8">
+                            <div class="col-md-7">
                                 <a href="../index.php"><div class="toppic p-3 shadow-lg logoYayoi" style="z-index: 1;">
                                     <img src="https://yayoirestaurants.com/frontend/assets/images/logo.svg" alt="Yayoi Restaurant - เสิร์ฟร้อน อร่อยเร็ว" width="100%">
                                 </div></a>
                             </div>
-                            <div class="col-md-4 font-weight-bold"><a class="headMenu" href="promoFood.php" class="float-right">เมนูยาโยอิ</a></div>
+                            <div class="col-md-5 font-weight-bold pt-2 "><a class="headMenu" href="../menu/promoFood.php" class="float-right">เมนูยาโยอิ</a></div>
                         </div>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-7">
                         <div class="row justify-content-end">
-                            <div class="headMenuBox text-center">
-                                <a class="headMenu" href="">เข้าระบบ</a>
-                            </div> |
-                            <div class="headMenuBox">
-                                <a class="headMenu" href="">สมัครสมาชิก</a>
-                            </div>|
-                            <div class="headMenuBox">
+                            <div class="headMenuBox pt-2">
+                                <a class="headMenu" href="../login.php">เข้าระบบ</a>
+                                <b class="pl-2">|</b></div> 
+                            <div class="headMenuBox pt-2 pl-0 pr-1">
+                                <a class="headMenu" href="../register.php">สมัครสมาชิก</a>
+                                <b class="pl-2">|</b></div>
+                            <div class="headMenuBox pt-1">
                                 <div class="dropdown">
                                     <button class="dropbtn">
                                         TH
@@ -63,10 +62,10 @@
                                 </div>
                             </div>
                             <div class="headMenuBox" onmouseover="changeIconDer('over')" onmouseout="changeIconDer('out')">
-                                <button class="btn font-weight-bold orderFoodBt"><img id='deliveryIcon' src="../icon/delivery.PNG" height="21px"> สั่งอาหารทันที</button>
+                                <button onclick="window.location.href='../menu/promoFood.php'" class="btn font-weight-bold orderFoodBt"><img id='deliveryIcon' src="../icon/delivery.PNG" height="21px"> สั่งอาหารทันที</button>
                             </div>
-                            <div class="headMenuBox" onmouseover="changeIconBasket('over')" onmouseout="changeIconBasket('out')">
-                                <a class="headMenu" href=""><img id='BasketIcon' src="../icon/busket.PNG" width="30px"></a>
+                            <div class="headMenuBox pt-1" onmouseover="changeIconBasket('over')" onmouseout="changeIconBasket('out')">
+                                <a class="headMenu" href="../cart.php"><img id='BasketIcon' src="../icon/busket.PNG" width="30px"></a>
                             </div>
                         </div>
                     </div>

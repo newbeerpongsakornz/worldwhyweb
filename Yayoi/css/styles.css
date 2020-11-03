@@ -399,6 +399,7 @@ footer{
 
 .cc25L{
     display: inline-block;
+    transform: translate(5px, 2px);
 }
 
 .backBtn{
@@ -528,4 +529,13 @@ footer{
 
 .btnNone:focus{
     outline: none;
+}
+
+.menuOneIcon > img{
+    margin: 0px 5px;
+    transform: translateY(-30px);
+}
+
+.menuOneIcon{
+    padding: 0px 15px;
 }

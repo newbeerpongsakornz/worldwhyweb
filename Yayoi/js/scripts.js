@@ -37,7 +37,6 @@ function add(menuNo, page){
                 htmlText += "<button type='button' class='circlebt d-inline'><svg class='pb-1' width='11px' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>";
                 htmlText += "<path fill='currentColor' d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg></button></div>";
                 htmlText += "<div style='font-size:22px;' class='text-right pr-0'><b>฿ "+menu.price+"</b></div></div><br>";
-                console.log(totalPrice);
 
             }
         }
@@ -223,7 +222,7 @@ function changeMenuOneName(cmd){
     }
 }
 
-function clickMenu(id, page, pageMenu){
+function clickMenu(id, page){
     let requestURL = "../json/"+page+".json"; 
     let request = new XMLHttpRequest(); 
     request.onreadystatechange = function () { 
@@ -244,20 +243,23 @@ function clickMenu(id, page, pageMenu){
                 break;
             }
         }
-        htmlText += "<div><button class='btnNone' onclick='changeMenuType('"+page+"', 'all', 1)'><div></div></button></div>";
-        htmlText += "<img src='"+menu.img+"' title='"+menu.id+" "+menu.nameTH+" width='100%'>";
-        htmlText += "<br><div class='menuOneIcon'>"
-        if (menu.type.length != 0)
+        htmlText += "<div class='text-left'><button class='btnNone clickCursor' onclick='changeMenuType('"+page+"', 'all', 1)'><div class='cc25'><span style='color: white;'><i class='fas fa-angle-left' style='transform: translate(-1px, 2px);'></i></span></div><div class='cc25L'> กลับ</div></button></div>";
+        htmlText += "<br><img src='"+menu.img+"' title='"+menu.id+" "+menu.nameTH+"' width='100%'>";
+        htmlText += "<br><div class='text-left'><div class='menuOneIcon'>"
+        if (page != "promoFood")
         {
-            for (i = 0; i < menu.type.length; i++)
+            if (menu.type.length != 0)
             {
-                htmlText += "<img src='../icon/"+menu.type[i]+".PNG' height='26px'>";
+                for (i = 0; i < menu.type.length; i++)
+                {
+                    htmlText += "<img src='../icon/"+menu.type[i]+".PNG' height='26px'>";
+                }
             }
         }
         htmlText += "</div><div class='menuOneN'>";
         htmlText += "<div class='menuOneName text-left' id='menuOneNameTH' onmouseover='changeMenuOneName(\"over\")' onmouseout='changeMenuOneName(\"out\")'>"+menu.nameTH+"</div>";
         htmlText += "<div class='menuOneName text-left' id='menuOneNameJP' onmouseover='changeMenuOneName(\"over\")' onmouseout='changeMenuOneName(\"out\")'>"+menu.nameJP+"</div>";
-        htmlText += "</div>";
+        htmlText += "</div></div>";
         htmlText += "";
         htmlText += "";
         htmlText += "";

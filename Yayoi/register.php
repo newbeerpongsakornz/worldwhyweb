@@ -75,7 +75,7 @@
             <a href="javascript:history.back()" class="backBtn">
                 <div class="cc25">
                     <span style="color: white;">
-                        <i class="fas fa-angle-left"></i>
+                        <i class="fas fa-angle-left" style='transform: translate(-1px, 2px);'></i>
                     </span>
                 </div>
                 <div class="cc25L">กลับ</div>
