@@ -163,11 +163,11 @@ function changeMenuType(page, typeFood, pageMenu){
             {
                 if (j == pageMenu)
                 {
-                    htmlText += "<button onclick='changeMenuType(\""+page+"\", \"all\", "+j+")' class='pageNum pageSelect' id='page"+j+"'>"+j+"</button>";
+                    htmlText += "<button onclick='changeMenuType(\""+page+"\", \"all\", 1)' class='pageNum pageSelect' id='page"+j+"'>"+j+"</button>";
                 }
                 else
                 {
-                    htmlText += "<button onclick='changeMenuType(\""+page+"\", \"all\", "+j+")' class='pageNum' id='page"+j+"'>"+j+"</button>";
+                    htmlText += "<button onclick='changeMenuType(\""+page+"\", \"all\", 1)' class='pageNum' id='page"+j+"'>"+j+"</button>";
                 }
             }
             htmlText += "</div><br><br><br>";
@@ -202,7 +202,7 @@ function changeMenuOneName(cmd){
     }
 }
 
-function clickMenu(id, page){
+function clickMenu(id, page, pageMenu){
     let requestURL = "../json/"+page+".json"; 
     let request = new XMLHttpRequest(); 
     request.onreadystatechange = function () { 
@@ -223,6 +223,7 @@ function clickMenu(id, page){
                 break;
             }
         }
+        htmlText += "<div><button class='btnNone' onclick='changeMenuType('"+page+"', 'all', 1)'><div></div></button></div>";
         htmlText += "<img src='"+menu.img+"' title='"+menu.id+" "+menu.nameTH+" width='100%'>";
         htmlText += "<br><div class='menuOneIcon'>"
         if (menu.type.length != 0)
