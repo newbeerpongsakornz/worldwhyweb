@@ -2,6 +2,16 @@ var totalPrice = 0;
 var numMenu = 0;
 
 function add(menuNo, page){
+    let requestURL = "../json/"+page+".json"; 
+    let request = new XMLHttpRequest(); 
+    request.onreadystatechange = function () { 
+        if (request.readyState == 4 && request.status == 200) {             
+            dataReportStatus(JSON.parse(request.responseText));            
+        } 
+    }; 
+    request.open("GET", requestURL, true); 
+    request.send();
+    function dataReportStatus(data) {
     
         if (document.getElementById("noChoose").innerText != "")
         {
@@ -37,7 +47,7 @@ function add(menuNo, page){
 
     }
 
-
+}
 
 
 function changeMenuColor(itemId, cmd){
