@@ -132,11 +132,11 @@
                     </div>
                     <div class="card-bd">
                         <div id="menuChoose">
+                    
                             
                         </div>
                         <div id="totalMenu">
-                            ราคาอาหารทั้งหมด <br>
-                            (ยังไม่รวมค่าจัดส่ง)
+                            
                         </div>
                         
                         
