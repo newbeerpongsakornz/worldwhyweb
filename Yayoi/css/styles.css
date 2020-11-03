@@ -464,3 +464,46 @@ footer{
 .icon-map-marker{
     content: "\e92c";
 }
+
+.deleteBt{
+    border-radius: 60px;
+    width: auto;
+    height: 20px;
+    color: white;
+    border: none;
+    background-color: #eb7aae;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 60px;
+    font-size: 14px;
+    right: 0;
+}
+.deleteBt:hover{
+    background-color: #ee66a5;
+}
+.circlebt {
+    background: #fff;
+    border: 2px solid #eb7aae;
+    width: 24px;
+    height: 24px;
+    color: #eb7aae;
+    margin: 0 5px;
+    padding: 0;
+    -ms-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -webkit-border-radius: 60px;
+    border-radius: 60px;
+}
+.circlebt:hover{
+    background-color: #ee66a5;
+    color: white;
+}
+.input-picker{
+    display: inline !important;
+    background: none;
+    border: 0;
+    text-align: center;
+    max-width: 30px;
+    font-size: 17px;
+    font-weight: 400;
+}
