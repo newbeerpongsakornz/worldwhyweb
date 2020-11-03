@@ -3,59 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="_token" content="ww8RQdcHnjUWqw4I4gtQy1AWPZRu3YZaenqjFgFz">
-    <meta name="keywords" content="ยาโยอิ, อาหารญี่ปุ่น, ปลาแซลมอน, กระทะร้อน, ราเม็ง, เบนโตะ, สั่งอาหาร, delivery">
-    <meta name="description" content="ยาโยอิเป็นร้านอาหารจากประเทศญี่ปุ่น ที่เสิร์ฟอาหารจานร้อน และรสชาติสไตล์ต้นตำรับ ด้วยราคาที่คุ้มค่า และคัดสรรวัตถุดิบคุณภาพดีเพื่อมาทำอาหาร รับประกันรสชาติ พร้อมช่องทางใหม่กับความสุขที่พร้อมส">
-    <meta name="robots" content="index,follow" />
-    <meta name="googlebot" content="index,follow" />
-    <meta http-equiv="Content-Language" content="th-TH">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="cache-control" content="max-age=31557600" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="เงื่อนไขการให้บริการ Yayoi Restaurant : Modern Japanese Restaurant in Thailand - ยาโยอิ เซ็ตอร่อยของทุกคน" />
-    <meta property="og:url" content="https://yayoirestaurants.com/terms" />
-    <meta property="og:site_name" content="Yayoi Restaurant : Modern Japanese Restaurant in Thailand - ยาโยอิ เซ็ตอร่อยของทุกคน" />
-    <meta property="og:image" content="https://yayoirestaurants.com/frontend/assets/images/logo.svg" />
-    <meta property="fb:app_id" content="542539216565446"/>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/notoFont.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://yayoirestaurants.com/frontend/assets/dist/app.css?v=2" type="text/css">
-    <link rel="stylesheet" href="https://yayoirestaurants.com/frontend/assets/dist/term.css" type="text/css">
+    <link rel="stylesheet" href="https://yayoirestaurants.com/frontend/assets/dist/aboutus.css" type="text/css">
     <script src="../js/scripts.js"></script>
     <script src="https://kit.fontawesome.com/a0ce56af97.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-    <title>ติดต่อเรา Yayoi Restaurant : Modern Japanese Restaurant in Thailand - ยาโยอิ เซ็ตอร่อยของทุกคน</title>
-
-    <base href="/">
 
     <link rel="shortcut icon" href="https://yayoirestaurants.com/frontend/assets/images/favicon.ico" type="image/x-icon" >
-    
-
-    <link rel="apple-touch-icon" href="https://yayoirestaurants.com/frontend/assets/images/favicon/apple-touch-icon.png" />
-    <link rel="apple-touch-icon" sizes="57x57" href="https://yayoirestaurants.com/frontend/assets/images/favicon/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="https://yayoirestaurants.com/frontend/assets/images/favicon/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="https://yayoirestaurants.com/frontend/assets/images/favicon/apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="https://yayoirestaurants.com/frontend/assets/images/favicon/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="https://yayoirestaurants.com/frontend/assets/images/favicon/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="https://yayoirestaurants.com/frontend/assets/images/favicon/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="https://yayoirestaurants.com/frontend/assets/images/favicon/apple-touch-icon-152x152.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="https://yayoirestaurants.com/frontend/assets/images/favicon/apple-touch-icon-180x180.png" />
+    <title>ติดต่อเรา Yayoi Restaurant : Modern Japanese Restaurant in Thailand - ยาโยอิ เซ็ตอร่อยของทุกคน</title>
 
     <style>
+    
         .item_conditions { font-size: 14px; line-height: 18px; margin-top: 20px;}
         .promo_note { font-size: 14px; color: #eb7aae}
-
+        strong { color: #eb7aae}
     </style>
+
 </head>
 <body>
-<header class="notoFont">
+    <header class="notoFont">
         <div class="topheader shadow">
             <div class="container notoFont">
                 <div class="row p-3">
@@ -101,10 +73,7 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
     </header>
-    
 
     <!-- main -->
     <img src="https://yayoirestaurants.com/mainbanners/9982_Contact.jpg" width="100%">
@@ -173,7 +142,7 @@
     <!--main-->
 
 
-        <footer class="text-center">
+    <footer class="text-center">
         <div class="container">
             <a href="../index.php">
                 <img width="200px" src="https://yayoirestaurants.com/frontend/assets/images/logo.svg" alt="Yayoi Restaurant - เสิร์ฟร้อน อร่อยเร็ว">
@@ -206,13 +175,5 @@
             <div id="creditD">© 2557-2563 บริษัท เอ็มเค อินเตอร์ฟู้ด</div>
         </div>
     </footer>
-
-
-<script type="text/javascript" src="https://yayoirestaurants.com/frontend/assets/dist/customize/text.th.js"></script>
-<script type="text/javascript" src="https://yayoirestaurants.com/frontend/assets/dist/app.js"></script>
-<script type="text/javascript" src="https://yayoirestaurants.com/frontend/assets/dist/customize/global.fn.js"></script>
-<script type="text/javascript" src="https://yayoirestaurants.com/frontend/assets/dist/customize/init.fn.js"></script>
-<script type="text/javascript" src="https://yayoirestaurants.com/frontend/assets/dist/customize/cart.js?v=1.2"></script>
-
 </body>
 </html>
