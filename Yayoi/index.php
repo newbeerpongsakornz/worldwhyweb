@@ -16,7 +16,7 @@
     
     <title>Yayoi Restaurant : Modern Japanese Restaurant in Thailand - ยาโยอิ เซ็ตอร่อยของทุกคน</title>
 </head>
-<body class="notoFont" >
+<body class="notoFont">
 
     <!-- Head -->
     <header>
@@ -182,25 +182,8 @@
                     <button onclick="window.location.href='help/promo.php'" class="seemoreBt seemore"><b>ดูทั้งหมด</b></button> <br><br></div>
             </div>
         </div>
-        <!-- <div>
-            <button class='plusAdd' onmouseover="changeBt()">
-                <span>
-                    <i class="fas fa-plus"></i>
-                </span>
-            </button>
-        </div>
-        <div>
-            <button class='minusAdd'>
-                <span>
-                    <i class="fas fa-minus"></i>
-                </span>
-            </button>
-        </div> -->
     </div>
     
-
-    
-
     <!-- Footer -->
     <footer class="text-center">
         <div class="container">

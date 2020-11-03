@@ -455,9 +455,6 @@ footer{
     background-color: #ee66a5;
 }
 
-
-
-
 .bodyMenu{
     margin-bottom: 45px;
 }
@@ -506,4 +503,29 @@ footer{
     max-width: 30px;
     font-size: 17px;
     font-weight: 400;
+}
+.menuOne{
+    width: 100%;
+}
+
+.menuOneName{
+    height: 28px;
+}
+
+.menuOneIcon, .menuOneN{
+    height: 86px;
+    display: inline-block;
+}
+
+.clickCursor{
+    cursor: pointer;
+}
+
+.btnNone{
+    border: 0;
+    background-color: transparent;
+}
+
+.btnNone:focus{
+    outline: none;
 }

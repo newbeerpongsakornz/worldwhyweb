@@ -6,7 +6,7 @@
         "nameJP":"アイスグリーンティー",
         "price": "29",
         "recom":"false",
-        "type": [""]
+        "type": []
     },
     {
         "id":"BE002",
@@ -15,7 +15,7 @@
         "nameJP":"ミネラルウォーター",
         "price": "23",
         "recom":"false",
-        "type": [""]
+        "type": []
     },
     {
         "id":"PP334",
@@ -24,7 +24,7 @@
         "nameJP":"あずき抹茶ラテ",
         "price": "59",
         "recom":"false",
-        "type": [""]
+        "type": []
     },
     {
         "id":"PP333",
@@ -33,7 +33,7 @@
         "nameJP":"タピオカミルクティー",
         "price": "59",
         "recom":"false",
-        "type": [""]
+        "type": []
     },
     {
         "id":"BE004",
@@ -42,7 +42,7 @@
         "nameJP":"抹茶ラテ",
         "price": "59",
         "recom":"false",
-        "type": [""]
+        "type": []
     },
     {
         "id":"BE003",
@@ -51,7 +51,7 @@
         "nameJP":"さくら梅ソーダ",
         "price": "55",
         "recom":"false",
-        "type": [""]
+        "type": []
     },
     {
         "id":"PP312",
@@ -60,7 +60,7 @@
         "nameJP":"スーパービタミン ミックスベリー",
         "price": "49",
         "recom":"false",
-        "type": [""]
+        "type": []
     },
     {
         "id":"PP311",
@@ -69,7 +69,7 @@
         "nameJP":"スーパービタミン オレンジトリオ",
         "price": "59",
         "recom":"false",
-        "type": [""]
+        "type": []
     }
 
 ]
