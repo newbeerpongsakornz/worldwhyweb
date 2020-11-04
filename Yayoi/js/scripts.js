@@ -42,7 +42,7 @@ function add(menuNo, page){
         }
         htmlText += "</div>";
         document.getElementById("menuChoose").innerHTML += htmlText;
-        document.getElementById("totalMenuActive").innerHTML = "<div class='float-left'> ราคาอาหารทั้งหมด <br> <div class='p-2' style='font-size:14px; color:#777777;'>(ยังไม่รวมค่าจัดส่ง)</div></div><div style='font-size:23px;' class='float-right'><strong><b>฿"+totalPrice+"</b></strong></div><button onclick='window.location.href='../cart.php'' class='buymoreBt rounded p-2 m-2'><b>ยืนยันการสั่งซื้อ</b></button>";
+        document.getElementById("totalMenuActive").innerHTML = "<div class='float-left'> ราคาอาหารทั้งหมด <br> <div class='p-2' style='font-size:14px; color:#777777;'>(ยังไม่รวมค่าจัดส่ง)</div></div><div style='font-size:23px;' class='float-right'><strong><b>฿"+totalPrice+"</b></strong></div><button onclick='window.location.href=\"../cart.php\"' class='buymoreBt rounded p-2 m-2'><b>ยืนยันการสั่งซื้อ</b></button>";
 
     }
 
@@ -156,7 +156,7 @@ function changeMenuType(page, typeFood, pageMenu){
                         }
                     }
                     htmlText += "</div><button onclick='clickMenu(\""+menu.id+"\", \""+page+"\")' class='linkMenu btnNone clickCursor'><div class='nameMenu font-weight-bold' id='nameMenu"+i+"' onmouseover='changeMenuName("+i+", \"over\")' onmouseout='changeMenuName("+i+", \"out\")'>"+menu.nameTH+"<br>";
-                    htmlText += "<div class='nameMenuJP' id='nameMenuJP"+i+"'>"+menu.nameJP+"<br><br></div></div></a>";
+                    htmlText += "<div class='nameMenuJP' id='nameMenuJP"+i+"'>"+menu.nameJP+"<br><br></div></div></button>";
                     htmlText += "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ ";
                     if (page == "setFood")
                     {
@@ -243,7 +243,7 @@ function clickMenu(id, page){
                 break;
             }
         }
-        htmlText += "<div class='text-left'><button class='btnNone clickCursor' onclick='changeMenuType('"+page+"', 'all', 1)'><div class='cc25'><span style='color: white;'><i class='fas fa-angle-left' style='transform: translate(-1px, 2px);'></i></span></div><div class='cc25L'> กลับ</div></button></div>";
+        htmlText += "<div class='text-left'><button class='btnNone clickCursor' onclick='changeMenuType(\""+page+"\", \"all\", 1)'><div class='cc25'><span style='color: white;'><i class='fas fa-angle-left' style='transform: translate(-1px, 2px);'></i></span></div><div class='cc25L'> กลับ</div></button></div>";
         htmlText += "<br><img src='"+menu.img+"' title='"+menu.id+" "+menu.nameTH+"' width='100%'>";
         htmlText += "<br><div class='text-left'><div class='menuOneIcon'>"
         if (page != "promoFood")
