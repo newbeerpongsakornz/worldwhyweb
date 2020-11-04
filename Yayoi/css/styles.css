@@ -123,6 +123,12 @@
 .menuBar{
     margin: 40px 0px;
     white-space: nowrap;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+.menuBar::-webkit-scrollbar{
+    display: none;
 }
 
 .menuBox{
@@ -479,6 +485,11 @@ footer{
 .deleteBt:hover{
     background-color: #ee66a5;
 }
+
+.deleteBt:focus{
+    outline: none;
+}
+
 .circlebt {
     background: #fff;
     border: 2px solid #eb7aae;
@@ -491,11 +502,18 @@ footer{
     -moz-border-radius: 60px;
     -webkit-border-radius: 60px;
     border-radius: 60px;
+    cursor: pointer;
 }
 .circlebt:hover{
     background-color: #ee66a5;
     color: white;
 }
+
+
+.circlebt:focus{
+    outline: none;
+}
+
 .input-picker{
     display: inline !important;
     background: none;
