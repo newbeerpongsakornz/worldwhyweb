@@ -22,7 +22,7 @@ function add(id, page){
         var htmlText = "";
         var num = 1;
         
-        htmlText += "<div>";
+        htmlText += "<div id='div"+id+"'>";
         for (i = 0; i < data.length; i++)
         {
             var menu = data[i];
@@ -33,8 +33,8 @@ function add(id, page){
 
                 totalPrice += parseInt(menu.price);
                 console.log('8;p');
-                htmlText += "<div style='width:100%;' class='p-2 mb-2'><div class='float-left'>"+menu.nameTH+" </div><button class='deleteBt mr-2'> <img src='../icon/delete.svg'> ลบ</button></div>";
-                htmlText += "<div style='width:100%;' class='pb-2 pt-2'><div class='d-inline float-left'><button type='button' class='circlebt d-inline' onclick='minus(\""+id+"\", "+menu.price+")'><svg class='pb-1' width='11px' aria-hidden='true'";
+                htmlText += "<div style='width:100%;' class='p-2 mb-2'><div class='float-left'>"+menu.nameTH+" </div><button class='deleteBt mr-2' onclick='deletediv(\""+id+"\")'> <img src='../icon/delete.svg'> ลบ</button></div>";
+                htmlText += "<div style='width:100%;' class='pt-3'><div class='d-inline float-left'><button type='button' class='circlebt d-inline' onclick='minus(\""+id+"\", "+menu.price+")'><svg class='pb-1' width='11px' aria-hidden='true'";
                 htmlText += "focusable='false' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>";
                 htmlText += "<path fill='currentColor' d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg></button>";
                 htmlText += "<div class='input-picker'><input class='input-picker d-inline' type='text' id='numFood"+id+"' value=1 data-max='999' readonly='' autocomplete='off'></div>";
@@ -51,6 +51,10 @@ function add(id, page){
 
     }
 
+}
+function deletediv(id){
+    document.getElementById("div"+id).remove();
+    numMenu--;
 }
 function minus(id, price){
     var num = document.getElementById("numFood"+id).value;
