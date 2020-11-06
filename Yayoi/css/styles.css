@@ -422,7 +422,15 @@ footer{
     height: 35px;
     background-color: white;
     border: 1px solid #cdcdcd;
+    cursor: pointer;
+}
 
+.pageNum:focus{
+    outline: none;
+}
+
+.pageNum:nth-child(1), .pageNum:nth-last-child(1){
+    border: 0px;
 }
 
 .pageBar{
@@ -593,6 +601,8 @@ footer{
     top: 0;
     right: 0;
     padding: 1px 6px;
+}
+
 .promo-cart{
     border: 2px dotted #f5bdd7;
     border-radius: 6px;
