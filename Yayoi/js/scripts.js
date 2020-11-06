@@ -235,19 +235,36 @@ function changeMenuType(page, typeFood, pageMenu){
         }
         if ((data.length > 15 && typeFood == "all"))
         {
-            htmlText += "<div class='pageBar'>";
+            htmlText += "<div class='pageBar'><div class='pageBar'>";
+            if (pageMenu-1 == 0)
+            {
+                htmlText += "<button";
+            }
+            else
+            {
+                htmlText += "<button onclick='changeMenuType(\""+page+"\", \"all\", "+(pageMenu-1)+")'";
+            }
+            htmlText += " class='pageNum'><</button>";
             for (j = 1; j < (data.length/15)+1; j++)
             {
                 if (j == pageMenu)
                 {
-                    htmlText += "<button onclick='changeMenuType(\""+page+"\", \"all\", 1)' class='pageNum pageSelect' id='page"+j+"'>"+j+"</button>";
+                    htmlText += "<button onclick='changeMenuType(\""+page+"\", \"all\", "+j+")' class='pageNum pageSelect' id='page"+j+"'>"+j+"</button>";
                 }
                 else
                 {
-                    htmlText += "<button onclick='changeMenuType(\""+page+"\", \"all\", 1)' class='pageNum' id='page"+j+"'>"+j+"</button>";
+                    htmlText += "<button onclick='changeMenuType(\""+page+"\", \"all\", "+j+")' class='pageNum' id='page"+j+"'>"+j+"</button>";
                 }
             }
-            htmlText += "</div><br><br><br>";
+            if (pageMenu+1 > data.length/15)
+            {
+                htmlText += "<button";
+            }
+            else
+            {
+                htmlText += "<button onclick='changeMenuType(\""+page+"\", \"all\", "+(pageMenu+1)+")'";
+            }
+            htmlText += " class='pageNum'>></button></div><br><br><br>";
         }
         if (dontHaveMenu)
         {
@@ -341,8 +358,4 @@ function clickMenu(id, page, price){
         document.getElementById("menuPromo").innerHTML = htmlText;
         document.getElementById("foodType").style = "display: none;";
     }
-}
-
-function deleteAlert(idTag){
-    document.getElementById(idTag).remove();
 }
