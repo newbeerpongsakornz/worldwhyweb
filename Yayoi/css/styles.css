@@ -565,3 +565,30 @@ footer{
     color: red;
     margin-bottom: 15px;
 }
+
+#alertBox{
+    width: 360px;
+    height: 152px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+
+#alertBox>div.headA{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+#alertBox>button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1px 6px;
+}

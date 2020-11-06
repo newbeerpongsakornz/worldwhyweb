@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/notoFont.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="js/indexJS.js"></script>
+    <script src="js/database.js"></script>
     <script src="https://kit.fontawesome.com/a0ce56af97.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -75,19 +76,15 @@
             <label><b>อีเมล</b><b class="redColor">*</b></label>
             <input type="text" id="email" name="email" class="form-control">
             <label><b>รหัสผ่าน</b><b class="redColor">*</b></label>
-            <input type="text" id="password" name="password" class="form-control">
+            <input type="password" id="password" name="password" class="form-control">
             <div style="width:100%; text-align: right;"><label class="pC">ลืมรหัสผ่าน ?</label></div>
-            <button class="btn btn-block btnPW">เข้าระบบ</button>
+            <button class="btn btn-block btnPW" onclick="login()">เข้าระบบ</button>
             <div style="width:100%; text-align: center; margin-bottom: 10px; color: #909090;"><label>หรือ</label></div>
             <button class="btn btn-block btnFB">เข้าระบบด้วย Facebook</button>
             <button class="btn btn-block btnWP" onclick="window.location.href='register.php'">สมัครสมาชิก</button>
             <br><br>
         </div>
-        
     </div>
-    
-
-    
 
     <!-- Footer -->
     <footer class="text-center">
@@ -124,6 +121,24 @@
         </div>
     </footer>
     
-    
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCaooLUXevEXGRHvfbg_HLWIS4znYjNYH4",
+            authDomain: "yayoibyworldwhyweb.firebaseapp.com",
+            databaseURL: "https://yayoibyworldwhyweb.firebaseio.com",
+            projectId: "yayoibyworldwhyweb",
+            storageBucket: "yayoibyworldwhyweb.appspot.com",
+            messagingSenderId: "789331007438",
+            appId: "1:789331007438:web:8be245447b5014ece4fd9f",
+            measurementId: "G-R09CB9DDVR"
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        var database = firebase.database();
+    </script>
 </body>
 </html>
