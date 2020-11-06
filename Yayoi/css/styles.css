@@ -85,8 +85,8 @@
 /* Body */
 .card-bd{
     background-color: #FEF4F9;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
     padding: 10px;
 }
 .card, .card-header{
@@ -94,9 +94,10 @@
 }
 .card-header{
     background-color: #EB7AAE!important;
-    border-top-left-radius: 10px!important;
-    border-top-right-radius: 10px!important;
+    border-top-left-radius: 7px!important;
+    border-top-right-radius: 7px!important;
     color: #FFFFFF;
+    font-size: 18px;
 }
 
 .nameMenu p{
@@ -329,7 +330,7 @@ footer{
 }
 
 .container-fluid{
-    width: 1180px !important;
+    width: 1190px !important;
 }
 .recommend{
     position:absolute;
@@ -539,6 +540,7 @@ footer{
 .btnNone{
     border: 0;
     background-color: transparent;
+    padding: 0 !important;
 }
 
 .btnNone:focus{
@@ -591,4 +593,7 @@ footer{
     top: 0;
     right: 0;
     padding: 1px 6px;
+.promo-cart{
+    border: 2px dotted #f5bdd7;
+    border-radius: 6px;
 }
