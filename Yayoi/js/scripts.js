@@ -13,17 +13,13 @@ function add(id, page){
     request.send();
     function dataReportStatus(data) {
     
-        if (document.getElementById("noChoose").innerText != "")
+        if (document.getElementById("noChoose") != null)
         {
-            document.getElementById("noChoose").innerText = "";
-            document.getElementById("totalMenu").id = "totalMenuActive";
+            document.getElementById("noChoose").style.display = "none";
+            document.getElementById("totalMenu").style.display = "block";
+            document.getElementById("totalMenu").innerHTML = "<div class='float-left'> ราคาอาหารทั้งหมด <br> <div class='p-2' style='font-size:14px; color:#777777;'>(ยังไม่รวมค่าจัดส่ง)</div></div><div style='font-size:23px;' class='float-right'><strong><b id='totalPrice'>฿"+totalPrice+"</b></strong></div><button onclick='window.location.href=\"../cart.php\"' class='buymoreBt rounded p-2 m-2'><b>ยืนยันการสั่งซื้อ</b></button>";
         }
         
-        var htmlText = "";
-        htmlText += "<div>";
-        var num = 1;
-        
-        htmlText += "<div id='div"+id+"'>";
         for (i = 0; i < data.length; i++)
         {
             var menu = data[i];
@@ -39,50 +35,64 @@ function add(id, page){
                     price = menu.price;
                 }
 
-                // if (document.getElementById("numFood"+id) == null)
-                // {
+
+                if (document.getElementById("numFood"+id) == null)
+                {
                     numMenu++;
                     totalPrice += parseInt(price);
-                    htmlText += "<div style='width:100%;' class='p-2 mb-2'><div class='float-left'>"+menu.nameTH+" </div><button class='deleteBt mr-2' onclick='deletediv(\""+id+"\")'> <img src='../icon/delete.svg'> ลบ</button></div>";
+
+                    var htmlText = "";
+                    htmlText += "<div id='div"+id+"'>";
+                    htmlText += "<div style='width:100%;' class='p-2 mb-2'><div class='float-left'>"+menu.nameTH+" </div><button class='deleteBt mr-2' onclick='deletediv(\""+id+"\", "+price+")'> <img src='../icon/delete.svg'> ลบ</button></div>";
                     htmlText += "<div style='width:100%;' class='pb-2 pt-2'><div class='d-inline float-left'><button type='button' class='circlebt d-inline' onclick='minus(\""+id+"\", "+price+")'><svg class='pb-1' width='11px' aria-hidden='true'";
                     htmlText += "focusable='false' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>";
                     htmlText += "<path fill='currentColor' d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg></button>";
-                    htmlText += "<div class='input-picker'><input class='input-picker d-inline' type='text' id='numFood"+id+"' value=1 data-max='999' readonly='' autocomplete='off'></div>";
+                    // htmlText += "<div class='input-picker'><input class='input-picker d-inline' type='text' id='numFood"+id+"' value=1 data-max='999' readonly=''></div>";
+                    htmlText += "<div class='numFood' id='numFood"+id+"'>1</div>";
                     htmlText += "<button type='button' class='circlebt d-inline' onclick='plus(\""+id+"\", "+price+")'><svg class='pb-1' width='11px' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>";
                     htmlText += "<path fill='currentColor' d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg></button></div>";
                     htmlText += "<div style='font-size:22px;' class='text-right pr-0'><b>฿ "+price+"</b></div></div><br>";
-                // }
-                // else
-                // {
-                //     document.getElementById("numFood"+id).value += 1;
-                //     totalPrice += parseInt(price);
-                //     document.getElementById("totalPrice").innerHTML = "฿ "+totalPrice;
-                // }
-
+                    
+                    
+                    document.getElementById("menuChoose").innerHTML += htmlText;
+                    document.getElementById("totalPrice").innerHTML = "฿ "+totalPrice;
+                }
+                else
+                {
+                    plus(id, price);
+                }
             }
         }
-        htmlText += "</div>";
-        document.getElementById("menuChoose").innerHTML += htmlText;
-        document.getElementById("totalMenuActive").innerHTML = "<div class='float-left'> ราคาอาหารทั้งหมด <br> <div class='p-2' style='font-size:14px; color:#777777;'>(ยังไม่รวมค่าจัดส่ง)</div></div><div style='font-size:23px;' class='float-right'><strong><b id='totalPrice'>฿"+totalPrice+"</b></strong></div><button onclick='window.location.href=\"../cart.php\"' class='buymoreBt rounded p-2 m-2'><b>ยืนยันการสั่งซื้อ</b></button>";
+        
     }
 
 }
-function deletediv(id){
-    document.getElementById("div"+id).remove();
+function deletediv(id, price){
     numMenu--;
+    if (numMenu == 0)
+    {
+        document.getElementById("noChoose").style.display = "block";
+        document.getElementById("totalMenu").style.display = "none";
+        
+    }
+    var numFood = parseInt(document.getElementById("numFood"+id).innerHTML);
+    totalPrice -= numFood*price;
+    document.getElementById("totalPrice").innerHTML = "฿ "+totalPrice;
+
+    document.getElementById("div"+id).remove();
 }
 function minus(id, price){
-    var num = document.getElementById("numFood"+id).value;
+    var num = document.getElementById("numFood"+id).innerHTML;
     if (num != 1){
-        document.getElementById("numFood"+id).value = parseInt(num)-1;
-        totalPrice -= price;
+        document.getElementById("numFood"+id).innerHTML = parseInt(num)-1;
+        totalPrice -= parseInt(price);
         document.getElementById("totalPrice").innerHTML = "฿ "+totalPrice;
     }
 }
 function plus(id, price){
-    var num = document.getElementById("numFood"+id).value;
-    document.getElementById("numFood"+id).value = parseInt(num)+1;
-    totalPrice += price;
+    var num = document.getElementById("numFood"+id).innerHTML;
+    document.getElementById("numFood"+id).innerHTML = parseInt(num)+1;
+    totalPrice += parseInt(price);
     document.getElementById("totalPrice").innerHTML = "฿ "+totalPrice;
     
 }
