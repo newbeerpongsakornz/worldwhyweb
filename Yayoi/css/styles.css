@@ -521,7 +521,8 @@ footer{
     font-weight: 400;
 }
 .menuOne{
-    width: 100%;
+    /* width: 100%; */
+    vertical-align: top !important;
 }
 
 .menuOneName{
@@ -571,3 +572,7 @@ footer{
     border: 2px dotted #f5bdd7;
     border-radius: 6px;
 }
+hr.dashed {
+    border-bottom: 1px dashed #c8c8c8;
+    border-top: none !important;
+  }

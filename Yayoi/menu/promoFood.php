@@ -95,7 +95,7 @@
         </div>
         <div class="row bodyMenu">
             <div class="col-lg-9 col-12">
-            <br><br>
+
                 <div id="menuPromo" class="row">
                     <?php
                         $url = "../json/promoFood.json";

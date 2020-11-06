@@ -186,7 +186,7 @@ function changeMenuType(page, typeFood, pageMenu){
                 {
                     dontHaveMenu = false;
                     htmlText += "<div class='menu col-4 p-0'>";
-                    htmlText += "<button onclick='clickMenu(\""+menu.id+"\", \""+page+"\")' class='btnNone clickCursor'><img src='";
+                    htmlText += "<button onclick='clickMenu(\""+menu.id+"\", \""+page+"\",\""+price+"\")' class='btnNone clickCursor'><img src='";
                     if (page == "setFood")
                     {
                         htmlText += menu.setType[0][0].img;
@@ -204,7 +204,7 @@ function changeMenuType(page, typeFood, pageMenu){
                             htmlText += "<div class='logoTypeBox'><img src='../icon/"+menu.type[j]+".PNG' height='26px'></div>";
                         }
                     }
-                    htmlText += "</div><button onclick='clickMenu(\""+menu.id+"\", \""+page+"\")' class='linkMenu btnNone clickCursor'><div class='nameMenu font-weight-bold' id='nameMenu"+i+"' onmouseover='changeMenuName("+i+", \"over\")' onmouseout='changeMenuName("+i+", \"out\")'>"+menu.nameTH+"<br>";
+                    htmlText += "</div><button onclick='clickMenu(\""+menu.id+"\", \""+page+"\", \""+price+"\")' class='linkMenu btnNone clickCursor'><div class='nameMenu font-weight-bold' id='nameMenu"+i+"' onmouseover='changeMenuName("+i+", \"over\")' onmouseout='changeMenuName("+i+", \"out\")'>"+menu.nameTH+"<br>";
                     htmlText += "<div class='nameMenuJP' id='nameMenuJP"+i+"'>"+menu.nameJP+"<br><br></div></div></button>";
                     htmlText += "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ ";
                     if (page == "setFood")
@@ -271,7 +271,7 @@ function changeMenuOneName(cmd){
     }
 }
 
-function clickMenu(id, page){
+function clickMenu(id, page, price){
     let requestURL = "../json/"+page+".json"; 
     let request = new XMLHttpRequest(); 
     request.onreadystatechange = function () { 
@@ -293,7 +293,7 @@ function clickMenu(id, page){
             }
         }
         htmlText += "<div class='text-left'><button class='btnNone clickCursor' onclick='changeMenuType(\""+page+"\", \"all\", 1)'><div class='cc25'><span style='color: white;'><i class='fas fa-angle-left' style='transform: translate(-1px, 2px);'></i></span></div><div class='cc25L'> กลับ</div></button></div><br>";
-        htmlText += "<img src='";
+        htmlText += "<img  src='";
         if (page == "setFood")
         {
             htmlText += menu.setType[0][0].img;
@@ -315,11 +315,18 @@ function clickMenu(id, page){
             }
         }
         htmlText += "</div><div class='menuOneN'>";
-        htmlText += "<div class='menuOneName text-left' id='menuOneNameTH' onmouseover='changeMenuOneName(\"over\")' onmouseout='changeMenuOneName(\"out\")'>"+menu.nameTH+"</div>";
+        htmlText += "<div class='menuOneName text-left mb-2' id='menuOneNameTH' onmouseover='changeMenuOneName(\"over\")' onmouseout='changeMenuOneName(\"out\")'><h5><b>"+menu.nameTH+"</b></h5></div>";
         htmlText += "<div class='menuOneName text-left' id='menuOneNameJP' onmouseover='changeMenuOneName(\"over\")' onmouseout='changeMenuOneName(\"out\")'>"+menu.nameJP+"</div>";
-        htmlText += "</div></div>";
-        htmlText += "";
-        htmlText += "";
+        htmlText += "</div><hr></div>";
+        htmlText += "<div class='d-inline float-right'>";
+        htmlText += "<div class='d-inline mr-4'><button type='button' class='circlebt d-inline' onclick='minus(\""+id+"\","+price+")'><svg class='pb-1' width='11px' aria-hidden='true'xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>";
+        htmlText += "<path fill='currentColor' d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg></button>";
+        htmlText += "<div class='numFood' id='numFood"+id+"'>1</div>";
+        htmlText += "<button type='button' class='circlebt d-inline' onclick='plus(\""+id+"\", "+price+")'><svg class='pb-1' width='11px' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>";
+        htmlText += "<path fill='currentColor' d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg></button></div>";
+        htmlText += "<div style='font-size:22px;' class='d-inline'><b>฿ "+menu.price+"</b></div>"
+        htmlText += "<div class='d-inline ml-3'><button class='cartBt d-inline position-relative' onclick='add(\""+menu.id+"\", \"promoFood\")'><img src='../icon/addcart.PNG' width='70%'></button></div></div><br><br>";
+        htmlText += "<hr class='dashed'></div>";
         htmlText += "";
         
         htmlText += "</div>";
