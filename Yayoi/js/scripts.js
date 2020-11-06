@@ -334,3 +334,7 @@ function clickMenu(id, page, price){
         document.getElementById("foodType").style = "display: none;";
     }
 }
+
+function deleteAlert(idTag){
+    document.getElementById(idTag).remove();
+}
