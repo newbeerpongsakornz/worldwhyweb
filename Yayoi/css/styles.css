@@ -619,8 +619,24 @@ hr.dashed {
     height: 50px;
     width: 350px;
     position: fixed;
-    bottom: 50px;
+    bottom: 70px;
     right: 20px;
     display: inline;
 
+}
+.bottom-busket{
+    position: relative;
+    padding: 2px 10px;
+    width: 45px;
+    height: 45px;
+    display: block;
+    text-decoration: none!important;
+    border: 0;
+    background: #e44e93;
+    color: #fff;
+    border-radius: 100%;
+    transition: all .2s;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
 }

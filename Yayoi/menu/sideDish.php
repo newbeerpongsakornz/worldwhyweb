@@ -131,7 +131,7 @@
                                 echo "</div><button onclick='clickMenu(\"".$menu->id."\", \"sideDish\")' class='btnNone clickCursor linkMenu'><div class='nameMenu font-weight-bold' id='nameMenu$i' onmouseover='changeMenuName($i, \"over\")' onmouseout='changeMenuName($i, \"out\")'>".$menu->nameTH."<br>";
                                 echo "<div class='nameMenuJP font-weight-normal' id='nameMenuJP$i'>".$menu->nameJP."<br><br></div></div></button>";
                                 echo "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ ".$menu->price."</b>&nbsp;&nbsp;";
-                                echo "<button class='cartBt' onclick='add(\"".$menu->id."\", \"sideDish\")'><img src='../icon/addcart.PNG' width='70%'></button></div></div>";
+                                echo "<button class='cartBt' onclick='add(\"".$menu->id."\", \"sideDish\"),alertpopup()'><img src='../icon/addcart.PNG' width='70%'></button></div></div>";
                                 echo "</div>";
                             }
                             else if ($i == 15)
