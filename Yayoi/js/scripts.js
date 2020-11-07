@@ -45,11 +45,11 @@ function add(id, page, num=1){
                     var htmlText = "";
                     htmlText += "<div id='div"+id+"'>";
                     htmlText += "<div style='width:100%;' class='p-2 mb-2'><div class='float-left'>"+menu.nameTH+" </div><button class='deleteBt mr-2' onclick='deletediv(\""+id+"\", "+price+")'> <img src='../icon/delete.svg'> ลบ</button></div>";
-                    htmlText += "<div style='width:100%;' class='pb-2 pt-2'><div class='d-inline float-left'><button type='button' class='circlebt d-inline' onclick='minus(\""+id+"\", "+price+")'><svg class='pb-1' width='11px' aria-hidden='true'";
+                    htmlText += "<div style='width:100%;' class='pb-2 pt-2'><div class='d-inline float-left'><button type='button' class='circlebt d-inline' onclick='minus(\""+id+"\", "+price+"),alertpopup()'><svg class='pb-1' width='11px' aria-hidden='true'";
                     htmlText += "focusable='false' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>";
                     htmlText += "<path fill='currentColor' d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg></button>";
                     // htmlText += "<div class='input-picker'><input class='input-picker d-inline' type='text' id='numFood"+id+"' value=1 data-max='999' readonly=''></div>";
-                    htmlText += "<div class='numFood' id='numFood"+id+"'>"+num+"</div>";
+                    htmlText += "<div class='numFood' id='numFood"+id+"'>1</div>";
                     htmlText += "<button type='button' class='circlebt d-inline' onclick='plus(\""+id+"\", "+price+")'><svg class='pb-1' width='11px' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>";
                     htmlText += "<path fill='currentColor' d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg></button></div>";
                     htmlText += "<div style='font-size:22px;' class='text-right pr-0'><b>฿ "+price+"</b></div></div><br>";
@@ -75,6 +75,13 @@ function addOne(id, page){
     add(id, page, parseInt(num));
 }
 
+function alertpopup(){
+    document.getElementById("popup-suc").style.display = "inline";
+    var divpopup = document.getElementById("popup-suc");
+    setTimeout(function(){
+        document.getElementById("popup-suc").style.display = "none";
+       },2000);
+}
 function deletediv(id, price){
     numMenu--;
     if (numMenu == 0)
@@ -103,7 +110,7 @@ function plus(id, price, number=1){
     document.getElementById("numFood"+id).innerHTML = parseInt(num)+number;
     totalPrice += parseInt(price)*number;
     document.getElementById("totalPrice").innerHTML = "฿ "+totalPrice;
-    
+    alertpopup();
 }
 
 function minusOne(id, price){
