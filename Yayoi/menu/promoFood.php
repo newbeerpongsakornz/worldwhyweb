@@ -147,7 +147,6 @@
         </div>
     </div>
     
-    <div class='popup float-right rounded p-1 notoFont' id="popup-suc"><img src="../icon/suc.png" class="d-inline m-2"><h6 class="d-inline m-2"><b>สำเร็จ</b></h6></div>
 
     <footer class="text-center">
         <div class="container">

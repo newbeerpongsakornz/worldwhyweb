@@ -76,10 +76,9 @@ function addOne(id, page){
 }
 
 function alertpopup(){
-    document.getElementById("popup-suc").style.display = "inline";
-    var divpopup = document.getElementById("popup-suc");
+    document.body.innerHTML += "<div class='popup float-right rounded p-1 notoFont' id='popup-suc'><img src='../icon/suc.png' class='d-inline m-2'><h6 class='d-inline m-2'><b>สำเร็จ</b></h6></div>"
     setTimeout(function(){
-        document.getElementById("popup-suc").style.display = "none";
+        document.getElementById("popup-suc").remove();
        },2000);
 }
 function deletediv(id, price){
