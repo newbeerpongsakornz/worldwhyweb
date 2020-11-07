@@ -690,3 +690,14 @@ button:focus{
 span>label.nameMenuJP{
     padding-left: 20px;
 }
+
+.menuSetFoodRice{
+    display: inline-block;
+    padding-right: 50px;
+}
+
+.menuSetFoodRice:nth-child(n+3){
+    border-left: 1px dotted #777;
+    padding-left: 50px;
+}
+

@@ -404,11 +404,17 @@ function clickMenu(id, page){
                 }
                 htmlText += "><span><b>"+menuSet.nameTH+"</b><br><label class='nameMenuJP'>"+menuSet.nameJP+"</label></span></div>";
             }
-            htmlText += "</div>";
-            htmlText += "";
-            htmlText += "";
-            htmlText += "";
-            htmlText += "</div>";
+            htmlText += "</div><div id='setFoodRice'><div style='font-size: 18px; margin-bottom: 5px'>เลือกข้าวในเซ็ต: </div>";
+            for (j = 0; j < menu.rices.length; j++)
+            {
+                htmlText += "<div class='menuSetFoodRice'><input type='radio' id='menuSetFoodRice"+j+"'";
+                if (j == 0)
+                {
+                    htmlText += " checked";
+                }
+                htmlText += "><span>&emsp;<img src='"+menu.rices[j].img+"' width='66px'>&emsp;<b>"+menu.rices[j].name+"</b></span></div>";
+            }
+            htmlText += "</div></div>";
         }
 
         htmlText += "<hr><div class='d-inline float-right'>";
