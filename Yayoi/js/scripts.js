@@ -1,7 +1,7 @@
 var totalPrice = 0;
 var numMenu = 0;
 
-function add(id, page){
+function add(id, page, num=1){
     let requestURL = "../json/"+page+".json"; 
     let request = new XMLHttpRequest(); 
     request.onreadystatechange = function () { 
@@ -16,6 +16,7 @@ function add(id, page){
         if (document.getElementById("noChoose") != null)
         {
             document.getElementById("noChoose").style.display = "none";
+            
             document.getElementById("totalMenu").style.display = "block";
             document.getElementById("totalMenu").innerHTML = "<div class='float-left'> ราคาอาหารทั้งหมด <br> <div class='p-2' style='font-size:14px; color:#777777;'>(ยังไม่รวมค่าจัดส่ง)</div></div><div style='font-size:23px;' class='float-right'><strong><b id='totalPrice'>฿"+totalPrice+"</b></strong></div><button onclick='window.location.href=\"../cart.php\"' class='buymoreBt rounded p-2 m-2'><b>ยืนยันการสั่งซื้อ</b></button><div class='promo-cart mt-3 mb-4'><section class='pt-3 p-2'><p>ฟรี นมเมมเบอร์รี่ 1 กล่องเมื่อสั่งซื้อครบ 1,000 บาท</p></section></div>";
         }
@@ -39,7 +40,7 @@ function add(id, page){
                 if (document.getElementById("numFood"+id) == null)
                 {
                     numMenu++;
-                    totalPrice += parseInt(price);
+                    totalPrice += parseInt(price)*num;
 
                     var htmlText = "";
                     htmlText += "<div id='div"+id+"'>";
@@ -48,7 +49,7 @@ function add(id, page){
                     htmlText += "focusable='false' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>";
                     htmlText += "<path fill='currentColor' d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg></button>";
                     // htmlText += "<div class='input-picker'><input class='input-picker d-inline' type='text' id='numFood"+id+"' value=1 data-max='999' readonly=''></div>";
-                    htmlText += "<div class='numFood' id='numFood"+id+"'>1</div>";
+                    htmlText += "<div class='numFood' id='numFood"+id+"'>"+num+"</div>";
                     htmlText += "<button type='button' class='circlebt d-inline' onclick='plus(\""+id+"\", "+price+")'><svg class='pb-1' width='11px' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>";
                     htmlText += "<path fill='currentColor' d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg></button></div>";
                     htmlText += "<div style='font-size:22px;' class='text-right pr-0'><b>฿ "+price+"</b></div></div><br>";
@@ -59,7 +60,8 @@ function add(id, page){
                 }
                 else
                 {
-                    plus(id, price);
+                    plus(id, price, num);
+                    console.log(num);
                 }
             }
         }
@@ -67,6 +69,12 @@ function add(id, page){
     }
 
 }
+
+function addOne(id, page){
+    var num = document.getElementById("numFoodOne"+id).innerHTML;
+    add(id, page, parseInt(num));
+}
+
 function deletediv(id, price){
     numMenu--;
     if (numMenu == 0)
@@ -81,19 +89,33 @@ function deletediv(id, price){
 
     document.getElementById("div"+id).remove();
 }
-function minus(id, price){
+function minus(id, price, number=1){
     var num = document.getElementById("numFood"+id).innerHTML;
     if (num != 1){
-        document.getElementById("numFood"+id).innerHTML = parseInt(num)-1;
+        document.getElementById("numFood"+id).innerHTML = parseInt(num)-number;
         totalPrice -= parseInt(price);
         document.getElementById("totalPrice").innerHTML = "฿ "+totalPrice;
     }
 }
-function plus(id, price){
+
+function plus(id, price, number=1){
     var num = document.getElementById("numFood"+id).innerHTML;
-    document.getElementById("numFood"+id).innerHTML = parseInt(num)+1;
-    totalPrice += parseInt(price);
+    document.getElementById("numFood"+id).innerHTML = parseInt(num)+number;
+    totalPrice += parseInt(price)*number;
     document.getElementById("totalPrice").innerHTML = "฿ "+totalPrice;
+    
+}
+
+function minusOne(id, price){
+    var num = document.getElementById("numFoodOne"+id).innerHTML;
+    if (num != 1){
+        document.getElementById("numFoodOne"+id).innerHTML = parseInt(num)-1;
+    }
+}
+
+function plusOne(id, price){
+    var num = document.getElementById("numFoodOne"+id).innerHTML;
+    document.getElementById("numFoodOne"+id).innerHTML = parseInt(num)+1;
     
 }
 
@@ -186,7 +208,7 @@ function changeMenuType(page, typeFood, pageMenu){
                 {
                     dontHaveMenu = false;
                     htmlText += "<div class='menu col-4 p-0'>";
-                    htmlText += "<button onclick='clickMenu(\""+menu.id+"\", \""+page+"\",\""+price+"\")' class='btnNone clickCursor'><img src='";
+                    htmlText += "<button onclick='clickMenu(\""+menu.id+"\", \""+page+"\")' class='btnNone clickCursor'><img src='";
                     if (page == "setFood")
                     {
                         htmlText += menu.setType[0][0].img;
@@ -204,7 +226,7 @@ function changeMenuType(page, typeFood, pageMenu){
                             htmlText += "<div class='logoTypeBox'><img src='../icon/"+menu.type[j]+".PNG' height='26px'></div>";
                         }
                     }
-                    htmlText += "</div><button onclick='clickMenu(\""+menu.id+"\", \""+page+"\", \""+price+"\")' class='linkMenu btnNone clickCursor'><div class='nameMenu font-weight-bold' id='nameMenu"+i+"' onmouseover='changeMenuName("+i+", \"over\")' onmouseout='changeMenuName("+i+", \"out\")'>"+menu.nameTH+"<br>";
+                    htmlText += "</div><button onclick='clickMenu(\""+menu.id+"\", \""+page+"\")' class='linkMenu btnNone clickCursor'><div class='nameMenu font-weight-bold' id='nameMenu"+i+"' onmouseover='changeMenuName("+i+", \"over\")' onmouseout='changeMenuName("+i+", \"out\")'>"+menu.nameTH+"<br>";
                     htmlText += "<div class='nameMenuJP' id='nameMenuJP"+i+"'>"+menu.nameJP+"<br><br></div></div></button>";
                     htmlText += "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ ";
                     if (page == "setFood")
@@ -288,7 +310,7 @@ function changeMenuOneName(cmd){
     }
 }
 
-function clickMenu(id, page, price){
+function clickMenu(id, page){
     let requestURL = "../json/"+page+".json"; 
     let request = new XMLHttpRequest(); 
     request.onreadystatechange = function () { 
@@ -331,18 +353,28 @@ function clickMenu(id, page, price){
                 }
             }
         }
+        var price = 0;
+        if (page == "setFood")
+        {
+            price = menu.setType[0][0].price;
+        }
+        else
+        {
+            price = menu.price;
+        }
+
         htmlText += "</div><div class='menuOneN'>";
         htmlText += "<div class='menuOneName text-left mb-2' id='menuOneNameTH' onmouseover='changeMenuOneName(\"over\")' onmouseout='changeMenuOneName(\"out\")'><h5><b>"+menu.nameTH+"</b></h5></div>";
         htmlText += "<div class='menuOneName text-left' id='menuOneNameJP' onmouseover='changeMenuOneName(\"over\")' onmouseout='changeMenuOneName(\"out\")'>"+menu.nameJP+"</div>";
         htmlText += "</div><hr></div>";
         htmlText += "<div class='d-inline float-right'>";
-        htmlText += "<div class='d-inline mr-4'><button type='button' class='circlebt d-inline' onclick='minus(\""+id+"\","+price+")'><svg class='pb-1' width='11px' aria-hidden='true'xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>";
+        htmlText += "<div class='d-inline mr-4'><button type='button' class='circlebt d-inline' onclick='minusOne(\""+id+"\","+price+")'><svg class='pb-1' width='11px' aria-hidden='true'xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>";
         htmlText += "<path fill='currentColor' d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg></button>";
-        htmlText += "<div class='numFood' id='numFood"+id+"'>1</div>";
-        htmlText += "<button type='button' class='circlebt d-inline' onclick='plus(\""+id+"\", "+price+")'><svg class='pb-1' width='11px' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>";
+        htmlText += "<div class='numFood' id='numFoodOne"+id+"'>1</div>";
+        htmlText += "<button type='button' class='circlebt d-inline' onclick='plusOne(\""+id+"\", "+price+")'><svg class='pb-1' width='11px' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>";
         htmlText += "<path fill='currentColor' d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg></button></div>";
-        htmlText += "<div style='font-size:22px;' class='d-inline'><b>฿ "+menu.price+"</b></div>"
-        htmlText += "<div class='d-inline ml-3'><button class='cartBt d-inline position-relative' onclick='add(\""+menu.id+"\", \"promoFood\")'><img src='../icon/addcart.PNG' width='70%'></button></div></div><br><br>";
+        htmlText += "<div style='font-size:22px;' class='d-inline'><b>฿ "+price+"</b></div>"
+        htmlText += "<div class='d-inline ml-3'><button class='cartBt d-inline position-relative' onclick='addOne(\""+menu.id+"\", \""+page+"\")'><img src='../icon/addcart.PNG' width='70%'></button></div></div><br><br>";
         htmlText += "<hr class='dashed'></div>";
         htmlText += "";
         
