@@ -80,8 +80,8 @@
                 {
                     if ($i == 7)
                     {
-                        echo "<a href='".$nameEN[$i].".php'><div class='menuBox menuSelect'>";
-                        echo "<img src='../icon/".($i+1)."1.PNG' height='40px'><br><br>";
+                        echo "<a href='".$nameEN[$i].".php'><div class='menuBox menuSelect' id='".$nameEN[$i]."Bar'>";
+                        echo "<img id='imgMenuBox".($i+1)."' src='../icon/".($i+1)."1.PNG' height='40px'><br><br>";
                         echo $nameTH[$i]."</div></a>";
                     }
                     else
@@ -109,7 +109,7 @@
                         }
                     ?>
                 </div>
-                <div id="menuPromo" class="row">
+                <div id="menuFood" class="row">
                     <?php
                         $url = "../json/drink.json";
                         $res = file_get_contents($url);

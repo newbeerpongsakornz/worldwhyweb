@@ -80,13 +80,13 @@
                 {
                     if ($i == 2)
                     {
-                        echo "<a href='".$nameEN[$i].".php'><div class='menuBox menuSelect'>";
-                        echo "<img src='../icon/".($i+1)."1.PNG' height='40px'><br><br>";
+                        echo "<a href='".$nameEN[$i].".php'><div class='menuBox menuSelect' id='".$nameEN[$i]."Bar'>";
+                        echo "<img id='imgMenuBox".($i+1)."' src='../icon/".($i+1)."1.PNG' height='40px'><br><br>";
                         echo $nameTH[$i]."</div></a>";
                     }
                     else
                     {
-                        echo "<a href='".$nameEN[$i].".php' class='menuText'><div class='menuBox' onmouseover='changeMenuColor(".($i+1).", \"over\")' onmouseout='changeMenuColor(".($i+1).", \"out\")'>";
+                        echo "<a href='".$nameEN[$i].".php' class='menuText'><div class='menuBox' id='".$nameEN[$i]."Bar' onmouseover='changeMenuColor(".($i+1).", \"over\")' onmouseout='changeMenuColor(".($i+1).", \"out\")'>";
                         echo "<img id='imgMenuBox".($i+1)."' src='../icon/".($i+1).".PNG' height='40px'><br><br>";
                         echo $nameTH[$i]."</div></a>";
                     }
@@ -109,7 +109,7 @@
                         }
                     ?>
                 </div>
-                <div id="menuPromo" class="row">
+                <div id="menuFood" class="row">
                     <?php
                         $url = "../json/setFood.json";
                         $res = file_get_contents($url);

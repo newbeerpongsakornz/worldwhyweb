@@ -640,3 +640,53 @@ hr.dashed {
     bottom: 50px;
     right: 20px;
 }
+
+.rightSide{
+    right: 0;
+    top: 0;
+    position: absolute;
+}
+
+.leftSide{
+    left: 0;
+}
+
+.btnSetFood{
+    width: 230px;
+    height: 38px;
+    border: 1px solid #eb7aae;
+    background-color: #fef4f9;
+    text-align: center;
+    border-radius: 4px;
+    padding: 4px;
+    margin: 0px 4px;
+    cursor: pointer;
+}
+
+.btnSetFood.select{
+    color: white;
+    background-color: #eb7aae;
+}
+
+button:focus{
+    outline: none;
+}
+
+#setFoodMenu>div#setFoodMenuBtn{
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.menuSetFoodOne{
+    width: 50%;
+    padding-bottom: 15px;
+    display: inline-block;
+}
+
+.menuSetFoodOne>span, span>label.nameMenuJP{
+    padding-left: 10px;
+}
+
+span>label.nameMenuJP{
+    padding-left: 20px;
+}

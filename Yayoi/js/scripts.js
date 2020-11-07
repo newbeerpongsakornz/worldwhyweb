@@ -204,7 +204,11 @@ function changeMenuType(page, typeFood, pageMenu){
     function dataReportStatus(data) { 
         var htmlText = "";
         var dontHaveMenu = true;
-        document.getElementById("foodType").style = "display: relative;";
+        if (page != "promoFood")
+        {
+            document.getElementById("foodType").style = "display: block;";
+        }
+        menuBar(page, "open");
         for (i = (15*(pageMenu-1)); i < data.length; i++)
         {  
             if (i < 15*pageMenu)
@@ -225,7 +229,7 @@ function changeMenuType(page, typeFood, pageMenu){
                     }
                     htmlText += "' width='85%' title='"+menu.id+" "+menu.nameTH+"'></a><br><br>";
                     htmlText += "<div class='logoType'>";
-                    if (menu.type.length != 0)
+                    if (menu.type.length != 0 && page != "promoFood")
                     {
                         for (j = 0; j < menu.type.length; j++)
                         {
@@ -243,8 +247,16 @@ function changeMenuType(page, typeFood, pageMenu){
                     {
                         htmlText += menu.price;
                     }
-                    htmlText += "</b>&nbsp;&nbsp;";
-                    htmlText += "<button class='cartBt' onclick='add(\""+menu.id+"\", \""+page+"\")'><img src='../icon/addcart.PNG' width='70%'></button>";
+                    htmlText += "</b>&nbsp;&nbsp;<button class='cartBt' onclick='";
+                    if (page == "setFood")
+                    {
+                        htmlText += "clickMenu";
+                    }
+                    else
+                    {
+                        htmlText += "add";
+                    }
+                    htmlText += "(\""+menu.id+"\", \""+page+"\")'><img src='../icon/addcart.PNG' width='70%'></button>";
                     htmlText += "</div></div></div>";
                 }
             }
@@ -291,7 +303,8 @@ function changeMenuType(page, typeFood, pageMenu){
             htmlText += "<div style='font-size: 30px; text-align: center; width:100%'>ไม่พบรายการอาหาร</div>";
         }
         gotoTop();
-        document.getElementById("menuPromo").innerHTML = htmlText;
+        document.getElementById("menuFood").innerHTML = htmlText;
+        document.getElementById("menuFood").style.padding = "0px";
     }
     
 }
@@ -327,6 +340,7 @@ function clickMenu(id, page){
     request.open("GET", requestURL, true); 
     request.send();
     function dataReportStatus(data) { 
+        menuBar(page, "none");
         var htmlText = "<div class='menuOne'>";
         var menu;
         for (i = 0; i < data.length; i++)
@@ -372,8 +386,32 @@ function clickMenu(id, page){
         htmlText += "</div><div class='menuOneN'>";
         htmlText += "<div class='menuOneName text-left mb-2' id='menuOneNameTH' onmouseover='changeMenuOneName(\"over\")' onmouseout='changeMenuOneName(\"out\")'><h5><b>"+menu.nameTH+"</b></h5></div>";
         htmlText += "<div class='menuOneName text-left' id='menuOneNameJP' onmouseover='changeMenuOneName(\"over\")' onmouseout='changeMenuOneName(\"out\")'>"+menu.nameJP+"</div>";
-        htmlText += "</div><hr></div>";
-        htmlText += "<div class='d-inline float-right'>";
+        htmlText += "</div></div>";
+
+        if (page == "setFood")
+        {
+            htmlText += "<hr><div id='setFoodMenu' class='text-left'>";
+            htmlText += "<div id='setFoodMenuBtn'><label style='font-size: 18px' class='leftSide'>เลือกประเภทอาหาร: </label><div class='rightSide'>";
+            htmlText += "<button class='btnSetFood select'>แบบเซ็ต</button><button class='btnSetFood'>แบบจานเดี่ยว</button>";
+            htmlText += "</div></div><div id='menuSetFood'><div style='font-size: 18px; margin-bottom: 5px'>เลือกวิธีปรุง: </div>";
+            for (j = 0; j < menu.setType[0].length; j++)
+            {
+                var menuSet = menu.setType[0][j];
+                htmlText += "<div class='menuSetFoodOne'><input type='radio' id='menuSetFoodOne"+j+"'";
+                if (j == 0)
+                {
+                    htmlText += " checked";
+                }
+                htmlText += "><span><b>"+menuSet.nameTH+"</b><br><label class='nameMenuJP'>"+menuSet.nameJP+"</label></span></div>";
+            }
+            htmlText += "</div>";
+            htmlText += "";
+            htmlText += "";
+            htmlText += "";
+            htmlText += "</div>";
+        }
+
+        htmlText += "<hr><div class='d-inline float-right'>";
         htmlText += "<div class='d-inline mr-4'><button type='button' class='circlebt d-inline' onclick='minusOne(\""+id+"\","+price+")'><svg class='pb-1' width='11px' aria-hidden='true'xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>";
         htmlText += "<path fill='currentColor' d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg></button>";
         htmlText += "<div class='numFood' id='numFoodOne"+id+"'>1</div>";
@@ -382,10 +420,47 @@ function clickMenu(id, page){
         htmlText += "<div style='font-size:22px;' class='d-inline'><b>฿ "+price+"</b></div>"
         htmlText += "<div class='d-inline ml-3'><button class='cartBt d-inline position-relative' onclick='addOne(\""+menu.id+"\", \""+page+"\")'><img src='../icon/addcart.PNG' width='70%'></button></div></div><br><br>";
         htmlText += "<hr class='dashed'></div>";
-        htmlText += "";
         
         htmlText += "</div>";
-        document.getElementById("menuPromo").innerHTML = htmlText;
-        document.getElementById("foodType").style = "display: none;";
+        document.getElementById("menuFood").innerHTML = htmlText;
+        if (page != "promoFood")
+        {
+            document.getElementById("foodType").style = "display: none;";
+        }
+        document.getElementById("menuFood").style.padding = "0px 20px";
+    }
+}
+
+function menuBar(page, cmd){
+    var items = document.getElementsByClassName("menuBox");
+    if (cmd == "none")
+    {
+        for (i = 0; i < items.length; i++)
+        {
+            if (items[i].classList.toString().includes("menuSelect"))
+            {
+                items[i].classList.remove("menuSelect");
+                items[i].setAttribute("onmouseover", "changeMenuColor("+(i+1)+", 'over')");
+                items[i].setAttribute("onmouseout", "changeMenuColor("+(i+1)+", 'out')");
+                document.getElementById("imgMenuBox"+(i+1)).src = "../icon/"+(i+1)+".PNG";
+                items[i].parentElement.classList += "menuText";
+                break;
+            }
+        }
+    }
+    else
+    {
+        for (i = 0; i < items.length; i++)
+        {
+            if (items[i].id == page+"Bar")
+            {
+                items[i].classList.add("menuSelect");
+                items[i].removeAttribute("onmouseover");
+                items[i].removeAttribute("onmouseout");
+                items[i].parentElement.classList.remove("menuText");
+                document.getElementById("imgMenuBox"+(i+1)).src = "../icon/"+(i+1)+"1.PNG";
+                break;
+            }
+        }
     }
 }
