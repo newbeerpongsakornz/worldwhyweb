@@ -16,7 +16,7 @@
     
     <title>Yayoi Restaurant : Modern Japanese Restaurant in Thailand - ยาโยอิ เซ็ตอร่อยของทุกคน</title>
 </head>
-<body class="notoFont">
+<body class="notoFont" onscroll="cartwindow()">
 
 <header>
         <div class="topheader shadow">
@@ -162,7 +162,7 @@
             </div>
         </div>
     </div>
-    <a href="../cart.php" class="bottom-busket"><img src="../icon/busket.PNG" width='100%' class="mt-2 mb-1"></a>
+    <!-- <a href="../cart.php" class="bottom-busket"><img src="../icon/busket.PNG" width='100%' class="mt-2 mb-1"></a> -->
 
     <footer class="text-center">
         <div class="container">

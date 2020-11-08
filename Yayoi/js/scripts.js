@@ -537,3 +537,18 @@ function slideMenuOne(){
         behavior: 'smooth',
       })
 }
+function cartwindow(){
+    setTimeout(function(){
+        if (window.pageYOffset >= 500){
+            document.body.innerHTML += "<a href='../cart.php' class='bottom-busket' id='cartwindow'><img src='../icon/busket.PNG' width='100%' class='mt-2 mb-1'></a>"
+            console.log(check)
+        }
+    },500);
+    setTimeout(function(){
+        if (window.pageYOffset < 500){
+            document.getElementById("cartwindow").remove();
+            console.log(check)
+        }
+    },500);
+
+}
