@@ -356,7 +356,7 @@ function clickMenu(id, page){
             }
         }
         htmlText += "<div class='text-left'><button class='btnNone clickCursor' onclick='changeMenuType(\""+page+"\", \"all\", 1)'><div class='cc25'><span style='color: white;'><i class='fas fa-angle-left' style='transform: translate(-1px, 2px);'></i></span></div><div class='cc25L'> กลับ</div></button></div><br>";
-        htmlText += "<img  src='";
+        htmlText += "<img id='imgMenuOne'  src='";
         if (page == "setFood")
         {
             htmlText += menu.setType[0][0].img;
@@ -396,7 +396,7 @@ function clickMenu(id, page){
         {
             htmlText += "<hr><div id='setFoodMenu' class='text-left'>";
             htmlText += "<div id='setFoodMenuBtn'><label style='font-size: 18px' class='leftSide'>เลือกประเภทอาหาร: </label><div class='rightSide'>";
-            htmlText += "<button class='btnSetFood select'>แบบเซ็ต</button><button class='btnSetFood'>แบบจานเดี่ยว</button>";
+            htmlText += "<button class='btnSetFood select' onclick='setfoodbtn_set()' id='btnsetfoodset'>แบบเซ็ต</button><button class='btnSetFood'onclick='setfoodbtn_single()'id='btnsetfoodsingle'>แบบจานเดี่ยว</button>";
             htmlText += "</div></div><div id='menuSetFood'><div style='font-size: 18px; margin-bottom: 5px'>เลือกวิธีปรุง: </div>";
             for (j = 0; j < menu.setType[0].length; j++)
             {
@@ -550,5 +550,17 @@ function cartwindow(){
             console.log(check)
         }
     },500);
+
+}
+function setfoodbtn_single(){
+    document.getElementById("btnsetfoodsingle").classList.add("select");
+    document.getElementById("btnsetfoodset").classList.remove("select");
+    document.getElementById("setFoodRice").style.display = "none";
+    document.getElementById("imgMenuOne").src = menu.setType[0][1].img;
+}
+function setfoodbtn_set(){
+    document.getElementById("btnsetfoodsingle").classList.remove("select");
+    document.getElementById("btnsetfoodset").classList.add("select");
+    document.getElementById("setFoodRice").style.display = "block";
 
 }
