@@ -145,7 +145,7 @@
                         for ($i = 0; $i < sizeOf($data); $i++)
                         {
                             $menu = $data[$i];
-                            echo "<div class='menu col-4'>";
+                            echo "<div class='menu col-6 col-lg-4'>";
                             echo "<a href=''><img src='".$menu->img."' width='78%' title='".$menu->id." ".$menu->nameTH."'></a><br><br>";
                             echo "<div class='logoType'></div>";
                             echo "<a href='' class='linkMenu'><div class='nameMenu font-weight-bold' id='nameMenu$i' onmouseover='changeMenuName($i, \"over\")' onmouseout='changeMenuName($i, \"out\")'>".$menu->nameTH."<br>";

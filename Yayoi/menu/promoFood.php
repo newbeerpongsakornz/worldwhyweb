@@ -107,7 +107,7 @@
                             if ($i < 15)
                             {
                                 $menu = $data[$i];
-                                echo "<div class='menu col-4 p-0'>";
+                                echo "<div class='menu col-6 col-lg-4 p-0'>";
                                 if ($menu->recom == "true")
                                 {
                                     echo "<div class='recommend'><img src='../icon/mask.svg' style='width:130%;'><div class='rectext text-center'>แนะนำ</div></div>";
