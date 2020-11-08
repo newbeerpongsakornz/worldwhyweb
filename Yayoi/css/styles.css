@@ -1,6 +1,7 @@
 .topheader{
     background-color: #EB7AAE;
     color: white;
+    height: 75px;
 }
 .toppic{
     background-color: #FFFFFF;
@@ -172,6 +173,7 @@
 
 .linkMenu{
     color: black;
+    height: 100px;
 }
 
 .linkMenu:hover{
@@ -701,3 +703,11 @@ span>label.nameMenuJP{
     padding-left: 50px;
 }
 
+#menuFoodSuggest>div{
+    display: inline-block;
+}
+
+#menuFoodSuggest>h3{
+    margin: 45px 0px 22px 0px;
+    font-weight: bold;
+}

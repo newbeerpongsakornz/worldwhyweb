@@ -120,7 +120,23 @@
                                 echo "<button class='cartBt' onclick='add(\"".$menu->id."\", \"promoFood\")'><img src='../icon/addcart.PNG' width='70%'></button></div></div>";
                                 echo "</div>";
                             }
-                            
+                            else if ($i == 15)
+                            {
+                                echo "<div class='pageBar'><button class='pageNum'><</button>";
+                                for ($j = 1; $j < (sizeof($data)/15)+1; $j++)
+                                {
+                                    if ($j == 1)
+                                    {
+                                        echo "<button onclick='changeMenuType(\"promoFood\", \"all\", $j)' class='pageNum pageSelect' id='page".($j)."'>".($j)."</button>";
+                                    }
+                                    else
+                                    {
+                                        echo "<button onclick='changeMenuType(\"promoFood\", \"all\", $j)' class='pageNum' id='page".($j)."'>".($j)."</button>";
+                                    }
+                                }
+                                echo "<button class='pageNum' onclick='changeMenuType(\"promoFood\", \"all\", 2)'>></button></div>";
+                                break;
+                            }
                         }
                     ?>
                 </div>

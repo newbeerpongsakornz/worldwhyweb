@@ -237,7 +237,7 @@ function changeMenuType(page, typeFood, pageMenu){
                         }
                     }
                     htmlText += "</div><button onclick='clickMenu(\""+menu.id+"\", \""+page+"\")' class='linkMenu btnNone clickCursor'><div class='nameMenu font-weight-bold' id='nameMenu"+i+"' onmouseover='changeMenuName("+i+", \"over\")' onmouseout='changeMenuName("+i+", \"out\")'>"+menu.nameTH+"<br>";
-                    htmlText += "<div class='nameMenuJP' id='nameMenuJP"+i+"'>"+menu.nameJP+"<br><br></div></div></button>";
+                    htmlText += "<div class='nameMenuJP font-weight-normal' id='nameMenuJP"+i+"'>"+menu.nameJP+"<br><br></div></div></button>";
                     htmlText += "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ ";
                     if (page == "setFood")
                     {
@@ -341,13 +341,17 @@ function clickMenu(id, page){
     request.send();
     function dataReportStatus(data) { 
         menuBar(page, "none");
+        gotoTop();
+        slideMenuOne();
         var htmlText = "<div class='menuOne'>";
         var menu;
+        var numRan = [];
         for (i = 0; i < data.length; i++)
         {
             if (id == data[i].id)
             {
                 menu = data[i];
+                numRan.push(i);
                 break;
             }
         }
@@ -427,6 +431,62 @@ function clickMenu(id, page){
         htmlText += "<div class='d-inline ml-3'><button class='cartBt d-inline position-relative' onclick='addOne(\""+menu.id+"\", \""+page+"\")'><img src='../icon/addcart.PNG' width='70%'></button></div></div><br><br>";
         htmlText += "<hr class='dashed'></div>";
         
+        htmlText += "<div id='menuFoodSuggest'><h3 class='headBody'>เมนูแนะนำ</h3>";
+        
+        while (numRan.length != 4)
+        {
+            var randomNum = Math.floor(Math.random() * data.length);
+            if (numRan.indexOf(randomNum) != -1)
+            {
+                continue;
+            }
+            numRan.push(randomNum);
+            var menu = data[randomNum];
+
+            htmlText += "<div class='menu col-4 p-0'>";
+            htmlText += "<button onclick='clickMenu(\""+menu.id+"\", \""+page+"\")' class='btnNone clickCursor'><img src='";
+            if (page == "setFood")
+            {
+                htmlText += menu.setType[0][0].img;
+            }
+            else
+            {
+                htmlText += menu.img;
+            }
+            htmlText += "' width='85%' title='"+menu.id+" "+menu.nameTH+"'></a><br><br>";
+            htmlText += "<div class='logoType'>";
+            if (menu.type.length != 0 && page != "promoFood")
+            {
+                for (j = 0; j < menu.type.length; j++)
+                {
+                    htmlText += "<div class='logoTypeBox'><img src='../icon/"+menu.type[j]+".PNG' height='26px'></div>";
+                }
+            }
+            htmlText += "</div><button onclick='clickMenu(\""+menu.id+"\", \""+page+"\")' class='linkMenu btnNone clickCursor'><div class='nameMenu font-weight-bold' id='nameMenu"+i+"' onmouseover='changeMenuName("+i+", \"over\")' onmouseout='changeMenuName("+i+", \"out\")'>"+menu.nameTH+"<br>";
+            htmlText += "<div class='nameMenuJP font-weight-normal' id='nameMenuJP"+i+"'>"+menu.nameJP+"<br><br></div></div></button>";
+            htmlText += "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ ";
+            if (page == "setFood")
+            {
+                htmlText += menu.setType[0][0].price;
+            }
+            else
+            {
+                htmlText += menu.price;
+            }
+            htmlText += "</b>&nbsp;&nbsp;<button class='cartBt' onclick='";
+            if (page == "setFood")
+            {
+                htmlText += "clickMenu";
+            }
+            else
+            {
+                htmlText += "add";
+            }
+            htmlText += "(\""+menu.id+"\", \""+page+"\")'><img src='../icon/addcart.PNG' width='70%'></button>";
+            htmlText += "</div></div></div>";
+        }
+        htmlText += "</div>";
+
         htmlText += "</div>";
         document.getElementById("menuFood").innerHTML = htmlText;
         if (page != "promoFood")
@@ -469,4 +529,11 @@ function menuBar(page, cmd){
             }
         }
     }
+}
+
+function slideMenuOne(){
+    window.scrollTo({
+        top: 425,
+        behavior: 'smooth',
+      })
 }
