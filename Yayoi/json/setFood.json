@@ -78,22 +78,20 @@
                     "nameTH":"เซ็ตปลาแพนกาเซียส ดอร์รี่ ย่างซีอิ๊วกระทะร้อน",
                     "nameJP":"パンがツアス",
                     "price":"179"
-                }
-            ],
-            [
+                },
                 {
                     "img":"https://yayoirestaurants.com/productimages/5178_SE013_Dory-w-Sauce-Set.jpg",
                     "nameTH":"เซ็ตปลาแพนกาเซียส ดอร์รี่ ย่างเกลือกระทะร้อน",
                     "nameJP":"パンがツアス",
                     "price":"179"
+                },
+                {
+                    "img":"https://yayoirestaurants.com/productimages/5178_SE013_Dory-w-Sauce-Set.jpg",
+                    "nameTH":"เซ็ตสเต็กปลาแพนกาเซียส ดอร์รี่ กระทะร้อน",
+                    "nameJP":"パンがツアス",
+                    "price":"179"
                 }
             ],
-            {
-                "img":"https://yayoirestaurants.com/productimages/5178_SE013_Dory-w-Sauce-Set.jpg",
-                "nameTH":"เซ็ตสเต็กปลาแพนกาเซียส ดอร์รี่ กระทะร้อน",
-                "nameJP":"パンがツアス",
-                "price":"179"
-            },
             [
                 {
                     "img":"https://yayoirestaurants.com/productimages/4875_AL008_Dory-w-Sauce.jpg",
@@ -149,14 +147,16 @@
                     "price":"169"
                 }
             ],
+            [    
                 {
                 "img":"https://yayoirestaurants.com/productimages/8951_AL016_Fried-Pork-Cutlet.jpg",
                 "nameTH":"หมูชุบแป้งทอด (อาหารจานเดียว)",
                 "nameJP":"とんかつ",
                 "price":"149"
                 }
-
+            ]
         ],
+
         "rices":
         [
             {
@@ -393,45 +393,34 @@
                     "nameTH":"เซ็ตปลาแซลม่อนย่างซีอิ๊วกระทะร้อน",
                     "nameJP":"サーモン",
                     "price":"309"
-                }
-            ],
-            [
+                },
                 {
                     "img":"https://yayoirestaurants.com/productimages/7678_SE012_Salmon-w-Sauce-Set.jpg",
                     "nameTH":"เซ็ตปลาแซลม่อนย่างเกลือกระทะร้อน",
                     "nameJP":"鮭の塩焼き",
                     "price":"125"
-                }
-            ],
-
-            [
+                },
                 {
                     "img":"https://yayoirestaurants.com/productimages/7347_AL019_Roasted-Pork-on-Hot.jpg",
                     "nameTH":"เซ็ตสเต็กปลาแซลมอนกระทะร้อน",
                     "nameJP":"鮭のステーキ",
                     "price":"309"
                 }
-            ],
 
+            ],
             [
                 {
                     "img":"https://yayoirestaurants.com/productimages/497_AL006_Salmon-w-Sauce.jpg",
                     "nameTH":"ปลาแซลม่อนย่างเกลือ(อาหารจานเดียว)",
                     "nameJP":"鮭の塩焼き",
                     "price":"289"
-                }
-            ],
-
-            [
+                },
                 {
                     "img":"https://yayoirestaurants.com/productimages/7814_AL005_Salmon-w-Salt.jpg",
                     "nameTH":"ปลาแซลม่อนย่างซีอิ๊ว(อาหารจานเดียว)",
                     "nameJP":"鮭の照り焼き",
                     "price":"289"
-                }
-            ],
-
-            [
+                },  
                 {
                     "img":"https://yayoirestaurants.com/productimages/7678_SE012_Salmon-w-Sauce-Set.jpg",
                     "nameTH":"สเต๊กปลาแซลมอนกระทะร้อน(อาหารจานเดียว)",
@@ -439,7 +428,7 @@
                     "price":"289"
                 }
             ]
- 
+
         ],
 
         "rices":
