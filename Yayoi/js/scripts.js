@@ -401,22 +401,22 @@ function clickMenu(id, page){
             for (j = 0; j < menu.setType[0].length; j++)
             {
                 var menuSet = menu.setType[0][j];
-                htmlText += "<div class='menuSetFoodOne' onclick='changeMenuOneAll(0,"+j+", \""+menu.id+"\")'><input type='radio' id='menuSetFoodOne"+j+"'";
+                htmlText += "<div class='menuSetFoodOne' onclick='changeMenuOneAll(0,"+j+", \""+menu.id+"\")'><input type='radio' name='menuSetFoodOneChoose' id='menuSetFoodOne"+j+"'";
                 if (j == 0)
                 {
                     htmlText += " checked";
                 }
-                htmlText += "'><span><b>"+menuSet.nameTH+"</b><br><label class='nameMenuJP'>"+menuSet.nameJP+"</label></span></div>";
+                htmlText += "><span><b>"+menuSet.nameTH+"</b><br><label class='nameMenuJP'>"+menuSet.nameJP+"</label></span></div>";
             }
             htmlText += "</div><div id='setFoodRice'><div style='font-size: 18px; margin-bottom: 5px'>เลือกข้าวในเซ็ต: </div>";
             for (j = 0; j < menu.rices.length; j++)
             {
-                htmlText += "<div class='menuSetFoodRice'><input type='radio' id='menuSetFoodRice"+j+"'";
+                htmlText += "<div class='menuSetFoodRice' onclick='changeMenuRice("+j+")'><input type='radio' name='menuSetFoodRiceChoose' id='menuSetFoodRice"+j+"'";
                 if (j == 0)
                 {
                     htmlText += " checked";
                 }
-                htmlText += "><span>&emsp;<img src='"+menu.rices[j].img+"' width='66px'>&emsp;<b>"+menu.rices[j].name+"</b></span></div>";
+                htmlText += " value="+menu.rices[j].price+"><span>&emsp;<img src='"+menu.rices[j].img+"' width='66px'>&emsp;<b>"+menu.rices[j].name+"</b></span></div>";
             }
             htmlText += "</div></div>";
         }
@@ -427,7 +427,7 @@ function clickMenu(id, page){
         htmlText += "<div class='numFood' id='numFoodOne"+id+"'>1</div>";
         htmlText += "<button type='button' class='circlebt d-inline' onclick='plusOne(\""+id+"\", "+price+")'><svg class='pb-1' width='11px' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>";
         htmlText += "<path fill='currentColor' d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg></button></div>";
-        htmlText += "<div style='font-size:22px;' class='d-inline'><b>฿ "+price+"</b></div>"
+        htmlText += "<div style='font-size:22px;' class='d-inline'><b id='menuSetFoodPrice'>฿ "+price+"</b></div>"
         htmlText += "<div class='d-inline ml-3'><button class='cartBt d-inline position-relative' onclick='addOne(\""+menu.id+"\", \""+page+"\")'><img src='../icon/addcart.PNG' width='70%'></button></div></div><br><br>";
         htmlText += "<hr class='dashed'></div>";
         
@@ -592,7 +592,7 @@ function setfoodFindMenu(type, id){
         for (j = 0; j < menu.setType[type].length; j++)
         {
             var menuSet = menu.setType[type][j];
-            htmlText += "<div class='menuSetFoodOne' onclick='changeMenuOneAll("+type+","+j+", \""+menu.id+"\")'><input type='radio' id='menuSetFoodOne"+j+"'";
+            htmlText += "<div class='menuSetFoodOne' onclick='changeMenuOneAll("+type+","+j+", \""+menu.id+"\")'><input type='radio' name='menuSetFoodOneChoose' id='menuSetFoodOne"+j+"'";
             if (j == 0)
             {
                 htmlText += " checked";
@@ -631,11 +631,13 @@ function changeMenuOneAll(type, idNo, id){
         document.getElementById("menuOneNameTH").innerHTML = "<h5><b>"+menuSet.nameTH+"</b></h5>";
         document.getElementById("menuOneNameJP").innerHTML = menuSet.nameJP;
         document.getElementById("imgMenuOne").src = menuSet.img;
-
-        for (i = 0; i < menu.setType[type].length; i++)
-        {
-            document.getElementById("menuSetFoodOne"+i).removeAttribute("checked");
-        }
-        document.getElementById("menuSetFoodOne"+idNo).setAttribute("checked", "checked");
+        document.getElementById("menuSetFoodOne"+idNo).checked = true;
+        document.getElementById("menuSetFoodPrice").innerHTML = menuSet.price;
     }
+}
+
+function changeMenuRice(idNo){
+    var itemPrice = document.getElementById("menuSetFoodPrice");
+    itemPrice.innerHTML = parseInt(itemPrice.innerHTML)+parseInt(document.getElementById("menuSetFoodRice"+idNo).value);
+    document.getElementById("menuSetFoodRice"+idNo).checked = true;
 }

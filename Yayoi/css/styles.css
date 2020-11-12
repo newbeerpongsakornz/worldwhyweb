@@ -712,6 +712,6 @@ span>label.nameMenuJP{
     font-weight: bold;
 }
 
-.menuSetFoodOne{
+.menuSetFoodOne, .menuSetFoodRice{
     cursor: pointer;
 }
