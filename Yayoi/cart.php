@@ -68,7 +68,7 @@
     </header>
     <img src="https://yayoirestaurants.com/mainbanners/3880_Cart.jpg" width="100%">
     <br><br>
-    <div class="container-fluid ">
+    <div class="container">
         <div class="border m-3 mb-4">
             <div class="p-3"><h5><img src="svg.svg" alt="" height="20px" class="svg mr-2"><b>ตรวจสอบรายการอาหาร</b> <img src="up-arrow.svg" alt="" height="20px" class="float-right m-2"> </h5></div>
             <div class="border-top text-center p-4"><h5 class="mt-3"><b>ไม่พบสินค้าในตะกร้า</b></h5>

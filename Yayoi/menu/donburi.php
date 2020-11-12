@@ -71,7 +71,7 @@
         <img src="../icon/like.PNG" width="40px" style="transform: translateY(-7px);">
         <b class="headBody">เมนูยาโยอิ</b>
     </div>
-    <div class="container-fluid text-center">
+    <div class="container text-center">
         <div class="menuBar" id="menuBar">
             <?php
                 $nameEN = ["promoFood", "freeFood", "setFood", "donburi", "bento", "ramen", "sideDish", "drink", "dessert"];

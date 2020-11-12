@@ -711,3 +711,7 @@ span>label.nameMenuJP{
     margin: 45px 0px 22px 0px;
     font-weight: bold;
 }
+
+.menuSetFoodOne{
+    cursor: pointer;
+}

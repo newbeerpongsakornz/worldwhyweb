@@ -396,17 +396,17 @@ function clickMenu(id, page){
         {
             htmlText += "<hr><div id='setFoodMenu' class='text-left'>";
             htmlText += "<div id='setFoodMenuBtn'><label style='font-size: 18px' class='leftSide'>เลือกประเภทอาหาร: </label><div class='rightSide'>";
-            htmlText += "<button class='btnSetFood select' onclick='setfoodbtn_set()' id='btnsetfoodset'>แบบเซ็ต</button><button class='btnSetFood'onclick='setfoodbtn_single()'id='btnsetfoodsingle'>แบบจานเดี่ยว</button>";
+            htmlText += "<button class='btnSetFood select' onclick='setfoodbtn_set(0, \""+menu.id+"\")' id='btnsetfoodset'>แบบเซ็ต</button><button class='btnSetFood'onclick='setfoodbtn_single(1, \""+menu.id+"\")'id='btnsetfoodsingle'>แบบจานเดี่ยว</button>";
             htmlText += "</div></div><div id='menuSetFood'><div style='font-size: 18px; margin-bottom: 5px'>เลือกวิธีปรุง: </div>";
             for (j = 0; j < menu.setType[0].length; j++)
             {
                 var menuSet = menu.setType[0][j];
-                htmlText += "<div class='menuSetFoodOne'><input type='radio' id='menuSetFoodOne"+j+"'";
+                htmlText += "<div class='menuSetFoodOne' onclick='changeMenuOneAll(0,"+j+", \""+menu.id+"\")'><input type='radio' id='menuSetFoodOne"+j+"'";
                 if (j == 0)
                 {
                     htmlText += " checked";
                 }
-                htmlText += "><span><b>"+menuSet.nameTH+"</b><br><label class='nameMenuJP'>"+menuSet.nameJP+"</label></span></div>";
+                htmlText += "'><span><b>"+menuSet.nameTH+"</b><br><label class='nameMenuJP'>"+menuSet.nameJP+"</label></span></div>";
             }
             htmlText += "</div><div id='setFoodRice'><div style='font-size: 18px; margin-bottom: 5px'>เลือกข้าวในเซ็ต: </div>";
             for (j = 0; j < menu.rices.length; j++)
@@ -552,15 +552,90 @@ function cartwindow(){
     },500);
 
 }
-function setfoodbtn_single(){
+function setfoodbtn_single(type, id){
     document.getElementById("btnsetfoodsingle").classList.add("select");
     document.getElementById("btnsetfoodset").classList.remove("select");
     document.getElementById("setFoodRice").style.display = "none";
-    document.getElementById("imgMenuOne").src = menu.setType[0][1].img;
+    setfoodFindMenu(type, id);
 }
-function setfoodbtn_set(){
+function setfoodbtn_set(type, id){
     document.getElementById("btnsetfoodsingle").classList.remove("select");
     document.getElementById("btnsetfoodset").classList.add("select");
     document.getElementById("setFoodRice").style.display = "block";
+    setfoodFindMenu(type, id);
+}
 
+function setfoodFindMenu(type, id){
+    let requestURL = "../json/setFood.json"; 
+    let request = new XMLHttpRequest(); 
+    request.onreadystatechange = function () { 
+        if (request.readyState == 4 && request.status == 200) {             
+            dataReportStatus(JSON.parse(request.responseText));            
+        } 
+    }; 
+    request.open("GET", requestURL, true); 
+    request.send();
+    function dataReportStatus(data) {
+        var htmlText = "";
+        var menu;
+        for (i = 0; i < data.length; i++)
+        {
+            if (id == data[i].id)
+            {
+                menu = data[i];
+                break;
+            }
+        }
+        document.getElementById("imgMenuOne").src = menu.setType[type][0].img;
+
+        htmlText += "<div id='menuSetFood'><div style='font-size: 18px; margin-bottom: 5px'>เลือกวิธีปรุง: </div>";
+        for (j = 0; j < menu.setType[type].length; j++)
+        {
+            var menuSet = menu.setType[type][j];
+            htmlText += "<div class='menuSetFoodOne' onclick='changeMenuOneAll("+type+","+j+", \""+menu.id+"\")'><input type='radio' id='menuSetFoodOne"+j+"'";
+            if (j == 0)
+            {
+                htmlText += " checked";
+            }
+            htmlText += "><span><b>"+menuSet.nameTH+"</b><br><label class='nameMenuJP'>"+menuSet.nameJP+"</label></span></div>";
+        }
+        htmlText += "</div></div>";
+        document.getElementById("menuSetFood").innerHTML = htmlText;
+        
+    }
+}
+
+function changeMenuOneAll(type, idNo, id){
+    let requestURL = "../json/setFood.json"; 
+    let request = new XMLHttpRequest(); 
+    request.onreadystatechange = function () { 
+        if (request.readyState == 4 && request.status == 200) {             
+            dataReportStatus(JSON.parse(request.responseText));            
+        } 
+    }; 
+    request.open("GET", requestURL, true); 
+    request.send();
+    function dataReportStatus(data) {
+        var htmlText = "";
+        var menu;
+        for (i = 0; i < data.length; i++)
+        {
+            if (id == data[i].id)
+            {
+                menu = data[i];
+                break;
+            }
+        }
+        var menuSet = menu.setType[type][idNo];
+
+        document.getElementById("menuOneNameTH").innerHTML = "<h5><b>"+menuSet.nameTH+"</b></h5>";
+        document.getElementById("menuOneNameJP").innerHTML = menuSet.nameJP;
+        document.getElementById("imgMenuOne").src = menuSet.img;
+
+        for (i = 0; i < menu.setType[type].length; i++)
+        {
+            document.getElementById("menuSetFoodOne"+i).removeAttribute("checked");
+        }
+        document.getElementById("menuSetFoodOne"+idNo).setAttribute("checked", "checked");
+    }
 }
