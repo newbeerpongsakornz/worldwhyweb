@@ -50,3 +50,4 @@ function changeIconBasket(cmd){
         item.src = "icon/busket.PNG";
     }
 }
+

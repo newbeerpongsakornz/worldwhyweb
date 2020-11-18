@@ -48,8 +48,7 @@ function add(id, page, num=1){
                     htmlText += "<div style='width:100%;' class='pb-2 pt-2'><div class='d-inline float-left'><button type='button' class='circlebt d-inline' onclick='minus(\""+id+"\", "+price+"),alertpopup()'><svg class='pb-1' width='11px' aria-hidden='true'";
                     htmlText += "focusable='false' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>";
                     htmlText += "<path fill='currentColor' d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg></button>";
-                    // htmlText += "<div class='input-picker'><input class='input-picker d-inline' type='text' id='numFood"+id+"' value=1 data-max='999' readonly=''></div>";
-                    htmlText += "<div class='numFood' id='numFood"+id+"'>1</div>";
+                    htmlText += "<div class='numFood' id='numFood"+id+"'>"+num+"</div>";
                     htmlText += "<button type='button' class='circlebt d-inline' onclick='plus(\""+id+"\", "+price+")'><svg class='pb-1' width='11px' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>";
                     htmlText += "<path fill='currentColor' d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg></button></div>";
                     htmlText += "<div style='font-size:22px;' class='text-right pr-0'><b>฿ "+price+"</b></div></div><br>";
@@ -72,6 +71,7 @@ function add(id, page, num=1){
 
 function addOne(id, page){
     var num = document.getElementById("numFoodOne"+id).innerHTML;
+    
     add(id, page, parseInt(num));
 }
 
@@ -411,7 +411,7 @@ function clickMenu(id, page){
             htmlText += "</div><div id='setFoodRice'><div style='font-size: 18px; margin-bottom: 5px'>เลือกข้าวในเซ็ต: </div>";
             for (j = 0; j < menu.rices.length; j++)
             {
-                htmlText += "<div class='menuSetFoodRice' onclick='changeMenuRice("+j+")'><input type='radio' name='menuSetFoodRiceChoose' id='menuSetFoodRice"+j+"'";
+                htmlText += "<div class='menuSetFoodRice' onclick='changeMenuRice("+j+", "+menuSet.price+")'><input type='radio' name='menuSetFoodRiceChoose' id='menuSetFoodRice"+j+"'";
                 if (j == 0)
                 {
                     htmlText += " checked";
@@ -636,8 +636,13 @@ function changeMenuOneAll(type, idNo, id){
     }
 }
 
-function changeMenuRice(idNo){
+function changeMenuRice(idNo, price){
     var itemPrice = document.getElementById("menuSetFoodPrice");
-    itemPrice.innerHTML = parseInt(itemPrice.innerHTML)+parseInt(document.getElementById("menuSetFoodRice"+idNo).value);
+    itemPrice.innerHTML = "฿ "+(price+parseInt(document.getElementById("menuSetFoodRice"+idNo).value));
     document.getElementById("menuSetFoodRice"+idNo).checked = true;
+}
+
+function alertDelete(){
+    htmlText = "<div class='alertDelete'><div class='headA'></div>";
+    htmlText = "</div>";
 }

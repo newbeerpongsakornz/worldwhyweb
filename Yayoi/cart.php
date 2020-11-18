@@ -55,7 +55,7 @@
                                 </div>
                             </div>
                             <div class="headMenuBox" onmouseover="changeIconDer('over')" onmouseout="changeIconDer('out')">
-                                <button onclick="window.location.href='promoFood.php'" class="btn font-weight-bold orderFoodBt"><img id='deliveryIcon' src="icon/delivery.PNG" height="21px"> สั่งอาหารทันที</button>
+                                <button onclick="window.location.href='menu/promoFood.php'" class="btn font-weight-bold orderFoodBt"><img id='deliveryIcon' src="icon/delivery.PNG" height="21px"> สั่งอาหารทันที</button>
                             </div>
                             <div class="headMenuBox pt-1" onmouseover="changeIconBasket('over')" onmouseout="changeIconBasket('out')">
                                 <a class="headMenu" href="cart.php"><img id='BasketIcon' src="icon/busket.PNG" width="30px"></a>

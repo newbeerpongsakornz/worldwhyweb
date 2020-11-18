@@ -92,13 +92,13 @@
                 $htmlText .= "<div class='carousel-item";
                 if ($i == 0)
                 {
-                    $htmlText .= " active'><img src='".$bannerImg[$i]."' class='d-block w-100'>";
+                    $htmlText .= " active'>";
                 }
                 else
                 {
-                    $htmlText .= "'><img src='".$bannerImg[$i]."' class='d-block w-100'>";
+                    $htmlText .= "'>";
                 }
-                $htmlText .= "</div>";
+                $htmlText .= "<img src='".$bannerImg[$i]."' class='d-block w-100'></div>";
             }
             $htmlText .= "</div>";
             echo $htmlText;
@@ -121,13 +121,13 @@
                     if ($i == 0)
                     {
                         echo "<a href='menu/".$nameEN[$i].".php'><div class='menuBox menuSelect'>";
-                        echo "<img src='icon/".($i+1)."1.PNG'height='40px'><br><br>";
+                        echo "<img src='icon/".($i+1)."1.PNG'height='40px'><br>";
                         echo $nameTH[$i]."</div></a>";
                     }
                     else
                     {
                         echo "<a href='menu/".$nameEN[$i].".php' class='menuText'><div class='menuBox' onmouseover='changeMenuColor(".($i+1).", \"over\")' onmouseout='changeMenuColor(".($i+1).", \"out\")'>";
-                        echo "<img id='imgMenuBox".($i+1)."' src='icon/".($i+1).".PNG' height='40px'><br><br>";
+                        echo "<img id='imgMenuBox".($i+1)."' src='icon/".($i+1).".PNG' height='40px'><br>";
                         echo $nameTH[$i]."</div></a>";
                     }
                 }
@@ -146,9 +146,9 @@
                         {
                             $menu = $data[$i];
                             echo "<div class='menu col-6 col-lg-4'>";
-                            echo "<a href=''><img src='".$menu->img."' width='78%' title='".$menu->id." ".$menu->nameTH."'></a><br><br>";
+                            echo "<a href='menu/promoFood.php'><img src='".$menu->img."' width='78%' title='".$menu->id." ".$menu->nameTH."'></a><br><br>";
                             echo "<div class='logoType'></div>";
-                            echo "<a href='' class='linkMenu'><div class='nameMenu font-weight-bold' id='nameMenu$i' onmouseover='changeMenuName($i, \"over\")' onmouseout='changeMenuName($i, \"out\")'>".$menu->nameTH."<br>";
+                            echo "<a href=''menu/promoFood.php' class='linkMenu'><div class='nameMenu font-weight-bold' id='nameMenu$i' onmouseover='changeMenuName($i, \"over\")' onmouseout='changeMenuName($i, \"out\")'>".$menu->nameTH."<br>";
                             echo "<div class='nameMenuJP font-weight-normal' id='nameMenuJP$i'>".$menu->nameJP."<br><br></div></div></a>";
                             echo "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ ".$menu->price."</b>&nbsp;&nbsp;";
                             echo "<button class='cartBt' onclick='add(\"".$menu->id."\", \"promoFood\")'><img src='icon/addcart.PNG' width='70%'></button></div></div>";
