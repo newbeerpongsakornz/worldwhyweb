@@ -101,6 +101,10 @@
     font-size: 18px;
 }
 
+.nameMenu{
+    font-size: 18.75px;
+}
+
 .nameMenu p{
     margin-bottom: 0px!important;
 }
@@ -146,10 +150,6 @@
 }
 .menuText{
     color: black;
-}
-
-.menuBox{
-    transition: 0.5s;
 }
 
 .menuText:hover{
@@ -714,4 +714,22 @@ span>label.nameMenuJP{
 
 .menuSetFoodOne, .menuSetFoodRice{
     cursor: pointer;
+}
+
+.alertDelete{
+    width: 457.5px;
+    height: 243px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+
+.menuBox>img{
+    margin-bottom: 10px;
 }
