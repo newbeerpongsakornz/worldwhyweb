@@ -81,7 +81,7 @@
                         {
                             $menu = $data[$i];
                             echo "<div class='menu col-6'>";
-                            echo "<a href=''><img src='".$menu->img."' width='85%' title='".$menu->id."' class='text-center'></a><br><br>";   
+                            echo "<a href=''><img src='".$menu->img."' width='85%' title='".$menu->id."' class='text-center promoimg'></a><br><br>";   
                             echo "<div class='nameMenuJP' id='nameMenuJP$i'>".$menu->time."<br>";
                             echo "<a href='' class='linkMenu'><div class='nameMenu' id='nameMenu$i' onmouseover='changeMenuName($i, \"over\")' onmouseout='changeMenuName($i, \"out\")'>".$menu->Detail."<br><br></div></div></a>";
                             echo "</div>";

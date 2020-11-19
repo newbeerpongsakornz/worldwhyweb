@@ -711,3 +711,11 @@ span>label.nameMenuJP{
     margin: 45px 0px 22px 0px;
     font-weight: bold;
 }
+.promoimg{
+    transition: transform .2s;
+    transform: scale(1) translateZ(0);
+    max-height: 100%;
+}
+.promoimg:hover {
+    transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }

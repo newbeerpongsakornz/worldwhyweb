@@ -173,7 +173,7 @@
                         {
                             $menu = $data[$i];
                             echo "<div class='menu col-6'>";
-                            echo "<a href=''><img src='".$menu->img."' width='85%' title='".$menu->id."'></a><br><br>";
+                            echo "<a href=''><img class='promoimg' src='".$menu->img."' width='85%' title='".$menu->id."'></a><br><br>";
                             echo "</div>";
                         }
                     ?>                 
