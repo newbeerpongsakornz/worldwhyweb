@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/notoFont.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="js/scripts.js"></script>
+    <script src="js/indexJS.js"></script>
     <script src="https://kit.fontawesome.com/a0ce56af97.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -55,7 +55,7 @@
                                 </div>
                             </div>
                             <div class="headMenuBox" onmouseover="changeIconDer('over')" onmouseout="changeIconDer('out')">
-                                <button onclick="window.location.href='promoFood.php'" class="btn font-weight-bold orderFoodBt"><img id='deliveryIcon' src="icon/delivery.PNG" height="21px"> สั่งอาหารทันที</button>
+                                <button onclick="window.location.href='menu/promoFood.php'" class="btn font-weight-bold orderFoodBt"><img id='deliveryIcon' src="icon/delivery.PNG" height="21px"> สั่งอาหารทันที</button>
                             </div>
                             <div class="headMenuBox pt-1" onmouseover="changeIconBasket('over')" onmouseout="changeIconBasket('out')">
                                 <a class="headMenu" href="cart.php"><img id='BasketIcon' src="icon/busket.PNG" width="30px"></a>
@@ -68,7 +68,7 @@
     </header>
     <img src="https://yayoirestaurants.com/mainbanners/3880_Cart.jpg" width="100%">
     <br><br>
-    <div class="container-fluid ">
+    <div class="container">
         <div class="border m-3 mb-4">
             <div class="p-3"><h5><img src="svg.svg" alt="" height="20px" class="svg mr-2"><b>ตรวจสอบรายการอาหาร</b> <img src="up-arrow.svg" alt="" height="20px" class="float-right m-2"> </h5></div>
             <div class="border-top text-center p-4"><h5 class="mt-3"><b>ไม่พบสินค้าในตะกร้า</b></h5>

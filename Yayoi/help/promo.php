@@ -46,7 +46,7 @@
                                         <span style="font-size: 20px; color: white;">
                                             <i class="fas fa-angle-down"></i>
                                         </span>
-                                    </button>
+                                    </button>w
                                     <div class="dropdown-content">
                                     <a href="#">EN</a>
                                     </div>
@@ -65,7 +65,7 @@
         </div>
     </header>
     <br><br>
-    <div class="container-fluid">
+    <div class="container">
         <div class="text-center m-4">
             <img src="../icon/promo.PNG" width="50px" class="pb-3 mr-1">
             <b class="headBody">โปรโมชั่น</b>
