@@ -143,7 +143,7 @@
                                         </label>
                                         <select class="form-control select-custom" id="th">
                                             <option value="0">ทั้งหมด</option>
-                                            <option value="1">กรุงเทพมหานครและปริมณฑล</option>
+                                            <option value="1">กรุงเทพมหานครและปริมณฑล (117 สาขา)</option>
                                             <option value="2">ภาคตะวันออก (19 สาขา)</option>
                                             <option value="3">ภาคเหนือ (8 สาขา)</option>
                                             <option value="4">ภาคตะวันออกเฉียงเหนือ (16 สาขา)</option>
@@ -566,7 +566,7 @@
             </div>
     </div>    
             <!--map-->
-<div class="row mt-5">
+<div class="row">
 <div class="col">
     <div id='map' class="w-100"></div>
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
