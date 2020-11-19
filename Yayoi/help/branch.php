@@ -12,6 +12,10 @@
     <title>สาขายาโยอิ Yayoi Restaurant : Modern Japanese Restaurant in Thailand - ยาโยอิ เซ็ตอร่อยของทุกคน</title>
 
     <style>
+        body{
+            overflow-x: hidden;
+        }
+
         .item_conditions {
             font-size: 14px;
             line-height: 18px;
@@ -115,7 +119,7 @@
     <div class="picture">
         <section>
             <div class="topbanner d-lg-block">
-                <img src="https://yayoirestaurants.com/mainbanners/8920_Location.jpg" data-src="https://yayoirestaurants.com/mainbanners/8920_Location.jpg">
+                <img src="https://yayoirestaurants.com/mainbanners/8920_Location.jpg" data-src="https://yayoirestaurants.com/mainbanners/8920_Location.jpg" class="img-fluid">
             </div>
         </section>
     </div>
