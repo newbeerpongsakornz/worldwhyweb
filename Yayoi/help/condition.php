@@ -92,9 +92,9 @@
             </div>
         </div>
     </header>
-    
 
-    <!-- main -->
+
+    <!-- body -->
         <div class="container py-5">
             <div class="row justify-content-center">
                 <section class="col-12 col-lg-10">
@@ -164,7 +164,7 @@
                 </section>
             </div>
         </div>
-    <!--main-->
+    <!--body-->
 
 
         <footer class="text-center">
