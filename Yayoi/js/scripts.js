@@ -537,12 +537,42 @@ function slideMenuOne(){
         behavior: 'smooth',
       })
 }
+// function cartwindow(){
+//     setTimeout(function(){
+//         if (window.pageYOffset >= 500){
+//             document.body.innerHTML += "<a href='../cart.php' class='bottom-busket' id='cartwindow'><img src='../icon/busket.PNG' width='100%' class='mt-2 mb-1'></a>"
+//         }
+//     },400);
+//     setTimeout(function(){
+//         if (window.pageYOffset < 500){
+//             document.getElementById("cartwindow").remove();
+//         }
+//     },400);
 
+// }
 function setfoodbtn_single(){
-    document.getElementById("btnsetfoodsingle").classList.add("select");
-    document.getElementById("btnsetfoodset").classList.remove("select");
-    document.getElementById("setFoodRice").style.display = "none";
-    document.getElementById("imgMenuOne").src = menu.setType[0][1].img;
+    let requestURL = "../json/setFood.json"; 
+    let request = new XMLHttpRequest(); 
+    request.onreadystatechange = function () { 
+        if (request.readyState == 4 && request.status == 200) {             
+            dataReportStatus(JSON.parse(request.responseText));            
+        } 
+    }; 
+    request.open("GET", requestURL, true); 
+    request.send();
+    function dataReportStatus(data) {
+        for (j = 0; j < menu.setType[1].length; j++)
+            {
+                var menuSet = menu.setType[1][j];
+                document.getElementById("imgMenuOne").src = menu.setType[1][j].img;
+                
+            }
+        document.getElementById("btnsetfoodsingle").classList.add("select");
+        document.getElementById("btnsetfoodset").classList.remove("select");
+        document.getElementById("setFoodRice").style.display = "none";
+        console.log(menu);
+    }
+    
 }
 function setfoodbtn_set(){
     document.getElementById("btnsetfoodsingle").classList.remove("select");

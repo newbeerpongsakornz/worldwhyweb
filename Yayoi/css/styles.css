@@ -642,6 +642,17 @@ hr.dashed {
     bottom: 50px;
     right: 20px;
 }
+@media screen and (max-height: 425){
+    .bottom-busket{
+        display: block;
+    }
+}
+@media screen and (max-height: 424){
+    .bottom-busket{
+        display: none;
+    }
+}
+
 
 .rightSide{
     right: 0;
