@@ -31,6 +31,12 @@
             height: 400px;
             width: 100%;
         }
+
+       #btn-find-branch{
+           border-radius: 80px;
+           color: white;
+           background-color:#eb7aae;
+       }
     </style>
 
 
@@ -539,49 +545,65 @@
                                 </select>
                             </div>
                         </section>
+
+                        <section class="col-lg-auto col-sm-4 col-12">
+                            <button type="submit" class="btn" id="btn-find-branch">
+                                <b>
+                                    <i class="icon-pin"></i>
+                                    สาขาใกล้เคียง</b>
+                            </button>
+                        </section>
+                    </div>
+                </section>
+            </div>
+
+
                     </div>
             </div>
+    </div>    
             <!--map-->
-            <div class="row mt-5">
-            <div class="col">
-            <div id='map' class="w-100"></div>
-            <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
-            <script>
-                function myFunction() {
-                    var lat = document.querySelector("#lat").value;
-                    var long = document.querySelector("#long").value;
-                    var box = document.querySelector("#box").value
-                    const searchBox = new google.maps.places.SearchBox(box);
-                    console.log(searchBox)
-                    console.log(lat, long)
-                    var x = document.getElementById("map");
+<div class="row mt-5">
+<div class="col">
+    <div id='map' class="w-100"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+    <script>
+        function myFunction() {
+            var lat = document.querySelector("#lat").value;
+            var long = document.querySelector("#long").value;
+            var box = document.querySelector("#box").value
+            const searchBox = new google.maps.places.SearchBox(box);
+            console.log(searchBox)
+            console.log(lat, long)
+            var x = document.getElementById("map");
 
-                    var pos = {
-                        'lat': lat,
-                        'long': long
-                    };
-                    console.log(pos);
-                    document.getElementById('map').src = 'https://maps.google.com/maps?q=' + pos.lat + ', ' + pos.long + '&t=&z=15&ie=UTF8&iwloc=&output=embed';
-                }
+            var pos = {
+'lat': lat,
+'long': long
+            };
+            console.log(pos);
+            document.getElementById('map').src = 'https://maps.google.com/maps?q=' + pos.lat + ', ' + pos.long + '&t=&z=15&ie=UTF8&iwloc=&output=embed';
+        }
 
-                function myFunction2() {
-                    var lat = document.querySelector("#lat").value;
-                    var long = document.querySelector("#long").value;
-                    var box = document.querySelector("#box").value
-                    const searchBox = new google.maps.places.SearchBox(box);
-                    console.log(searchBox)
-                    console.log(lat, long)
-                    var x = document.getElementById("map");
-                    document.getElementById('map').src = 'https://maps.google.com/maps?q=' + box + '&t=&z=15&ie=UTF8&iwloc=&output=embed';
-                }
-            </script>
-            <!--map-->
-        </div>
-        </div>
-        </div>
-        </div>
+        function myFunction2() {
+            var lat = document.querySelector("#lat").value;
+            var long = document.querySelector("#long").value;
+            var box = document.querySelector("#box").value
+            const searchBox = new google.maps.places.SearchBox(box);
+            console.log(searchBox)
+            console.log(lat, long)
+            var x = document.getElementById("map");
+            document.getElementById('map').src = 'https://maps.google.com/maps?q=' + box + '&t=&z=15&ie=UTF8&iwloc=&output=embed';
+        }
+    </script>
+    <div class="pb-5">
+    <!--map-->
+    </div>
+                </div>
             </div>
-            </div>
+        </div>
+        </div>
+        </div>
+        </div>
         <section>
 
 
