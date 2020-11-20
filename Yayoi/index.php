@@ -70,9 +70,8 @@
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <?php
             $bannerImg = array(
-                "https://yayoirestaurants.com/mainbanners/3464_2007-03-Tempura Overload_Desktop_1920x803.jpg",
-                "https://yayoirestaurants.com/mainbanners/5764_Yayoi_Juicy-Super-C-Booster_Web-Banner_1920-x-803-px.jpg",
-                "https://yayoirestaurants.com/mainbanners/1937__AW Yayoi-Tokyo-Trio_Web-Banner-1920-x-803-px.jpg"
+                "https://yayoirestaurants.com/mainbanners/1937__AW Yayoi-Tokyo-Trio_Web-Banner-1920-x-803-px.jpg",
+                "https://yayoirestaurants.com/mainbanners/9377_Desktop-1920x803px.jpg"
             );
             $htmlText = "<ol class='carousel-indicators'>";
             for ($i = 0; $i < sizeOf($bannerImg); $i++)
@@ -169,11 +168,11 @@
                         $res = file_get_contents($url);
                         $data = json_decode($res);
 
-                        for ($i = 0; $i < 4; $i++)
+                        for ($i = 0; $i < sizeof($data); $i++)
                         {
                             $menu = $data[$i];
                             echo "<div class='menu col-6'>";
-                            echo "<a href=''><img class='promoimg' src='".$menu->img."' width='85%' title='".$menu->id."'></a><br><br>";
+                            echo "<a href='help/promotions/".($i+1).".php'><img class='promoimg' src='".$menu->img."' width='85%' title='".$menu->id."'></a><br><br>";
                             echo "</div>";
                         }
                     ?>                 

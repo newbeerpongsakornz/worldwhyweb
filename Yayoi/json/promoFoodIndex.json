@@ -1,43 +1,5 @@
 [
     {
-
-        "id":"PM002",
-        "img":"https://yayoirestaurants.com/promotioncontents/thumbs/8092_Yayoi_Juicy-Super-C-Booster_Web-Banner_555-x-283-px.jpg",
-        "time":"23 กรกฎาคม - 29 ตุลาคม 2563",
-        "Detail":"โปรโมชั่นเครื่องดื่มยาโยอิ จุยซี ซูเปอร์ ซี บูทเตอร์"
-        
-        
-        
-    },
-
-    {
-        "id":"PM001",
-        "img":"https://yayoirestaurants.com/promotioncontents/thumbs/5503__AW%20Yayoi-Duo-Sundae-Party_Web-Banner_555-x-283-px.jpg",
-        "time":"1 กันยายน - 29 ตุลาคม 2563",
-        "Detail":"โปรโมชั่นดูโอ้ สวีทตี้"
-        
-        
-    },
-    {
-        "id":"PM003",
-        "img":"https://yayoirestaurants.com/promotioncontents/thumbs/8845__AW%20Yayoi-Sundae-Party_Web-Banner_555-x-283-px.jpg",
-        "time":"1 กันยายน - 29 ตุลาคม 2563",
-        "Detail":"โปรโมชั่นซันเด ปาร์ตี้"
-        
-       
-    },
-    {
-
-        "id":"PM004",
-        "img":"https://yayoirestaurants.com/promotioncontents/thumbs/11_2007-03-Tempura%20Overload_Web%20News%20update_555x283.jpg",
-        "time":"1 กันยายน - 29 ตุลาคม 2563",
-        "Detail":"โปรโมชั่นเครื่องดื่มยาโยอิ เทมปุระ โอเวอร์โหลด"
-        
-        
-        
-    },
-
-    {
         "id":"PM005",
         "img":"https://yayoirestaurants.com/promotioncontents/thumbs/5018__AW%20Yayoi-Tokyo-Trio_Web-Banner-555-x-283-px-2.jpg",
         "time":"1 ตุลาคม - 30 พฤศจิกายน 2563",
@@ -47,8 +9,8 @@
     },
     {
         "id":"PM006",
-        "img":"https://yayoirestaurants.com/promotioncontents/thumbs/4612_Web%20News%20update%20555x283px-01%20(1).jpg",
-        "time":"14 - 25 ตุลาคม 2563",
+        "img":"https://yayoirestaurants.com/promotioncontents/thumbs/6895_Web-News-update-555x283px.jpg",
+        "time":"30 ตุลาคม - 30 พฤศจิกายน 2563",
         "Detail":"โปรโมชั่นเครื่องดื่มยาโยอิ เทศกาลอาหารเจ ระยะเวลาโปรโมชั่น 12 - 25 ตุลาคม 2563"
         
        
