@@ -46,7 +46,7 @@
                                         <span style="font-size: 20px; color: white;">
                                             <i class="fas fa-angle-down"></i>
                                         </span>
-                                    </button>w
+                                    </button>
                                     <div class="dropdown-content">
                                     <a href="#">EN</a>
                                     </div>
