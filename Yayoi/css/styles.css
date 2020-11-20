@@ -182,6 +182,14 @@
 .linkMenu:hover{
     text-decoration: none!important;
 }
+.linkpromo{
+    color: black;
+    height: 100px;
+}
+ .linkpromo:hover{
+    text-decoration: underline;
+
+ }
 
 #foodType{
     background-color: #f6f6f6;
@@ -338,6 +346,9 @@ footer{
 .headBody{
     color: #eb7aae;
     font-size: 38px;
+}
+.promotxt{
+    color: #eb7aae;
 }
 
 .container-fluid{
@@ -765,4 +776,14 @@ span>label.nameMenuJP{
 
 .menuBox>img{
     margin-bottom: 10px;
+}
+.datepromo{
+    margin: 0;
+    font-size: .9rem;
+    color: #777;
+}
+
+.detail-date {
+    color: #777;
+    margin-bottom: .5rem;
 }
