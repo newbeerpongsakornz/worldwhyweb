@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +12,13 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    
-    <link rel="shortcut icon" href="https://yayoirestaurants.com/frontend/assets/images/favicon.ico" type="image/x-icon" >
-    
+
+    <link rel="shortcut icon" href="https://yayoirestaurants.com/frontend/assets/images/favicon.ico" type="image/x-icon">
+
     <title>Yayoi Restaurant : Modern Japanese Restaurant in Thailand - ยาโยอิ เซ็ตอร่อยของทุกคน</title>
 </head>
-<body class="notoFont" >
+
+<body class="notoFont">
 
     <!-- Head -->
     <header>
@@ -26,9 +28,11 @@
                     <div class="col-md-5">
                         <div class="row justify-content-start">
                             <div class="col-md-7">
-                                <a href="index.php"><div class="toppic p-3 shadow-lg logoYayoi" style="z-index: 1;">
-                                    <img src="https://yayoirestaurants.com/frontend/assets/images/logo.svg" alt="Yayoi Restaurant - เสิร์ฟร้อน อร่อยเร็ว" width="100%">
-                                </div></a>
+                                <a href="index.php">
+                                    <div class="toppic p-3 shadow-lg logoYayoi" style="z-index: 1;">
+                                        <img src="https://yayoirestaurants.com/frontend/assets/images/logo.svg" alt="Yayoi Restaurant - เสิร์ฟร้อน อร่อยเร็ว" width="100%">
+                                    </div>
+                                </a>
                             </div>
                             <div class="col-md-5 font-weight-bold pt-2 "><a class="headMenu" href="menu/promoFood.php" class="float-right">เมนูยาโยอิ</a></div>
                         </div>
@@ -37,7 +41,7 @@
                         <div class="row justify-content-end">
                             <div class="headMenuBox pt-2">
                                 <a class="headMenu" href="login.php">เข้าระบบ</a>
-                                <b class="pl-2">|</b></div> 
+                                <b class="pl-2">|</b></div>
                             <div class="headMenuBox pt-2 pl-0 pr-1">
                                 <a class="headMenu" href="register.php">สมัครสมาชิก</a>
                                 <b class="pl-2">|</b></div>
@@ -50,7 +54,7 @@
                                         </span>
                                     </button>
                                     <div class="dropdown-content">
-                                    <a href="#">EN</a>
+                                        <a href="#">EN</a>
                                     </div>
                                 </div>
                             </div>
@@ -67,7 +71,7 @@
         </div>
     </header>
 
-    <!-- Body -->                           
+    <!-- Body -->
     <br><br>
     <div class="text-center container">
         <h1><b class="headBody">สมัครสมาชิก ยาโยอิ</b></h1>
@@ -104,16 +108,16 @@
             <label><b>ยืนยันรหัสผ่านใหม่</b><b class="redColor">*</b></label>
             <input type="password" id="passwordCom" name="passwordCom" class="form-control">
             <div class="valueInvalid" id='passwordComInvalid'></div>
-            <button class="btn btn-block btnPW" onclick="checkValueAll()">สมัครสมาชิก</button>
+            <button class="btn btn-block btnPW">สมัครสมาชิก</button>
             <div style="width:100%; text-align: center; margin-bottom: 10px; color: #909090;"><label>หรือ</label></div>
-            <button class="btn btn-block btnFB" onclick="deleteMenu()">เข้าระบบด้วย Facebook</button>
+            <button class="btn btn-block btnFB"> <span style="color:white;"><i class="fab fa-facebook-f"></i></span> เข้าระบบด้วย Facebook</button>
             <br><br>
         </div>
-        
-    </div>
-    
 
-    
+    </div>
+
+
+
 
     <!-- Footer -->
     <footer class="text-center">
@@ -140,7 +144,7 @@
                 <div><a href="https://www.instagram.com/yayoith_official/?igshid=p9ki0k2ayxv1" target="_blank"><img src="https://yayoirestaurants.com/frontend/assets/images/icon/ins_icon.svg"></a></div>
                 <div><a href="https://www.youtube.com/user/YayoiThailand" target="_blank"><img src="https://yayoirestaurants.com/frontend/assets/images/icon/yt_icon.svg"></a></div>
             </div>
-            
+
         </div><br>
         <div id="credit">
             <div style="transform: translateY(10px);">
@@ -150,4 +154,5 @@
         </div>
     </footer>
 </body>
+
 </html>

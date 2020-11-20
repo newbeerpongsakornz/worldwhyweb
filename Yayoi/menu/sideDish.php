@@ -136,7 +136,7 @@
                             }
                             else if ($i == 15)
                             {
-                                echo "<div class='pageBar'><button class='pageNum'><</button>";
+                                echo "<div class='pageBar'><button class='pageNum'>‹</button>";
                                 for ($j = 1; $j < (sizeof($data)/15)+1; $j++)
                                 {
                                     if ($j == 1)
@@ -148,7 +148,7 @@
                                         echo "<button onclick='changeMenuType(\"sideDish\", \"all\", $j)' class='pageNum' id='page".($j)."'>".($j)."</button>";
                                     }
                                 }
-                                echo "<button class='pageNum' onclick='changeMenuType(\"setFood\", \"all\", 2)'>></button></div>";
+                                echo "<button class='pageNum' onclick='changeMenuType(\"setFood\", \"all\", 2)'>›</button></div>";
                                 break;
                             }
                         }

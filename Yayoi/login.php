@@ -77,9 +77,9 @@
             <label><b>รหัสผ่าน</b><b class="redColor">*</b></label>
             <input type="password" id="password" name="password" class="form-control">
             <div style="width:100%; text-align: right;"><label class="pC">ลืมรหัสผ่าน ?</label></div>
-            <button class="btn btn-block btnPW" onclick="login()">เข้าระบบ</button>
+            <button class="btn btn-block btnPW">เข้าระบบ</button>
             <div style="width:100%; text-align: center; margin-bottom: 10px; color: #909090;"><label>หรือ</label></div>
-            <button class="btn btn-block btnFB">เข้าระบบด้วย Facebook</button>
+            <button class="btn btn-block btnFB"> <span style="color:white;"><i class="fab fa-facebook-f"></i></span> เข้าระบบด้วย Facebook</button>
             <button class="btn btn-block btnWP" onclick="window.location.href='register.php'">สมัครสมาชิก</button>
             <br><br>
         </div>
