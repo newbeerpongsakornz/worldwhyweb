@@ -38,8 +38,8 @@ function add(id, page, num = 1) {
 
                     var htmlText = "";
                     htmlText += "<div id='div" + id + "'>";
-                    htmlText += "<div style='width:100%;' class='p-2 mb-2'><div class='float-left'>" + menu.nameTH + " </div><button class='deleteBt mr-2' onclick='deletediv(\"" + id + "\", " + price + ")'> <img src='../icon/delete.svg'> ลบ</button></div>";
-                    htmlText += "<div style='width:100%;' class='pb-2 pt-2'><div class='d-inline float-left'><button type='button' class='circlebt d-inline' onclick='minus(\"" + id + "\", " + price + "),alertpopup()'><svg class='pb-1' width='11px' aria-hidden='true'";
+                    htmlText += "<div style='width:100%;' class='p-2 mb-2'><div class='float-left'>" + menu.nameTH + " </div><button class='deleteBt mr-2' onclick='isDelete(\"" + id + "\", " + price + ", \"" + menu.nameTH + "\")'> <img src='../icon/delete.svg'> ลบ</button></div>";
+                    htmlText += "<div style='width:100%;' class='pb-2 pt-2'><div class='d-inline float-left' style='transform: translateY(5px);'><button type='button' class='circlebt d-inline' onclick='minus(\"" + id + "\", " + price + ")'><svg class='pb-1' width='11px' aria-hidden='true'";
                     htmlText += "focusable='false' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>";
                     htmlText += "<path fill='currentColor' d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg></button>";
                     htmlText += "<div class='numFood' id='numFood" + id + "'>" + num + "</div>";
@@ -53,8 +53,9 @@ function add(id, page, num = 1) {
                 }
                 else {
                     plus(id, price, num);
-                    console.log(num);
                 }
+                alertpopup(menu.nameTH, num);
+
             }
         }
 
@@ -68,8 +69,8 @@ function addOne(id, page) {
     add(id, page, parseInt(num));
 }
 
-function alertpopup() {
-    document.body.innerHTML += "<div class='popup float-right rounded p-1 notoFont' id='popup-suc'><img src='../icon/suc.png' class='d-inline m-2'><h6 class='d-inline m-2'><b>สำเร็จ</b></h6></div>"
+function alertpopup(name, num) {
+    document.body.innerHTML += "<div class='popup float-right rounded p-1 notoFont' id='popup-suc'><div style='transform: translateY(5px)'><img src='../icon/suc.png' width='35px' class='d-inline m-2' style='transform: translateY(-10px)'><div style='display: inline-block; font-size: 14px;'><b class='d-inline m-2' style='line-height: 2px;'>สำเร็จ</b><br>&nbsp&nbsp" + num + " x " + name + "</div></div></div>"
     setTimeout(function () {
         document.getElementById("popup-suc").remove();
     }, 2000);
@@ -86,6 +87,7 @@ function deletediv(id, price) {
     document.getElementById("totalPrice").innerHTML = "฿ " + totalPrice;
 
     document.getElementById("div" + id).remove();
+
 }
 function minus(id, price, number = 1) {
     var num = document.getElementById("numFood" + id).innerHTML;
@@ -467,18 +469,6 @@ function slideMenuOne() {
         behavior: 'smooth',
     })
 }
-// function cartwindow(){
-//     setTimeout(function(){
-//         if (window.pageYOffset >= 500){
-//             document.body.innerHTML += "<a href='../cart.php' class='bottom-busket' id='cartwindow'><img src='../icon/busket.PNG' width='100%' class='mt-2 mb-1'></a>"
-//         }
-//     },400);
-//     setTimeout(function(){
-//         if (window.pageYOffset < 500){
-//             document.getElementById("cartwindow").remove();
-//         }
-//     },400);
-
 
 function setfoodbtn_single(type, id) {
     document.getElementById("btnsetfoodsingle").classList.add("select");
@@ -564,7 +554,31 @@ function changeMenuRice(idNo, price) {
     document.getElementById("menuSetFoodRice" + idNo).checked = true;
 }
 
-function alertDelete() {
-    htmlText = "<div class='alertDelete'><div class='headA'></div>";
-    htmlText = "</div>";
+function isDelete(id, price, name) {
+    var htmlText = "";
+
+    htmlText += "<div id='alertDeleteBack' onmouseclick='notnotnot()'><div class='alertDeleteBox text-center'><button onclick='isDeleteCheck(false, \"" + id + "\", \"" + price + "\")' class='btnNone clickCursor closeBtn'><i class='fas fa-times'></i></button>";
+    htmlText += "<div class='headA'>ลบรายการอาหาร</div>";
+    htmlText += "<div style='margin-bottom: 25px;line-height: 28.8px;'>คุณต้องการลบ <b>" + name + "</b><br>ออกจากรายการอาหาร</div>";
+    htmlText += "<div class='deleteBtn'><button onclick='isDeleteCheck(false, \"" + id + "\", \"" + price + "\")'>ยกเลิก</button><button onclick='isDeleteCheck(true, \"" + id + "\", \"" + price + "\")'>ยืนยัน</button></div>";
+    htmlText += "</div></div>";
+
+    document.body.innerHTML += htmlText;
+
 }
+
+function isDeleteCheck(yesOrNo, id, price) {
+    if (yesOrNo) {
+        deletediv(id, price);
+    }
+    document.getElementById("alertDeleteBack").remove();
+}
+
+window.onscroll = function () {
+    var btn = document.getElementById("goToCartBtn");
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
+    }
+};

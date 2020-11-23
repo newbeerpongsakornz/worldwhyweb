@@ -18,25 +18,27 @@
 </head>
 
 <body class="notoFont">
-    <header>
+<header>
         <div class="topheader shadow">
-            <div class="container notoFont">
+            <div class="container">
                 <div class="row p-3">
                     <div class="col-md-5">
-                        <div class="row justify-content-start">
+                        <div class="row">
                             <div class="col-md-7">
-                                <a href="../index.php"><div class="toppic p-3 shadow-lg logoYayoi" style="z-index: 1;">
-                                    <img src="https://yayoirestaurants.com/frontend/assets/images/logo.svg" alt="Yayoi Restaurant - เสิร์ฟร้อน อร่อยเร็ว" width="100%">
-                                </div></a>
+                                <div class="toppic logoYayoi" style="z-index: 1;">
+                                    <a href="../index.php">
+                                        <img src="https://yayoirestaurants.com/frontend/assets/images/logo.svg" alt="Yayoi Restaurant - เสิร์ฟร้อน อร่อยเร็ว" width="100%" height="78px">
+                                    </a>
+                                </div>
                             </div>
-                            <div class="col-md-5 font-weight-bold pt-2 "><a class="headMenu" href="../menu/promoFood.php" class="float-right">เมนูยาโยอิ</a></div>
+                            <div class="col-md-5 font-weight-bold pt-2 "><a class="headMenuMain" href="promoFood.php" class="float-right">เมนูยาโยอิ</a></div>
                         </div>
                     </div>
                     <div class="col-md-7">
-                        <div class="row justify-content-end">
+                        <div class="row justify-content-end" id="headBoxRight">
                             <div class="headMenuBox pt-2">
                                 <a class="headMenu" href="../login.php">เข้าระบบ</a>
-                                <b class="pl-2">|</b></div> 
+                                <b class="pl-2">|</b></div>
                             <div class="headMenuBox pt-2 pl-0 pr-1">
                                 <a class="headMenu" href="../register.php">สมัครสมาชิก</a>
                                 <b class="pl-2">|</b></div>
@@ -49,7 +51,7 @@
                                         </span>
                                     </button>
                                     <div class="dropdown-content">
-                                    <a href="#">EN</a>
+                                        <a href="#">EN</a>
                                     </div>
                                 </div>
                             </div>
@@ -57,7 +59,7 @@
                                 <button onclick="window.location.href='promoFood.php'" class="btn font-weight-bold orderFoodBt"><img id='deliveryIcon' src="../icon/delivery.PNG" height="21px"> สั่งอาหารทันที</button>
                             </div>
                             <div class="headMenuBox pt-1" onmouseover="changeIconBasket('over')" onmouseout="changeIconBasket('out')">
-                                <a class="headMenu" href="../cart.php"><img id='BasketIcon' src="../icon/busket.PNG" width="30px"></a>
+                                <a class="headMenu" href="../cart.php"><img id='BasketIcon' src="../icon/busket.PNG" width="27px"></a>
                             </div>
                         </div>
                     </div>
@@ -98,7 +100,7 @@
                 <div id="foodType" class="text-center">
                     <?php
 
-                        $typeTH = array("ทั้งหมด", "เนื้อไก่", "เนื้อปลา", "เนื้อหมู", "เนื้อกุ้ง");
+                        $typeTH = array("ทั้งหมด", "เนื้อไก่", "เนื้อปลา", "เนื้อหมู", "กุ้ง");
                         $typeEN = array("all", "chicken", "fish", "pork", "shrimp");
                         
                         for ($i = 0; $i < sizeof($typeTH); $i++)
@@ -134,7 +136,7 @@
                                 echo "</div><button onclick='clickMenu(\"".$menu->id."\", \"freeFood\")' class='linkMenu btnNone clickCursor'><div class='nameMenu font-weight-bold' id='nameMenu$i' onmouseover='changeMenuName($i, \"over\")' onmouseout='changeMenuName($i, \"out\")'>".$menu->nameTH."<br>";
                                 echo "<div class='nameMenuJP font-weight-normal' id='nameMenuJP$i'>".$menu->nameJP."<br><br></div></div></button>";
                                 echo "<div class='priceMenu'><div><b style='font-size: 30px;'>฿ ".$menu->price."</b>&nbsp;&nbsp;";
-                                echo "<button class='cartBt' onclick='add(\"".$menu->id."\", \"freeFood\"),alertpopup()'><img src='../icon/addcart.PNG' width='70%'></button></div></div>";
+                                echo "<button class='cartBt' onclick='add(\"".$menu->id."\", \"freeFood\")'><img src='../icon/addcart.PNG' width='70%'></button></div></div>";
                                 echo "</div>";
                             }
                             else if ($i == 15)
@@ -177,6 +179,7 @@
             </div>
         </div>
     </div>
+    <a id="goToCartBtn" href="../cart.php" class="bottom-busket"><img src="../icon/busket.PNG" width='100%' class="mt-2 mb-1"></a>
 
 
     <footer class="text-center">

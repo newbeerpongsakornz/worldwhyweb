@@ -23,22 +23,22 @@
     <!-- Head -->
     <header>
         <div class="topheader shadow">
-            <div class="container notoFont">
+            <div class="container">
                 <div class="row p-3">
                     <div class="col-md-5">
-                        <div class="row justify-content-start">
+                        <div class="row">
                             <div class="col-md-7">
-                                <a href="index.php">
-                                    <div class="toppic p-3 shadow-lg logoYayoi" style="z-index: 1;">
-                                        <img src="https://yayoirestaurants.com/frontend/assets/images/logo.svg" alt="Yayoi Restaurant - เสิร์ฟร้อน อร่อยเร็ว" width="100%">
-                                    </div>
-                                </a>
+                                <div class="toppic logoYayoi" style="z-index: 1;">
+                                    <a href="index.php">
+                                        <img src="https://yayoirestaurants.com/frontend/assets/images/logo.svg" alt="Yayoi Restaurant - เสิร์ฟร้อน อร่อยเร็ว" width="100%" height="78px">
+                                    </a>
+                                </div>
                             </div>
-                            <div class="col-md-5 font-weight-bold pt-2 "><a class="headMenu" href="menu/promoFood.php" class="float-right">เมนูยาโยอิ</a></div>
+                            <div class="col-md-5 font-weight-bold pt-2 "><a class="headMenuMain" href="menu/promoFood.php" class="float-right">เมนูยาโยอิ</a></div>
                         </div>
                     </div>
                     <div class="col-md-7">
-                        <div class="row justify-content-end">
+                        <div class="row justify-content-end" id="headBoxRight">
                             <div class="headMenuBox pt-2">
                                 <a class="headMenu" href="login.php">เข้าระบบ</a>
                                 <b class="pl-2">|</b></div>
@@ -62,7 +62,7 @@
                                 <button onclick="window.location.href='menu/promoFood.php'" class="btn font-weight-bold orderFoodBt"><img id='deliveryIcon' src="icon/delivery.PNG" height="21px"> สั่งอาหารทันที</button>
                             </div>
                             <div class="headMenuBox pt-1" onmouseover="changeIconBasket('over')" onmouseout="changeIconBasket('out')">
-                                <a class="headMenu" href="cart.php"><img id='BasketIcon' src="icon/busket.PNG" width="30px"></a>
+                                <a class="headMenu" href="cart.php"><img id='BasketIcon' src="icon/busket.PNG" width="27px"></a>
                             </div>
                         </div>
                     </div>
@@ -94,7 +94,7 @@
             <label><b>วันเกิด</b><b class="redColor">*</b></label>
             <input type="date" id="date" name="date" class="form-control">
             <div class="valueInvalid" id='dateInvalid'></div>
-            <label style="color: #c8c8c8;">*สงวนสิทธิ์การสมัครสมาขิกเฉพาะผู้ทีมีอายุ 10 ปี ขึ้นไป</label><br>
+            <label style="color: #c8c8c8; font-size: 14px;">*สงวนสิทธิ์การสมัครสมาขิกเฉพาะผู้ทีมีอายุ 10 ปี ขึ้นไป</label><br>
             <label><b>อีเมล</b><b class="redColor">*</b></label>
             <input type="text" id="email" name="email" class="form-control">
             <div class="valueInvalid" id='emailInvalid'></div>

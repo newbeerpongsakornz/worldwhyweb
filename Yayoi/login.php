@@ -21,23 +21,25 @@
     <!-- Head -->
     <header>
         <div class="topheader shadow">
-            <div class="container notoFont">
+            <div class="container">
                 <div class="row p-3">
                     <div class="col-md-5">
-                        <div class="row justify-content-start">
+                        <div class="row">
                             <div class="col-md-7">
-                                <a href="index.php"><div class="toppic p-3 shadow-lg logoYayoi" style="z-index: 1;">
-                                    <img src="https://yayoirestaurants.com/frontend/assets/images/logo.svg" alt="Yayoi Restaurant - เสิร์ฟร้อน อร่อยเร็ว" width="100%">
-                                </div></a>
+                                <div class="toppic logoYayoi" style="z-index: 1;">
+                                    <a href="index.php">
+                                        <img src="https://yayoirestaurants.com/frontend/assets/images/logo.svg" alt="Yayoi Restaurant - เสิร์ฟร้อน อร่อยเร็ว" width="100%" height="78px">
+                                    </a>
+                                </div>
                             </div>
-                            <div class="col-md-5 font-weight-bold pt-2 "><a class="headMenu" href="menu/promoFood.php" class="float-right">เมนูยาโยอิ</a></div>
+                            <div class="col-md-5 font-weight-bold pt-2 "><a class="headMenuMain" href="menu/promoFood.php" class="float-right">เมนูยาโยอิ</a></div>
                         </div>
                     </div>
                     <div class="col-md-7">
-                        <div class="row justify-content-end">
+                        <div class="row justify-content-end" id="headBoxRight">
                             <div class="headMenuBox pt-2">
                                 <a class="headMenu" href="login.php">เข้าระบบ</a>
-                                <b class="pl-2">|</b></div> 
+                                <b class="pl-2">|</b></div>
                             <div class="headMenuBox pt-2 pl-0 pr-1">
                                 <a class="headMenu" href="register.php">สมัครสมาชิก</a>
                                 <b class="pl-2">|</b></div>
@@ -50,7 +52,7 @@
                                         </span>
                                     </button>
                                     <div class="dropdown-content">
-                                    <a href="#">EN</a>
+                                        <a href="#">EN</a>
                                     </div>
                                 </div>
                             </div>
@@ -58,7 +60,7 @@
                                 <button onclick="window.location.href='menu/promoFood.php'" class="btn font-weight-bold orderFoodBt"><img id='deliveryIcon' src="icon/delivery.PNG" height="21px"> สั่งอาหารทันที</button>
                             </div>
                             <div class="headMenuBox pt-1" onmouseover="changeIconBasket('over')" onmouseout="changeIconBasket('out')">
-                                <a class="headMenu" href="cart.php"><img id='BasketIcon' src="icon/busket.PNG" width="30px"></a>
+                                <a class="headMenu" href="cart.php"><img id='BasketIcon' src="icon/busket.PNG" width="27px"></a>
                             </div>
                         </div>
                     </div>
@@ -76,7 +78,7 @@
             <input type="text" id="email" name="email" class="form-control">
             <label><b>รหัสผ่าน</b><b class="redColor">*</b></label>
             <input type="password" id="password" name="password" class="form-control">
-            <div style="width:100%; text-align: right;"><label class="pC">ลืมรหัสผ่าน ?</label></div>
+            <div style="width:100%; text-align: right;"><a class="pC" href="forgot.php">ลืมรหัสผ่าน ?</a></div><br>
             <button class="btn btn-block btnPW">เข้าระบบ</button>
             <div style="width:100%; text-align: center; margin-bottom: 10px; color: #909090;"><label>หรือ</label></div>
             <button class="btn btn-block btnFB"> <span style="color:white;"><i class="fab fa-facebook-f"></i></span> เข้าระบบด้วย Facebook</button>

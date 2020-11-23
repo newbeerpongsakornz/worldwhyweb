@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,14 +12,13 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-    <link rel="shortcut icon" href="https://yayoirestaurants.com/frontend/assets/images/favicon.ico" type="image/x-icon">
-    <link href="http://mozilla.github.io/foundation-icons/assets/foundation-icons.css" type="text/css" rel="stylesheet">
-
+    <link rel="shortcut icon" href="https://yayoirestaurants.com/frontend/assets/images/favicon.ico" type="image/x-icon" >
+    
     <title>Yayoi Restaurant : Modern Japanese Restaurant in Thailand - ยาโยอิ เซ็ตอร่อยของทุกคน</title>
 </head>
+<body class="notoFont" >
 
-<body class="notoFont">
-
+    <!-- Head -->
     <header>
         <div class="topheader shadow">
             <div class="container">
@@ -70,24 +68,21 @@
             </div>
         </div>
     </header>
-    
-    <img src="https://yayoirestaurants.com/mainbanners/3880_Cart.jpg" width="100%">
+
+    <!-- Body -->                           
     <br><br>
-    <div class="container">
-        <div class="border m-3 mb-4">
-            <div class="p-3">
-                <h5><img src="svg.svg" alt="" height="20px" class="svg mr-2"><b>ตรวจสอบรายการอาหาร</b> <img src="up-arrow.svg" alt="" height="20px" class="float-right m-2"> </h5>
-            </div>
-            <div class="border-top text-center p-4">
-                <h5 class="mt-3"><b>ไม่พบสินค้าในตะกร้า</b></h5>
-                <div> <button onclick="window.location.href='menu/promoFood.php'" class="buymoreBt rounded p-2 m-2"><b>กลับไปสั่งอาหารเพิ่ม</b></button></div>
-            </div>
+    <div class="text-center container">
+        <h1><b class="headBody">ลืมรหัสผ่าน</b></h1>
+        <div class="boxForm f18" id="login">
+            <label><b>อีเมล</b><b class="redColor">*</b></label>
+            <input type="text" id="email" name="email" class="form-control">
+            <button class="btn btn-block btnPW"><b>ส่งรหัสผ่านใหม่</b></button>
+            <button class="btn btn-block btnWP" onclick="window.location.href='login.php'"><b>เข้าระบบ</b></button>
+            <br><br>
         </div>
-        <br>
     </div>
 
-
-
+    <!-- Footer -->
     <footer class="text-center">
         <div class="container">
             <a href="index.php">
@@ -112,7 +107,7 @@
                 <div><a href="https://www.instagram.com/yayoith_official/?igshid=p9ki0k2ayxv1" target="_blank"><img src="https://yayoirestaurants.com/frontend/assets/images/icon/ins_icon.svg"></a></div>
                 <div><a href="https://www.youtube.com/user/YayoiThailand" target="_blank"><img src="https://yayoirestaurants.com/frontend/assets/images/icon/yt_icon.svg"></a></div>
             </div>
-
+            
         </div><br>
         <div id="credit">
             <div style="transform: translateY(10px);">
@@ -122,5 +117,4 @@
         </div>
     </footer>
 </body>
-
 </html>

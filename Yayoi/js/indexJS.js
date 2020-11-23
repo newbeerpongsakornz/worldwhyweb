@@ -1,5 +1,3 @@
-
-
 function changeMenuColor(itemId, cmd){
     var item = document.getElementById("imgMenuBox"+itemId);
     if (cmd == "over")
@@ -51,3 +49,15 @@ function changeIconBasket(cmd){
     }
 }
 
+window.onscroll = function () {
+    var btn = document.getElementById("goToCartBtn");
+    if (btn != null)
+    {
+        if (document.body.scrollTop > 595 || document.documentElement.scrollTop > 595) {
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
+        }
+    }
+    
+};
