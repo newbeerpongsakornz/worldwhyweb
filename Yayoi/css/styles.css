@@ -202,7 +202,7 @@
     text-decoration: none!important;
 }
 .linkpromo{
-    color: black;
+    color: black!important;
     height: 100px;
 }
  .linkpromo:hover{

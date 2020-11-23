@@ -64,9 +64,9 @@
             </div>
         </div>
     </header>
-    <br><br>
+    <br>
     <div class="container">
-        <div class="text-center m-4">
+        <div class="text-center m-3">
             <img src="../icon/promo.PNG" width="50px" class="pb-3 mr-1">
             <b class="headBody">โปรโมชั่น</b>
         </div>
@@ -77,14 +77,20 @@
                         $res = file_get_contents($url);
                         $data = json_decode($res);
 
+                        echo "<div class='menu col-1'>";
+                        echo "</div>";
+
                         for ($i = 0; $i < sizeOf($data); $i++)
                         {
                             $menu = $data[$i];
-                            echo "<div class='menu col-6'>";
-                            echo "<a href='promotions/".($i+1).".php'><img src='".$menu->img."' width='85%' title='".$menu->id."' class='text-center promoimg'></a><br><br>";   
-                            echo "<div class='nameMenuJP' id='nameMenuJP$i'>".$menu->time."<br>";
-                            echo "<a href='' class='linkMenu'><div class='nameMenu' id='nameMenu$i' onmouseover='changeMenuName($i, \"over\")' onmouseout='changeMenuName($i, \"out\")'>".$menu->Detail."<br><br></div></div></a>";
-                            echo "</div>";
+                           
+                            echo "<div class='menu col-5'>";    
+                            echo "<div class='float-right'>";
+                            echo "<a href='promotions/".($i+1).".php'><img src='".$menu->img."' width='100%' title='".$menu->id."' class='promoimg'></a><br><br>";   
+                            echo "<div class='datepromo' id='nameMenuJP$i'>".$menu->time."<br>";
+                            echo "<a href='' class='linkpromo'><div class='' id='nameMenu$i'>".$menu->Detail."<br><br></div></div></a>";
+                            echo "</div></div>";
+
                         }
                     ?>                 
                 </div></div>
