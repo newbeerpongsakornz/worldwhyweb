@@ -64,9 +64,9 @@
             </div>
         </div>
     </header>
-    <br><br>
+    <br>
     <div class="container">
-        <div class="text-center m-4">
+        <div class="text-center m-3">
             <img src="../icon/promo.PNG" width="50px" class="pb-3 mr-1">
             <b class="headBody">โปรโมชั่น</b>
         </div>
