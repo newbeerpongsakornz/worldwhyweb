@@ -17,7 +17,7 @@ function add(id, page, num = 1) {
             document.getElementById("noChoose").style.display = "none";
 
             document.getElementById("totalMenu").style.display = "block";
-            document.getElementById("totalMenu").innerHTML = "<div class='float-left'> ราคาอาหารทั้งหมด <br> <div class='p-2' style='font-size:14px; color:#777777;'>(ยังไม่รวมค่าจัดส่ง)</div></div><div style='font-size:23px;' class='float-right'><strong><b id='totalPrice'>฿" + totalPrice + "</b></strong></div><button onclick='window.location.href=\"../cart.php\"' class='buymoreBt rounded p-2 m-2'><b>ยืนยันการสั่งซื้อ</b></button><div class='promo-cart mt-3 mb-4'><section class='pt-3 p-2'><p>ฟรี นมเมมเบอร์รี่ 1 กล่องเมื่อสั่งซื้อครบ 1,000 บาท</p></section></div>";
+            document.getElementById("totalMenu").innerHTML = "<div class='float-left'> ราคาอาหารทั้งหมด <br> <div class='p-2' style='font-size:14px; color:#777777;'>(ยังไม่รวมค่าจัดส่ง)</div></div><div style='font-size:23px;' class='float-right'><strong><b id='totalPrice'>฿" + totalPrice + "</b></strong></div><button onclick='window.location.href=\"../cart.php\"' class='buymoreBt rounded p-2 m-2'><b>ยืนยันการสั่งซื้อ</b></button>";
         }
 
         for (i = 0; i < data.length; i++) {
