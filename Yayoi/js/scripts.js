@@ -379,6 +379,7 @@ function clickMenu(id, page) {
 
         htmlText += "<div id='menuFoodSuggest' class='text-left'><h3 class='headBody text-center'>เมนูแนะนำ</h3>";
 
+        var i = 0;
         while (true) {
             if (numRan.length == 4 || numRan.length == data.length) {
                 break;
@@ -423,6 +424,7 @@ function clickMenu(id, page) {
             }
             htmlText += "(\"" + menu.id + "\", \"" + page + "\")'><img src='../icon/addcart.PNG' width='70%'></button>";
             htmlText += "</div></div></div>";
+            i++;
         }
         htmlText += "</div>";
 
